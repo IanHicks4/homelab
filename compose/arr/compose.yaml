@@ -1,0 +1,89 @@
+services:
+  sonarr:
+    image: lscr.io/linuxserver/sonarr:latest
+    container_name: sonarr
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/New_York
+    volumes:
+      - ./sonarr:/config
+      - /mnt/media:/media
+    ports:
+      - 8989:8989
+
+  radarr:
+    image: lscr.io/linuxserver/radarr:latest
+    container_name: radarr
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/New_York
+    volumes:
+      - ./radarr:/config
+      - /mnt/media:/media
+    ports:
+      - 7878:7878
+
+  prowlarr:
+    image: lscr.io/linuxserver/prowlarr:latest
+    container_name: prowlarr
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/New_York
+    volumes:
+      - ./prowlarr:/config
+    ports:
+      - 9696:9696
+
+  seerr:
+    image: ghcr.io/seerr-team/seerr:latest
+    container_name: seerr
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - LOG_LEVEL=debug
+      - TZ=America/New_York
+    volumes:
+      - ./seerr:/app/config
+    ports:
+      - 5055:5055
+
+  flaresolverr:
+    image: ghcr.io/flaresolverr/flaresolverr:latest
+    container_name: flaresolverr
+    restart: unless-stopped
+    environment:
+      - LOG_LEVEL=info
+      - TZ=America/New_York
+    ports:
+      - 8191:8191
+
+  bazarr:
+    image: lscr.io/linuxserver/bazarr:latest
+    container_name: bazarr
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/New_York
+    volumes:
+      - ./bazarr:/config
+      - /mnt/media:/media
+    ports:
+      - 6767:6767
+
+  recyclarr:
+    image: ghcr.io/recyclarr/recyclarr:8
+    container_name: recyclarr
+    user: "1000:1000"
+    restart: unless-stopped
+    environment:
+      - TZ=America/New_York
+    volumes:
+      - ./recyclarr:/config

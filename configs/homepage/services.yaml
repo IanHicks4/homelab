@@ -1,0 +1,85 @@
+- Media:
+    - Jellyfin:
+        href: https://jellyfin.kai.coach
+        description: Movies, shows, and playback
+        icon: jellyfin.png
+        siteMonitor: https://jellyfin.kai.coach
+
+    - Seerr:
+        href: https://seerr.kai.coach
+        description: Requests and approvals
+        icon: overseerr.png
+        siteMonitor: https://seerr.kai.coach
+
+    - Immich:
+        href: https://immich.kai.coach
+        description: Photos and mobile backup
+        icon: immich.png
+        siteMonitor: https://immich.kai.coach
+
+- Security & Private Apps:
+    - Vaultwarden:
+        href: https://vault.kai.coach
+        description: Password manager
+        icon: vaultwarden.png
+        siteMonitor: https://vault.kai.coach
+
+- Requests & Automation:
+    - Sonarr:
+        href: http://100.77.136.106:8989
+        description: TV automation
+        icon: sonarr.png
+        siteMonitor: http://100.77.136.106:8989
+
+    - Radarr:
+        href: http://100.77.136.106:7878
+        description: Movie automation
+        icon: radarr.png
+        siteMonitor: http://100.77.136.106:7878
+
+    - Bazarr:
+        href: http://100.77.136.106:6767
+        description: Subtitle management
+        icon: bazarr.png
+        siteMonitor: http://100.77.136.106:6767
+
+    - Prowlarr:
+        href: http://100.77.136.106:9696
+        description: Indexers
+        icon: prowlarr.png
+        siteMonitor: http://100.77.136.106:9696
+
+    - qBittorrent:
+        href: http://100.77.136.106:8080
+        description: Torrent client
+        icon: qbittorrent.png
+        siteMonitor: http://100.77.136.106:8080
+
+- Network & DNS:
+    - Pi-hole:
+        href: http://100.111.36.105/admin/
+        description: DNS filtering
+        icon: pi-hole.png
+
+    - Caddy:
+        href: https://jellyfin.kai.coach
+        description: Reverse proxy entrypoint
+        icon: caddy.png
+        siteMonitor: https://jellyfin.kai.coach
+
+- Monitoring:
+    - Homepage:
+        href: http://100.77.136.106:3000
+        description: Main dashboard
+        icon: homepage.png
+
+    - Glances:
+        href: http://100.77.136.106:61208
+        description: Live system metrics
+        icon: glances.png
+
+    - Uptime Kuma:
+        href: http://100.77.136.106:3001
+        description: Uptime and health checks
+        icon: uptime-kuma.png
+        siteMonitor: http://100.77.136.106:3001

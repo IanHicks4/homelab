@@ -1,0 +1,44 @@
+services:
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: homepage
+    restart: unless-stopped
+    user: "0:0"
+    ports:
+      - "3000:3000"
+    environment:
+      - TZ=America/New_York
+      - HOMEPAGE_ALLOWED_HOSTS=*
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./homepage-config:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /mnt/media:/mnt/media:ro
+
+  glances:
+    image: nicolargo/glances:latest-full
+    container_name: glances
+    restart: unless-stopped
+    pid: host
+    network_mode: host
+    environment:
+      - TZ=America/New_York
+      - GLANCES_OPT=-w
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /etc/os-release:/etc/os-release:ro
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+
+  uptime-kuma:
+    image: louislam/uptime-kuma:1
+    container_name: uptime-kuma
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./uptime-kuma:/app/data
+    environment:
+      - TZ=America/New_York

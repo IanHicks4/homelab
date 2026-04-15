@@ -1,0 +1,13 @@
+.env
+**/.env
+*.db
+*.sqlite
+*.sqlite3
+*.log
+cache/
+data/
+logs/
+postgres/
+backups/docker/
+backups/database/
+node_modules/

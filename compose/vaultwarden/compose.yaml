@@ -1,0 +1,15 @@
+services:
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: vaultwarden
+    restart: unless-stopped
+    environment:
+      DOMAIN: "https://vault.kai.coach"
+      SIGNUPS_ALLOWED: "false"
+      WEBSOCKET_ENABLED: "true"
+      ADMIN_TOKEN: ${ADMIN_TOKEN}
+      TZ: "America/New_York"
+    volumes:
+      - ./data:/data
+    ports:
+      - "8088:80"

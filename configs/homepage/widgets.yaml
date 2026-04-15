@@ -1,0 +1,30 @@
+- greeting:
+    text_size: 4xl
+    text: Hope Homelab
+
+- datetime:
+    text_size: xl
+    format:
+      dateStyle: long
+      timeStyle: short
+      hourCycle: h12
+
+- resources:
+    cpu: true
+    memory: true
+    cputemp: true
+    uptime: true
+    disk:
+      - /
+      - /mnt/media
+
+- search:
+    provider: google
+    target: _blank
+
+- openmeteo:
+    label: Providence
+    latitude: 41.8240
+    longitude: -71.4128
+    timezone: America/New_York
+    units: imperial

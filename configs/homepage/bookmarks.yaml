@@ -1,0 +1,24 @@
+- Admin:
+    - Router:
+        - abbr: RT
+          href: http://192.168.1.1
+
+    - Pi-hole Admin:
+        - abbr: PH
+          href: http://100.111.36.105/admin/
+
+    - Tailscale Admin:
+        - abbr: TS
+          href: https://login.tailscale.com/admin/machines
+
+    - GitHub Repo:
+        - abbr: GH
+          href: https://github.com/IanHicks4/HopeHomelab
+
+    - Immich:
+        - abbr: IM
+          href: https://immich.kai.coach
+
+    - Vaultwarden:
+        - abbr: VW
+          href: https://vault.kai.coach

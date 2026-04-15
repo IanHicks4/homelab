@@ -1,0 +1,43 @@
+server:
+  externalDomain: "https://immich.kai.coach"
+  loginPageMessage: "Ian's Photo Library"
+  publicUsers: false
+
+logging:
+  enabled: true
+  level: log
+
+backup:
+  database:
+    enabled: true
+    cronExpression: "0 2 * * *"
+    keepLastAmount: 14
+
+library:
+  scan:
+    enabled: true
+    cronExpression: "0 0 * * *"
+  watch:
+    enabled: false
+
+machineLearning:
+  enabled: true
+  facialRecognition:
+    enabled: true
+    modelName: buffalo_l
+  clip:
+    enabled: true
+    modelName: ViT-B-32__openai
+  ocr:
+    enabled: true
+    modelName: PP-OCRv5_mobile
+
+passwordLogin:
+  enabled: true
+
+reverseGeocoding:
+  enabled: true
+
+trash:
+  enabled: true
+  days: 30

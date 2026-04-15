@@ -1,0 +1,23 @@
+{
+	email iehianhicks@proton.me
+}
+
+jellyfin.kai.coach {
+	encode zstd gzip
+	reverse_proxy host.docker.internal:8096
+}
+
+seerr.kai.coach {
+	encode zstd gzip
+	reverse_proxy host.docker.internal:5055
+}
+
+vault.kai.coach {
+        tls internal
+	reverse_proxy host.docker.internal:8088
+}
+
+immich.kai.coach {
+        encode zstd gzip
+        reverse_proxy host.docker.internal:2283
+}

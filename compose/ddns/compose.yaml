@@ -1,0 +1,12 @@
+services:
+  porkbun-ddns:
+    image: mietzen/porkbun-ddns:latest
+    container_name: porkbun-ddns
+    restart: unless-stopped
+
+    environment:
+      APIKEY: ${APIKEY}
+      SECRETAPIKEY: ${SECRETAPIKEY}
+      DOMAIN: "kai.coach"
+      SUBDOMAINS: "jellyfin,seerr,immich"
+      INTERVAL: "300"
