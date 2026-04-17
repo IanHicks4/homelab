@@ -7,6 +7,8 @@
 
 ## Restricted / Internal
 - `vault.kai.coach` → Vaultwarden
+- `home.kai.coach` → Homepage
+- `status.kai.coach` → Uptime Kuma
   - Uses internal TLS in Caddy
 
 ## Notes
