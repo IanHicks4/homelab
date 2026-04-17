@@ -11,5 +11,10 @@ services:
       TZ: "America/New_York"
     volumes:
       - ./data:/data
-    ports:
-      - "8088:80"
+    networks:
+      - proxy
+      - default
+
+networks:
+  proxy:
+    external: true

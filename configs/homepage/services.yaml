@@ -69,7 +69,7 @@
 
 - Monitoring:
     - Homepage:
-        href: http://100.77.136.106:3000
+        href: https://home.kai.coach
         description: Main dashboard
         icon: homepage.png
 
@@ -79,7 +79,7 @@
         icon: glances.png
 
     - Uptime Kuma:
-        href: http://100.77.136.106:3001
+        href: https://status.kai.coach
         description: Uptime and health checks
         icon: uptime-kuma.png
-        siteMonitor: http://100.77.136.106:3001
+        siteMonitor: https://status.kai.coach

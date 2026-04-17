@@ -14,10 +14,20 @@ seerr.kai.coach {
 
 vault.kai.coach {
         tls internal
-	reverse_proxy host.docker.internal:8088
+	reverse_proxy vaultwarden:80
 }
 
 immich.kai.coach {
         encode zstd gzip
         reverse_proxy host.docker.internal:2283
+}
+
+home.kai.coach {
+        tls internal
+        reverse_proxy homepage:3000
+}
+
+status.kai.coach {
+        tls internal
+        reverse_proxy uptime-kuma:3001
 }

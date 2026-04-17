@@ -8,5 +8,5 @@ services:
       APIKEY: ${APIKEY}
       SECRETAPIKEY: ${SECRETAPIKEY}
       DOMAIN: "kai.coach"
-      SUBDOMAINS: "jellyfin,seerr,immich"
+      SUBDOMAINS: "jellyfin,seerr,immich,home,status"
       INTERVAL: "300"

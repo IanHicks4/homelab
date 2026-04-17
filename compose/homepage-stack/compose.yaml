@@ -8,13 +8,16 @@ services:
       - "3000:3000"
     environment:
       - TZ=America/New_York
-      - HOMEPAGE_ALLOWED_HOSTS=*
+      - HOMEPAGE_ALLOWED_HOSTS=home.kai.coach
     extra_hosts:
       - "host.docker.internal:host-gateway"
     volumes:
       - ./homepage-config:/app/config
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - /mnt/media:/mnt/media:ro
+    networks:
+      - default
+      - proxy
 
   glances:
     image: nicolargo/glances:latest-full
@@ -36,9 +39,14 @@ services:
     image: louislam/uptime-kuma:1
     container_name: uptime-kuma
     restart: unless-stopped
-    ports:
-      - "3001:3001"
     volumes:
       - ./uptime-kuma:/app/data
     environment:
       - TZ=America/New_York
+    networks:
+      - default
+      - proxy
+
+networks:
+  proxy:
+    external: true
