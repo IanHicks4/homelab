@@ -61,8 +61,6 @@ services:
     environment:
       - LOG_LEVEL=info
       - TZ=America/New_York
-    ports:
-      - 8191:8191
 
   bazarr:
     image: lscr.io/linuxserver/bazarr:latest
