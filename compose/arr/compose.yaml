@@ -11,7 +11,7 @@ services:
       - ./sonarr:/config
       - /mnt/media:/media
     ports:
-      - 8989:8989
+      - "100.77.136.106:8989:8989"
 
   radarr:
     image: lscr.io/linuxserver/radarr:latest
@@ -25,7 +25,7 @@ services:
       - ./radarr:/config
       - /mnt/media:/media
     ports:
-      - 7878:7878
+      - "100.77.136.106:7878:7878"
 
   prowlarr:
     image: lscr.io/linuxserver/prowlarr:latest
@@ -38,7 +38,7 @@ services:
     volumes:
       - ./prowlarr:/config
     ports:
-      - 9696:9696
+      - "100.77.136.106:9696:9696"
 
   seerr:
     image: ghcr.io/seerr-team/seerr:latest
@@ -76,7 +76,7 @@ services:
       - ./bazarr:/config
       - /mnt/media:/media
     ports:
-      - 6767:6767
+      - "100.77.136.106:6767:6767"
 
   recyclarr:
     image: ghcr.io/recyclarr/recyclarr:8
