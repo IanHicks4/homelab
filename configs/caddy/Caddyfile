@@ -31,3 +31,17 @@ status.kai.coach {
         tls internal
         reverse_proxy uptime-kuma:3001
 }
+
+grafana.kai.coach {
+        tls internal
+        reverse_proxy grafana:3000
+}
+
+n8n.kai.coach {
+    reverse_proxy host.docker.internal:5678
+}
+
+address.kai.coach {
+    encode zstd gzip
+    reverse_proxy host.docker.internal:8090
+}

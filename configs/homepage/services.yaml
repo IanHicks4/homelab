@@ -55,6 +55,12 @@
         icon: qbittorrent.png
         siteMonitor: http://100.77.136.106:8080
 
+    - n8n:
+        href: https://n8n.kai.coach
+        description: Workflow automation
+        icon: n8n.png
+        siteMonitor: https://n8n.kai.coach
+
 - Network & DNS:
     - Pi-hole:
         href: http://100.111.36.105/admin/
@@ -83,3 +89,9 @@
         description: Uptime and health checks
         icon: uptime-kuma.png
         siteMonitor: https://status.kai.coach
+
+    - Grafana:
+        href: https://grafana.kai.coach
+        description: Centralized logging
+        icon: grafana.png
+        siteMonitor: https://grafana.kai.coach
