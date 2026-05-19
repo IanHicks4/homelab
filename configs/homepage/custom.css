@@ -3,7 +3,7 @@
 ==================================*/
 /* Import Poppins and Merriweather fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Merriweather:wght@400;700&display=swap');
-
+ 
 /*==================================
   ROOT VARIABLES
 ==================================*/
@@ -11,7 +11,7 @@
   /* Font families for consistent typography */
   --font-primary: 'Poppins', sans-serif;
   --font-secondary: 'Merriweather', serif;
-  
+ 
   /* Color palette for consistent theming */
   --color-border: #4d4e5e;
   --color-tab-border: #4a4a54;
@@ -21,40 +21,40 @@
   --color-block: #222432;
   --color-block-hover: #2d2d4a;
   --color-bookmark-icon: #1f233c;
-  
+ 
   /* Gradient definition for animated borders */
   --gradient-border: linear-gradient(90deg, #F75050, #6C033D, #F75050);
-  
+ 
   /* Consistent spacing scale */
   --spacing-xs: 5px;
   --spacing-sm: 8px;
   --spacing-md: 10px;
   --spacing-lg: 30px;
   --spacing-xl: 40px;
-  
+ 
   /* Border properties for consistent styling */
   --border-width: 2px;
   --border-radius: .375rem;
   --border-radius-sm: .275rem;
-  
+ 
   /* Animation timings for consistent motion */
   --animation-duration: 3s;
   --transition-duration: 0.3s;
-  
+ 
   /* Layout measurements */
   --logo-size: 66px;
-  
+ 
   /* Tab-specific styling variables */
   --tab-border-width: 2px;
   --tab-border-radius: .375rem;
   --tab-backdrop-filter: blur(1px);
 }
-
+ 
 /* Apply Poppins font to all text */
 * {
   font-family: var(--font-primary) !important;
 }
-
+ 
 /*==================================
   TAB STYLES
 ==================================*/
@@ -67,7 +67,7 @@
   justify-content: flex-start;
   gap: var(--spacing-xl);
 }
-
+ 
 /* Individual tab styling */
 button[id$='-tab'] {
   border-width: var(--tab-border-width);
@@ -79,12 +79,12 @@ button[id$='-tab'] {
   border-spacing: 0;
   transition: border-color var(--transition-duration) ease;
 }
-
+ 
 /* Tab hover effect */
 button[id$='-tab']:hover {
   border-color: var(--color-tab-hover);
 }
-
+ 
 /*==================================
   HEADING STYLES
 ==================================*/
@@ -93,7 +93,7 @@ button[id$='-tab']:hover {
   font-family: var(--font-secondary) !important;
   font-weight: 700 !important;
 }
-
+ 
 /* Logo size and positioning */
 .information-widget-logo img {
   width: var(--logo-size) !important;  
@@ -102,34 +102,35 @@ button[id$='-tab']:hover {
   max-height: none;     
   margin-left: var(--spacing-lg);
 }
-
+ 
 /*==================================
   SERVICE CARD STYLES
 ==================================*/
 /* Base service card container */
 .service-card {
   position: relative;
-  padding: 0;
+  padding: 5px;
   margin: 0;
   border-radius: var(--border-radius);
   background: transparent;
   border: var(--border-width) solid var(--color-border);
-  overflow: visible;
+  overflow: hidden;
+  min-height: 140px;
 }
-
+ 
 /* Background color for service data blocks */
 .bg-theme-200\/50, 
 .flex-1.service-block {     
   background-color: var(--color-block) !important;
   transition: background-color var(--transition-duration) ease;
 }
-
+ 
 /* Change block colors on service card hover */
 .service-card:hover [class*="bg-theme-200/50"],
 .service-card:hover .flex-1.service-block {    
   background-color: var(--color-block-hover) !important;
 }
-
+ 
 /* Animated border gradient effect */
 .service-card::before {
   content: '';
@@ -143,18 +144,18 @@ button[id$='-tab']:hover {
   opacity: 0;
   transition: opacity var(--transition-duration) ease;
 }
-
+ 
 /* Show animated border on hover */
 .service-card:hover::before {
   opacity: 1;
 }
-
+ 
 /* Animation keyframes for border gradient */
 @keyframes wave {
   0% { background-position: 100% 0; }
   100% { background-position: -100% 0; }
 }
-
+ 
 /* Inner card background effect */
 .service-card::after {
   content: '';
@@ -165,17 +166,17 @@ button[id$='-tab']:hover {
   z-index: -1;
   transition: background-color var(--transition-duration) ease;
 }
-
+ 
 /* Change background color on hover */
 .service-card:hover::after {
   background: var(--color-background-hover);
 }
-
+ 
 /* Hide default border on hover */
 .service-card:hover {
   border-color: transparent;
 }
-
+ 
 /*==================================
   BOOKMARK SECTION STYLES
 ==================================*/
@@ -186,12 +187,12 @@ button[id$='-tab']:hover {
   padding: var(--spacing-md) var(--spacing-sm) 0 var(--spacing-sm);
   margin-bottom: var(--spacing-sm);
 }
-
+ 
 /* Bookmark icon background */
 .bookmark-icon {
   background-color: var(--color-bookmark-icon) !important;
 }
-
+ 
 /*==================================
   LAYOUT GROUP STYLES - HOMEPAGE
 ==================================*/
@@ -219,91 +220,27 @@ button[id$='-tab']:hover {
 :is([id="inner_wrapper"]:has(#tabs [aria-selected="true"][id="HOME-tab"])) #layout-groups > .services-group:nth-child(n+10) {
   display: none !important;
 }
-
-/*==================================
-  LAYOUT GROUP STYLES - STAT
-==================================*/
-/* Media layout container with calculations */
-:is([id="inner_wrapper"]:has(#tabs [aria-selected="true"][id="STAT-tab"])) #layout-groups {
-  --gap: var(--spacing-md);
-  --cols-2: calc(50% - (var(--gap) / 2));
-  --cols-3: calc(33.33% - (var(--gap) * 2 / 3));
  
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--gap) !important;
-}
-/* First 6 services - 33.33% width each */
-:is([id="inner_wrapper"]:has(#tabs [aria-selected="true"][id="STAT-tab"])) #layout-groups > .services-group:nth-child(-n+6) {
-  flex: 1 1 var(--cols-3) !important;
-  max-width: var(--cols-3) !important;
-}
-/* Services 7-8 - 50% width each */
-:is([id="inner_wrapper"]:has(#tabs [aria-selected="true"][id="STAT-tab"])) #layout-groups > .services-group:nth-child(n+7):nth-child(-n+8) {
-  flex: 1 1 var(--cols-2) !important;
-  max-width: var(--cols-2) !important;
-}
-/* Service 9 - 100% width */
-:is([id="inner_wrapper"]:has(#tabs [aria-selected="true"][id="STAT-tab"])) #layout-groups > .services-group:nth-child(9) {
-  flex: 1 1 100% !important;
-  max-width: 100% !important;
-}
-/* Hide services after the ninth one */
-:is([id="inner_wrapper"]:has(#tabs [aria-selected="true"][id="STAT-tab"])) #layout-groups > .services-group:nth-child(n+10) {
-  display: none !important;
-}
-
-/*==================================
-  LAYOUT GROUP STYLES - DEPS
-==================================*/
-/* DEPS layout container with calculations */
-:is([id="inner_wrapper"]:has(#tabs [aria-selected="true"][id="DEPS-tab"])) #layout-groups {
-  --gap: var(--spacing-md);
-  --cols-6: calc(16.667% - (var(--gap) * 5 / 6));
-  --cols-1: 100%;
-  
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--gap) !important;
-}
-
-/* First row: Six services - 16.667% width each */
-:is([id="inner_wrapper"]:has(#tabs [aria-selected="true"][id="DEPS-tab"])) #layout-groups > .services-group:nth-child(-n+6) {
-  flex: 1 1 var(--cols-6) !important;
-  max-width: var(--cols-6) !important;
-}
-
-/* Second row: Single service - 100% width */
-:is([id="inner_wrapper"]:has(#tabs [aria-selected="true"][id="DEPS-tab"])) #layout-groups > .services-group:nth-child(7) {
-  flex: 1 1 var(--cols-1) !important;
-  max-width: var(--cols-1) !important;
-}
-
-/* Hide services after the seventh one */
-:is([id="inner_wrapper"]:has(#tabs [aria-selected="true"][id="DEPS-tab"])) #layout-groups > .services-group:nth-child(n+8) {
-  display: none !important;
-}
-
 /*==================================
   TEXT STYLES
 ==================================*/
 /* Small text styling with pre-line whitespace */
 .text-sm {
   white-space: pre-line;
-  text-align: center;
+  text-align: left;
   font-size: 1em;
-  
+ 
   &::first-line {
     margin-bottom: var(--spacing-xs);
   }
 }
-
+ 
 /* Hide elements with _hidden prefix */
 [data-name^="_hidden"] .service-title,
 .bookmark-group .bookmark-group-name {
   display: none;
 }
-
+ 
 /* Hide footer completely */
 #footer {
   display: none;

@@ -12,6 +12,35 @@
 - This host runs the main Docker workloads including media, reverse proxy, monitoring, DDNS, and utility services.
 - Add CPU, RAM, and exact model details later if desired.
 
+# Lenovo ThinkStation P360 Tiny
+
+Purchased:
+Facebook Marketplace
+$100
+
+Specs:
+- i5-12600T
+- 32GB DDR5
+- NVIDIA T400 4GB
+- 500GB Micron NVMe
+
+BIOS:
+- VT-x enabled
+- VT-d enabled
+- IOMMU enabled
+- Secure Boot disabled
+
+Current role:
+Proxmox engineering lab
+
+IP:
+192.168.1.101
+
+Future:
+- Ubuntu sandbox VM
+- GitHub runner
+- Security lab
+
 ## Raspberry Pi 4
 - Hostname: `raspberrypi`
 - Purpose: Infrastructure node

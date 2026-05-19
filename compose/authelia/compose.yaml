@@ -1,0 +1,30 @@
+services:
+  authelia:
+    image: authelia/authelia:latest
+    container_name: authelia
+    restart: unless-stopped
+    volumes:
+      - ./config:/config
+      - ./secrets:/secrets:ro
+    environment:
+      TZ: America/New_York
+      AUTHELIA_IDENTITY_VALIDATION_RESET_PASSWORD_JWT_SECRET_FILE: /secrets/jwt_secret
+      AUTHELIA_SESSION_SECRET_FILE: /secrets/session_secret
+      AUTHELIA_STORAGE_ENCRYPTION_KEY_FILE: /secrets/storage_encryption_key
+    networks:
+      - proxy
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7-alpine
+    container_name: authelia-redis
+    restart: unless-stopped
+    volumes:
+      - ./redis:/data
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true

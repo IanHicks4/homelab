@@ -16,9 +16,12 @@ services:
       - ${UPLOAD_LOCATION}:/usr/src/app/upload
       - ./config.yml:${IMMICH_CONFIG_FILE}:ro
       # Uncomment after initial setup if you want Intel iGPU transcoding
-      # - /dev/dri:/dev/dri
-    ports:
-      - "2283:2283"
+      - /dev/dri:/dev/dri
+    networks:
+      - default
+      - proxy 
+#    ports:
+#      - "100.77.136.106:2283:2283"
     security_opt:
       - no-new-privileges:true
     healthcheck:

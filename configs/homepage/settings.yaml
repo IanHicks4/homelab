@@ -1,27 +1,66 @@
 title: Hope Homelab
+description: HomeLab Central Dashboard
+background:
+  image: https://immich.kai.coach/api/assets/de687057-c78b-4029-afdd-6621ae1752dd/thumbnail?size=preview&c=HtcJVYiXeIiPiIiCeDh3d4eAhwh4&edited=true
+  opacity: 25
+cardBlur: sm # xs, md, etc... see https://tailwindcss.com/docs/backdrop-blur
 theme: dark
-color: slate
-headerStyle: clean
-hideVersion: true
-showStats: true
+color: stone
+headerStyle: underlined
+
+
 statusStyle: "dot"
+language: en
+useEqualHeights: true
+
+quicklaunch:
+  searchDescriptions: true
+  hideInternetSearch: false
+  showSearchSuggestions: true
+  hideVisitURL: false
+  provider: google
+  mobileButtonPosition: top-right
+
+
 layout:
-  Media:
+
+  Quick Links:
+    style: row
+    columns: 4
+
+  The Lab:
+    style: row
+    columns: 2
+
+  Services:
+    style: row
+    columns: 4
+
+    Media:
+      style: column
+      rows: 2
+
+    Apps:
+      style: column
+      rows: 2
+
+    Network & DNS:
+      style: column
+      rows: 2
+
+    Monitoring:
+      style: column
+      rows: 2
+
+  Arr Stack:
     style: row
     columns: 3
 
-  Security & Private Apps:
-    style: row
-    columns: 2
+    Discovery:
+      style: column
 
-  Requests & Automation:
-    style: row
-    columns: 3
+    Calendar:
+      style: column
 
-  Network & DNS:
-    style: row
-    columns: 2
-
-  Monitoring:
-    style: row
-    columns: 2
+    Management:
+      style: column

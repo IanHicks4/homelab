@@ -1,6 +1,4 @@
-- greeting:
-    text_size: 4xl
-    text: Hope Homelab
+---
 
 - datetime:
     text_size: xl
@@ -10,17 +8,25 @@
       hourCycle: h12
 
 - resources:
+    label: HopeLab
+    expanded: false
     cpu: true
     memory: true
     cputemp: true
     uptime: true
+    refresh: 1000
+
+- resources:
+    label: Opti
+    expanded: true
     disk:
       - /
-      - /mnt/media
 
-- search:
-    provider: google
-    target: _blank
+- resources:
+    label: External
+    expanded: true
+    disk:
+      - /mnt/media
 
 - openmeteo:
     label: Providence
@@ -28,3 +34,4 @@
     longitude: -71.4128
     timezone: America/New_York
     units: imperial
+    cache: 5

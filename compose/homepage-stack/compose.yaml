@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
     user: "0:0"
     ports:
-      - "3000:3000"
+      - "100.77.136.106:3000:3000"
     environment:
       - TZ=America/New_York
       - HOMEPAGE_ALLOWED_HOSTS=home.kai.coach
@@ -15,6 +15,8 @@ services:
       - ./homepage-config:/app/config
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - /mnt/media:/mnt/media:ro
+    env_file:
+      - ./homepage-config/.env
     networks:
       - default
       - proxy

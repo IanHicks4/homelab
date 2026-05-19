@@ -51,8 +51,11 @@ services:
       - TZ=America/New_York
     volumes:
       - ./seerr:/app/config
-    ports:
-      - 5055:5055
+    networks:
+      - default
+      - proxy
+#    ports:
+#      - "127.0.0.1:5055:5055"
 
   flaresolverr:
     image: ghcr.io/flaresolverr/flaresolverr:latest
@@ -85,3 +88,8 @@ services:
       - TZ=America/New_York
     volumes:
       - ./recyclarr:/config
+
+
+networks:
+  proxy:
+    external: true
