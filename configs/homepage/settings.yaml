@@ -30,7 +30,7 @@ layout:
 
   The Lab:
     style: row
-    columns: 2
+    columns: 3
 
   Services:
     style: row

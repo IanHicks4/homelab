@@ -30,6 +30,11 @@
           cpu: false
           memory: false
 
+    - P360 Proxmox:
+        icon: proxmox.png
+        href: https://p360:8006
+        description: Virtualization Lab Node
+
 
 # ── Media (column) ───────────────────────────────────────────────
 - Services:

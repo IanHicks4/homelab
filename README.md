@@ -5,6 +5,7 @@ This repository contains documentation, configuration backups, Docker Compose fi
 
 ## Main Systems
 - Dell OptiPlex 7060
+- Lenovo ThinkStation P360
 - Raspberry Pi 4
 - Verizon CR1000B router
 - External 8TB media drive
@@ -20,6 +21,7 @@ This repository contains documentation, configuration backups, Docker Compose fi
 - qBittorrent + Gluetun
 - Sonarr / Radarr / Bazarr / Prowlarr / Seerr
 - Pi-hole + Unbound
+- Proxmox VE
 
 ## Documentation Sections
 - inventory/ → hardware, ports, services, domains, IPs
