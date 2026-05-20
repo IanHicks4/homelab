@@ -19,7 +19,7 @@ services:
       #- PORT_FORWARDING=on
       - VPN_SERVICE_PROVIDER=protonvpn
       - VPN_TYPE=wireguard
-      - WIREGUARD_PRIVATE_KEY=eCrPX+nK3iaJEaFgzYrtBl14VutydTXdCdqZL7DaQkw=
+      - WIREGUARD_PRIVATE_KEY=${WIREGUARD_PRIVATE_KEY}
       - WIREGUARD_ADDRESSES=10.2.0.2/32
       - SERVER_COUNTRIES=United States
       - VPN_PORT_FORWARDING=on
