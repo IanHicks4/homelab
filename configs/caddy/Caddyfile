@@ -54,7 +54,15 @@ n8n.kai.coach {
 
 address.kai.coach {
         encode zstd gzip
-        reverse_proxy wedding-address-form:80
+
+        handle /api/wedding-address {
+	        rewrite * /webhook/wedding-address
+                reverse_proxy n8n:5678
+        }
+
+        handle {
+                reverse_proxy wedding-address-form:80
+        }
 }
 
 auth.kai.coach {
