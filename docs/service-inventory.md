@@ -238,6 +238,7 @@ Security notes:
 
 - API key environment variable names are referenced.
 - No real secret values are included in this document.
+- `compose/ddns/compose.yaml` lists DDNS subdomains for `jellyfin`, `seerr`, `immich`, `home`, `status`, `grafana`, `n8n`, and `address`; DDNS coverage for `vault.kai.coach`, `auth.kai.coach`, and `tools.kai.coach` needs verification.
 
 ### `gamebuilds`
 
@@ -407,12 +408,13 @@ Purpose:
 Ports and routes:
 
 - Compose exposes `100.77.136.106:8085:80`.
-- Caddy route `tools.kai.coach` proxies to `it-tools:8085`.
+- Caddy route `tools.kai.coach` proxies to `it-tools:80`.
 
 Access classification:
 
 - Direct port is configured for Tailscale/private access.
 - Caddy route exposure needs verification.
+- DDNS coverage needs verification because `tools` is not listed in `compose/ddns/compose.yaml`.
 
 Persistent volumes/bind mounts:
 
@@ -428,7 +430,6 @@ Monitoring/logging relevance:
 
 Security notes:
 
-- Open question: Caddy routes to `it-tools:8085`, while the container service appears to listen on port `80` inside the compose mapping.
 - Caddy route does not import the Authelia forward-auth snippet.
 
 ### `jellyfin`
@@ -829,7 +830,7 @@ These routes are configured in the repo, but public exposure is not confirmed by
 | n8n UI | `n8n.kai.coach` | UI access needs separate verification |
 | Address-form webhook | `address.kai.coach/api/wedding-address` | Webhook exposure needs separate verification from n8n UI access |
 | Wedding address form | `address.kai.coach` | Caddy route exists, exposure intent needs verification |
-| IT Tools | `tools.kai.coach` | Caddy route exists, target port mismatch also needs verification |
+| IT Tools | `tools.kai.coach` | Caddy route exists; exposure and DDNS coverage need verification |
 
 ## Tailscale / Private-Bound Services
 
@@ -931,10 +932,10 @@ Needs verification:
 
 | Item | Reason |
 |---|---|
-| IT Tools Caddy target | Compose maps host `8085` to container `80`, while Caddy routes to `it-tools:8085`; verify route correctness |
 | n8n UI exposure | Review separately from address-form webhook exposure |
 | Address-form webhook exposure | Webhook may need public reachability even if n8n UI should remain private |
 | Caddy routes without Authelia import | Review intended auth model for `n8n.kai.coach`, `vault.kai.coach`, `auth.kai.coach`, `tools.kai.coach`, and `address.kai.coach` |
+| DDNS coverage | `compose/ddns/compose.yaml` does not list `vault`, `auth`, or `tools`; verify DNS/DDNS coverage for those Caddy routes |
 | Docker socket mounts | Homepage and Alloy have read-only Docker socket access |
 | Host mounts | Glances, node-exporter, cAdvisor, and Alloy mount host paths |
 | VPN stack privileges | Gluetun uses `NET_ADMIN` and `/dev/net/tun` |
@@ -945,7 +946,7 @@ Needs verification:
 - Is `address.kai.coach` intentionally public-facing?
 - Should `n8n.kai.coach` expose the n8n UI, or should only selected webhook paths be reachable?
 - Does the `address.kai.coach/api/wedding-address` webhook need public access?
-- Is the IT Tools Caddy route target port correct?
+- Are `vault.kai.coach`, `auth.kai.coach`, and `tools.kai.coach` covered by DNS/DDNS outside `compose/ddns/compose.yaml`?
 - Are `grafana.kai.coach`, `home.kai.coach`, and `status.kai.coach` reachable only from trusted networks?
 - Should Vaultwarden rely only on its own authentication, or should there be additional proxy-layer authentication?
 - Where are live `.env` files backed up, if at all?
