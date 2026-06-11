@@ -27,20 +27,20 @@ The repo shows these main architectural pieces:
 
 | Stack | Main services | Purpose | Repo-configured access | Confirmed public exposure | Persistent data | Backup relevance |
 |---|---|---|---|---|---|---|
-| `arr` | Sonarr, Radarr, Prowlarr, Seerr, FlareSolverr, Bazarr, Recyclarr | Media automation and requests | Tailscale-bound admin ports; Seerr Caddy route | Seerr confirmed by `inventory/domains.md` | Config dirs, `/mnt/media` | Backup script exists; restore runbook needed |
+| `arr` | Sonarr, Radarr, Prowlarr, Seerr, FlareSolverr, Bazarr, Recyclarr | Media automation and requests | Tailscale-bound admin ports; Seerr Caddy route | Seerr confirmed by `inventory/domains.md` | Config dirs, `/mnt/media` | Backup script and restore runbook exist |
 | `authelia` | Authelia, Redis | Forward authentication | Proxy network; `auth.kai.coach` Caddy route | Internal/private; public DNS removed | Config, secrets mount, Redis data | Backup script and restore runbook exist |
 | `caddy` | Caddy | Reverse proxy / TLS | `80:80`, `443:443` | Configured edge ports; running/exposure needs verification | Caddy data/config | Backup script and restore runbook exist |
-| `ddns` | Porkbun DDNS | Dynamic DNS updates | Internal/background | Not applicable | Credential/config files | Backup script exists; restore runbook needed |
+| `ddns` | Porkbun DDNS | Dynamic DNS updates | Internal/background | Not applicable | Credential/config files | Backup script and restore runbook exist |
 | `homepage-stack` | Homepage, Glances, Uptime Kuma | Dashboard, host metrics, uptime checks | Tailscale-bound Homepage; Caddy routes for Homepage and Uptime Kuma | Internal/private via Pi-hole DNS | Homepage config, Uptime Kuma data | Backup script and restore runbook exist |
 | `immich` | Immich server, ML, Redis, Postgres | Photo library | Caddy route; no active host port | Confirmed by `inventory/domains.md` | Upload library, database, model cache | Backup script and restore runbook exist |
 | `it-tools` | IT Tools | Utility tools | `100.77.136.106:8085`; Caddy route | Internal/private via Pi-hole DNS | No volume shown | Low, based on repo config |
-| `jellyfin` | Jellyfin | Media streaming | Host network; Caddy route | Confirmed by `inventory/domains.md` | Config, `/mnt/media` | Backup script exists; restore runbook needed |
-| `logging` | Loki, Grafana, Alloy | Log collection and dashboards | Localhost ports; Grafana Caddy route | Grafana internal/private via Pi-hole DNS | Loki data, Grafana data | Backup script exists; restore runbook needed |
-| `monitoring` | Prometheus, node-exporter, cAdvisor | Metrics collection | Localhost ports; proxy network for Prometheus | No public route found | Prometheus data | Backup script exists; restore runbook needed |
+| `jellyfin` | Jellyfin | Media streaming | Host network; Caddy route | Confirmed by `inventory/domains.md` | Config, `/mnt/media` | Backup script and restore runbook exist |
+| `logging` | Loki, Grafana, Alloy | Log collection and dashboards | Localhost ports; Grafana Caddy route | Grafana internal/private via Pi-hole DNS | Loki data, Grafana data | Backup script and restore runbook exist |
+| `monitoring` | Prometheus, node-exporter, cAdvisor | Metrics collection | Localhost ports; proxy network for Prometheus | No public route found | Prometheus data | Backup script and restore runbook exist |
 | `n8n` | n8n | Workflow automation and webhooks | `n8n.kai.coach` internal route; address-form webhook route | Internal/private via Pi-hole DNS | `/srv/docker/n8n` | Backup script and restore runbook exist |
-| `speedtest-tracker` | Speedtest Tracker | Network speed history | `100.77.136.106:8082`; proxy network | Needs verification | `./config` | Backup script exists; restore runbook needed |
+| `speedtest-tracker` | Speedtest Tracker | Network speed history | `100.77.136.106:8082`; proxy network | Needs verification | `./config` | Backup script and restore runbook exist |
 | `vaultwarden` | Vaultwarden | Password manager | `vault.kai.coach` Caddy route | Internal/private via Pi-hole DNS | `./data` | Backup script and restore runbook exist |
-| `vpn` | Gluetun, qBittorrent | VPN-bound torrent client | `100.77.136.106:8080` | No | VPN config, qBittorrent config, `/mnt/media` | Backup script exists; restore runbook needed |
+| `vpn` | Gluetun, qBittorrent | VPN-bound torrent client | `100.77.136.106:8080` | No | VPN config, qBittorrent config, `/mnt/media` | Backup script and restore runbook exist |
 | `wedding-address-form` | nginx static site | Address form frontend | `address.kai.coach` route | Public address form; webhook proxies internally to n8n | Static `./html`; n8n handles webhook | Needs verification |
 
 ## Stack Details
@@ -93,7 +93,7 @@ Backup relevance:
 
 - Persistent application configs and shared media paths are present.
 - Verified backup script: `scripts/backups/backup-arr.sh`.
-- No Arr restore runbook was found.
+- Verified restore runbook: `runbooks/restore-arr.md`.
 - The backup script archives `/srv/docker/arr` to `/mnt/backupshare/arr/archive` after stopping Arr stack containers for a clean backup.
 - Arr configs may contain API keys or service credentials and must not be committed to Git.
 
@@ -242,7 +242,7 @@ Persistent volumes/bind mounts:
 Backup relevance:
 
 - Verified backup script: `scripts/backups/backup-ddns.sh`.
-- No DDNS restore runbook was found.
+- Verified restore runbook: `runbooks/restore-ddns.md`.
 - The backup script archives `/srv/docker/ddns` to `/mnt/backupshare/ddns/archive` and requires root because DDNS `.env` credentials may be permission-restricted.
 - DDNS API keys are sensitive and must not be committed to Git.
 
@@ -459,8 +459,8 @@ Backup relevance:
 
 - Jellyfin config and media storage are persistent.
 - Verified backup script: `scripts/backups/backup-jellyfin.sh`.
+- Verified restore runbook: `runbooks/restore-jellyfin.md`.
 - Verified media restore runbook: `runbooks/restore-media-drive.md`.
-- No Jellyfin-specific restore runbook was found.
 - The backup script archives `/srv/docker/jellyfin` to `/mnt/backupshare/jellyfin/archive` after stopping Jellyfin for a clean config backup.
 
 Monitoring/logging relevance:
@@ -518,7 +518,7 @@ Backup relevance:
 
 - Loki and Grafana data are persistent.
 - Verified backup script: `scripts/backups/backup-logging.sh`.
-- No Logging/Grafana/Loki/Alloy restore runbook was found.
+- Verified restore runbook: `runbooks/restore-logging.md`.
 - The backup script archives `/srv/docker/logging` to `/mnt/backupshare/logging/archive` and requires root because Grafana/Loki data and logging `.env` may be permission-restricted.
 - Grafana admin settings, logging `.env`, Loki data, and Alloy config may contain sensitive state and must not be committed to Git.
 
@@ -574,7 +574,7 @@ Backup relevance:
 
 - Prometheus data is persistent.
 - Verified backup script: `scripts/backups/backup-monitoring.sh`.
-- No Monitoring/Prometheus restore runbook was found.
+- Verified restore runbook: `runbooks/restore-monitoring.md`.
 - The backup script archives `/srv/docker/monitoring` to `/mnt/backupshare/monitoring/archive` and requires root because Prometheus data may be permission-restricted.
 
 Monitoring/logging relevance:
@@ -673,7 +673,7 @@ Backup relevance:
 
 - Config/history data is persistent.
 - Verified backup script: `scripts/backups/backup-speedtest-tracker.sh`.
-- No Speedtest Tracker restore runbook was found.
+- Verified restore runbook: `runbooks/restore-speedtest-tracker.md`.
 - The backup script archives `/srv/docker/speedtest-tracker` to `/mnt/backupshare/speedtest-tracker/archive` and requires root because config, database, and secrets may be permission-restricted.
 - Speedtest Tracker `.env`, config, and database files are sensitive and must not be committed to Git.
 
@@ -772,7 +772,7 @@ Backup relevance:
 - VPN and qBittorrent config are persistent.
 - `/mnt/media` is shared media storage.
 - Verified backup script: `scripts/backups/backup-vpn.sh`.
-- No VPN/qBittorrent/Gluetun restore runbook was found.
+- Verified restore runbook: `runbooks/restore-vpn.md`.
 - The backup script archives `/srv/docker/vpn` to `/mnt/backupshare/vpn/archive` and requires root because VPN/qBittorrent config and secrets may be permission-restricted.
 - VPN/WireGuard secrets, qBittorrent config, and related `.env` values are sensitive and must not be committed to Git.
 
@@ -922,13 +922,20 @@ Verified restore runbooks:
 
 | Area | File |
 |---|---|
+| Arr stack | `runbooks/restore-arr.md` |
 | Authelia | `runbooks/restore-authelia.md` |
 | Caddy | `runbooks/restore-caddy.md` |
+| DDNS | `runbooks/restore-ddns.md` |
 | Homepage/Uptime Kuma/Glances | `runbooks/restore-homepage-stack.md` |
 | Immich | `runbooks/restore-immich.md` |
+| Jellyfin | `runbooks/restore-jellyfin.md` |
+| Logging/Grafana/Loki/Alloy | `runbooks/restore-logging.md` |
 | Media drive | `runbooks/restore-media-drive.md` |
+| Monitoring/Prometheus | `runbooks/restore-monitoring.md` |
 | n8n | `runbooks/restore-n8n.md` |
+| Speedtest Tracker | `runbooks/restore-speedtest-tracker.md` |
 | Vaultwarden | `runbooks/restore-vaultwarden.md` |
+| VPN/qBittorrent/Gluetun | `runbooks/restore-vpn.md` |
 
 Other operational runbooks present:
 
@@ -949,25 +956,18 @@ Backup coverage summary:
 | Homepage/Uptime Kuma/Glances | `scripts/backups/backup-homepage-stack.sh` | `runbooks/restore-homepage-stack.md` | `/srv/docker/homepage-stack` archive including Homepage config and Uptime Kuma data | `homepage-config/.env`, integration secrets, notification data, and monitor data are sensitive | complete |
 | Caddy | `scripts/backups/backup-caddy.sh` | `runbooks/restore-caddy.md` | `/srv/docker/caddy` archive after Caddy config validation | TLS/certificate state and reverse-proxy config are sensitive | complete |
 | Media drive | Not in `scripts/backups/` | `runbooks/restore-media-drive.md` | Shared media storage restore documentation | Media contents may be private | partial |
-| Logging/Grafana/Loki/Alloy | `scripts/backups/backup-logging.sh` | Not found | `/srv/docker/logging` archive including Grafana and Loki data | Grafana admin settings, `.env`, Loki data, and Alloy config may be sensitive | needs runbook |
-| Arr stack | `scripts/backups/backup-arr.sh` | Not found | `/srv/docker/arr` archive excluding logs/cache/internal app backups | API keys and service credentials may exist in app configs | needs runbook |
-| VPN/qBittorrent/Gluetun | `scripts/backups/backup-vpn.sh` | Not found | `/srv/docker/vpn` archive excluding logs/lockfiles/history | VPN/WireGuard secrets and qBittorrent config are sensitive | needs runbook |
-| Jellyfin | `scripts/backups/backup-jellyfin.sh` | Not found | `/srv/docker/jellyfin` config archive excluding cache/log/transcodes | User/server metadata and config are sensitive; media drive restore is separate | needs runbook |
-| Speedtest Tracker | `scripts/backups/backup-speedtest-tracker.sh` | Not found | `/srv/docker/speedtest-tracker` archive excluding logs | `.env`, app config, and database/history may be sensitive | needs runbook |
-| Monitoring/Prometheus | `scripts/backups/backup-monitoring.sh` | Not found | `/srv/docker/monitoring` archive excluding Prometheus lock/active query files | Prometheus history and host metadata may be sensitive | needs runbook |
-| DDNS | `scripts/backups/backup-ddns.sh` | Not found | `/srv/docker/ddns` archive excluding logs | Porkbun API credentials are sensitive | needs runbook |
+| Logging/Grafana/Loki/Alloy | `scripts/backups/backup-logging.sh` | `runbooks/restore-logging.md` | `/srv/docker/logging` archive including Grafana and Loki data | Grafana admin settings, `.env`, Loki data, and Alloy config may be sensitive | complete |
+| Arr stack | `scripts/backups/backup-arr.sh` | `runbooks/restore-arr.md` | `/srv/docker/arr` archive excluding logs/cache/internal app backups | API keys and service credentials may exist in app configs | complete |
+| VPN/qBittorrent/Gluetun | `scripts/backups/backup-vpn.sh` | `runbooks/restore-vpn.md` | `/srv/docker/vpn` archive excluding logs/lockfiles/history | VPN/WireGuard secrets and qBittorrent config are sensitive | complete |
+| Jellyfin | `scripts/backups/backup-jellyfin.sh` | `runbooks/restore-jellyfin.md` | `/srv/docker/jellyfin` config archive excluding cache/log/transcodes | User/server metadata and config are sensitive; media drive restore is separate | complete |
+| Speedtest Tracker | `scripts/backups/backup-speedtest-tracker.sh` | `runbooks/restore-speedtest-tracker.md` | `/srv/docker/speedtest-tracker` archive excluding logs | `.env`, app config, and database/history may be sensitive | complete |
+| Monitoring/Prometheus | `scripts/backups/backup-monitoring.sh` | `runbooks/restore-monitoring.md` | `/srv/docker/monitoring` archive excluding Prometheus lock/active query files | Prometheus history and host metadata may be sensitive | complete |
+| DDNS | `scripts/backups/backup-ddns.sh` | `runbooks/restore-ddns.md` | `/srv/docker/ddns` archive excluding logs | Porkbun API credentials are sensitive | complete |
 
 ## Services Needing Backup / Restore Documentation
 
 | Area | Reason |
 |---|---|
-| Logging/Grafana/Loki/Alloy restore runbook | Backup script exists, but no matching restore runbook was found. |
-| Monitoring/Prometheus restore runbook | Backup script exists, but no matching restore runbook was found. |
-| Arr stack restore runbook | Backup script exists, but no matching restore runbook was found. |
-| Jellyfin restore runbook | Backup script exists, but no Jellyfin-specific restore runbook was found; media drive restore is documented separately. |
-| VPN/qBittorrent/Gluetun restore runbook | Backup script exists, but no matching restore runbook was found. |
-| Speedtest Tracker restore runbook | Backup script exists, but no matching restore runbook was found. |
-| DDNS restore runbook | Backup script exists, but no matching restore runbook was found; restore should cover Porkbun credential handling without exposing secrets. |
 | Pi-hole export/restore | Internal DNS is an access dependency, but no Pi-hole export/restore documentation was found. |
 | Proxmox host/VM/LXC backup strategy | Broader host and VM/LXC backup strategy is outside the Docker stack scripts and needs documentation. |
 | Full OptiPlex host rebuild validation | Rebuild runbook exists, but periodic end-to-end validation status needs documentation. |
