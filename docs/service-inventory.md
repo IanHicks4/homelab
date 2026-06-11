@@ -28,17 +28,17 @@ The repo shows these main architectural pieces:
 | Stack | Main services | Purpose | Repo-configured access | Confirmed public exposure | Persistent data | Backup relevance |
 |---|---|---|---|---|---|---|
 | `arr` | Sonarr, Radarr, Prowlarr, Seerr, FlareSolverr, Bazarr, Recyclarr | Media automation and requests | Tailscale-bound admin ports; Seerr Caddy route | Seerr confirmed by `inventory/domains.md` | Config dirs, `/mnt/media` | Needs backup docs |
-| `authelia` | Authelia, Redis | Forward authentication | Proxy network; `auth.kai.coach` Caddy route | Internal/private; public DNS removed | Config, secrets mount, Redis data | Needs backup docs |
+| `authelia` | Authelia, Redis | Forward authentication | Proxy network; `auth.kai.coach` Caddy route | Internal/private; public DNS removed | Config, secrets mount, Redis data | Backup script and restore runbook exist |
 | `caddy` | Caddy | Reverse proxy / TLS | `80:80`, `443:443` | Configured edge ports; running/exposure needs verification | Caddy data/config | Restore runbook exists |
 | `ddns` | Porkbun DDNS | Dynamic DNS updates | Internal/background | Not applicable | No volume shown | Needs operational restore notes |
 | `gamebuilds` | Filebrowser | File access for game builds | `100.77.136.106:8088` | No | Database/settings, game-build files | Needs backup docs |
-| `homepage-stack` | Homepage, Glances, Uptime Kuma | Dashboard, host metrics, uptime checks | Tailscale-bound Homepage; Caddy routes for Homepage and Uptime Kuma | Internal/private via Pi-hole DNS | Homepage config, Uptime Kuma data | Needs backup docs |
+| `homepage-stack` | Homepage, Glances, Uptime Kuma | Dashboard, host metrics, uptime checks | Tailscale-bound Homepage; Caddy routes for Homepage and Uptime Kuma | Internal/private via Pi-hole DNS | Homepage config, Uptime Kuma data | Backup script and restore runbook exist |
 | `immich` | Immich server, ML, Redis, Postgres | Photo library | Caddy route; no active host port | Confirmed by `inventory/domains.md` | Upload library, database, model cache | Backup script and restore runbook exist |
 | `it-tools` | IT Tools | Utility tools | `100.77.136.106:8085`; Caddy route | Internal/private via Pi-hole DNS | No volume shown | Low, based on repo config |
 | `jellyfin` | Jellyfin | Media streaming | Host network; Caddy route | Confirmed by `inventory/domains.md` | Config, `/mnt/media` | Needs service-specific backup docs |
 | `logging` | Loki, Grafana, Alloy | Log collection and dashboards | Localhost ports; Grafana Caddy route | Grafana internal/private via Pi-hole DNS | Loki data, Grafana data | Needs backup docs |
 | `monitoring` | Prometheus, node-exporter, cAdvisor | Metrics collection | Localhost ports; proxy network for Prometheus | No public route found | Prometheus data | Needs backup docs |
-| `n8n` | n8n | Workflow automation and webhooks | `n8n.kai.coach` internal route; address-form webhook route | Internal/private via Pi-hole DNS | `/srv/docker/n8n` | Needs backup docs |
+| `n8n` | n8n | Workflow automation and webhooks | `n8n.kai.coach` internal route; address-form webhook route | Internal/private via Pi-hole DNS | `/srv/docker/n8n` | Backup script and restore runbook exist |
 | `speedtest-tracker` | Speedtest Tracker | Network speed history | `100.77.136.106:8082`; proxy network | Needs verification | `./config` | Needs backup docs |
 | `vaultwarden` | Vaultwarden | Password manager | `vault.kai.coach` Caddy route | Internal/private via Pi-hole DNS | `./data` | Backup script and restore runbook exist |
 | `vpn` | Gluetun, qBittorrent | VPN-bound torrent client | `100.77.136.106:8080` | No | VPN config, qBittorrent config, `/mnt/media` | Needs backup docs |
@@ -142,7 +142,10 @@ Persistent volumes/bind mounts:
 Backup relevance:
 
 - Config, mounted secret files, and Redis data are persistent.
-- No Authelia restore runbook was found.
+- Verified backup script: `scripts/backups/backup-authelia.sh`.
+- Verified restore runbook: `runbooks/restore-authelia.md`.
+- The backup script archives `/srv/docker/authelia` to `/mnt/backupshare/authelia/archive` and requires root because Authelia secrets and Redis data may be permission-restricted.
+- Authelia secrets, including `jwt_secret`, `session_secret`, and `storage_encryption_key`, must be restored exactly from backup.
 
 Monitoring/logging relevance:
 
@@ -153,6 +156,7 @@ Security notes:
 - Secret file paths are referenced for JWT, session, and storage encryption keys.
 - The secrets mount is read-only.
 - Do not treat example env files as proof of live secret values.
+- `config/.env` and files under `secrets/` are sensitive and must not be committed to Git.
 - Authelia should remain internal/private even if a Caddy route is configured.
 
 ### `caddy`
@@ -337,7 +341,10 @@ Persistent volumes/bind mounts:
 Backup relevance:
 
 - Homepage config and Uptime Kuma data are persistent.
-- No restore runbook was found.
+- Verified backup script: `scripts/backups/backup-homepage-stack.sh`.
+- Verified restore runbook: `runbooks/restore-homepage-stack.md`.
+- The backup script archives `/srv/docker/homepage-stack` to `/mnt/backupshare/homepage-stack/archive` and requires root because Homepage env/config and Uptime Kuma data may be permission-restricted.
+- `homepage-config/.env` and Uptime Kuma data are sensitive and must not be committed to Git.
 
 Monitoring/logging relevance:
 
@@ -350,6 +357,7 @@ Security notes:
 - Runtime inspection and repo references confirm Docker socket mounts for Homepage and Glances in `compose/homepage-stack/compose.yaml`.
 - Homepage read-only Docker socket access is intentionally retained for Docker/container dashboard widgets.
 - Glances Docker socket and host-level read-only mounts are intentionally retained for host/process metrics consumed by Homepage widgets, including Opti CPU and top-process visibility.
+- Homepage integration secrets and Uptime Kuma notification/monitor data are sensitive.
 - Treat Docker socket access as high-trust even when mounted read-only; this is an accepted risk, not an immediate removal task.
 - Homepage and Glances must remain internal/private and should not be publicly exposed.
 - Caddy routes for Homepage and Uptime Kuma import Authelia forward auth.
@@ -395,6 +403,7 @@ Backup relevance:
 - Verified backup script: `scripts/backups/backup-immich.sh`.
 - Verified restore runbook: `runbooks/restore-immich.md`.
 - The backup script references library, Postgres dump, and compose backup paths.
+- Immich `.env`, media library contents, and database metadata are sensitive and must not be committed to Git.
 
 Monitoring/logging relevance:
 
@@ -644,7 +653,9 @@ Persistent volumes/bind mounts:
 Backup relevance:
 
 - n8n persistent data may include workflows and credentials.
-- No restore runbook was found.
+- Verified backup script: `scripts/backups/backup-n8n.sh`.
+- Verified restore runbook: `runbooks/restore-n8n.md`.
+- The backup script archives `/srv/docker/n8n` to `/mnt/backupshare/n8n/archive` after stopping the `n8n` container for a clean SQLite backup.
 
 Monitoring/logging relevance:
 
@@ -653,6 +664,7 @@ Monitoring/logging relevance:
 Security notes:
 
 - Treat n8n persistent data as sensitive.
+- n8n workflows and credentials are sensitive and must not be committed to Git.
 - Caddy route `n8n.kai.coach` does not import the Authelia forward-auth snippet.
 - n8n UI/admin access should remain internal/private.
 - Public access should be limited to the address-form webhook path through `address.kai.coach/api/wedding-address`.
@@ -734,6 +746,8 @@ Backup relevance:
 
 - Verified backup script: `scripts/backups/backup-vault.sh`.
 - Verified restore runbook: `runbooks/restore-vaultwarden.md`.
+- The backup script archives Vaultwarden data and syncs the live data directory under `/mnt/backupshare/vaultwarden`.
+- Vaultwarden data and environment-derived admin configuration are sensitive and must not be committed to Git.
 
 Monitoring/logging relevance:
 
@@ -902,29 +916,48 @@ The following services are configured to bind to `100.77.136.106`, which invento
 
 ## Existing Backup And Restore Evidence
 
+Backup scripts are under `scripts/backups/`. Restore runbooks are under `runbooks/`.
+
+Some backup scripts require root because they archive sensitive or permission-restricted data. Sensitive files such as `.env` files, Authelia secrets, n8n credentials/workflows, Vaultwarden data, and Homepage integration secrets must not be committed to Git.
+
 Verified backup scripts:
 
 | Service | File |
 |---|---|
+| Authelia | `scripts/backups/backup-authelia.sh` |
+| Homepage/Uptime Kuma/Glances | `scripts/backups/backup-homepage-stack.sh` |
 | Immich | `scripts/backups/backup-immich.sh` |
+| n8n | `scripts/backups/backup-n8n.sh` |
 | Vaultwarden | `scripts/backups/backup-vault.sh` |
 
 Verified restore runbooks:
 
 | Area | File |
 |---|---|
+| Authelia | `runbooks/restore-authelia.md` |
 | Caddy | `runbooks/restore-caddy.md` |
+| Homepage/Uptime Kuma/Glances | `runbooks/restore-homepage-stack.md` |
 | Immich | `runbooks/restore-immich.md` |
 | Media drive | `runbooks/restore-media-drive.md` |
+| n8n | `runbooks/restore-n8n.md` |
 | Vaultwarden | `runbooks/restore-vaultwarden.md` |
+
+Backup coverage summary:
+
+| Service/stack | Backup script | Restore runbook | Status | Notes |
+|---|---|---|---|---|
+| Immich | `scripts/backups/backup-immich.sh` | `runbooks/restore-immich.md` | Covered | Backs up Postgres dump, library sync, and compose backup paths; scheduling needs verification from operations. |
+| Vaultwarden | `scripts/backups/backup-vault.sh` | `runbooks/restore-vaultwarden.md` | Covered | Archives and syncs Vaultwarden data; sensitive vault data must not be committed. |
+| n8n | `scripts/backups/backup-n8n.sh` | `runbooks/restore-n8n.md` | Covered | Archives `/srv/docker/n8n`; workflows and credentials are sensitive; UI remains internal/private except the public address-form webhook path. |
+| Authelia | `scripts/backups/backup-authelia.sh` | `runbooks/restore-authelia.md` | Covered | Archives config, secrets, and Redis data; backup requires root; secrets must be restored exactly. |
+| Homepage/Uptime Kuma/Glances | `scripts/backups/backup-homepage-stack.sh` | `runbooks/restore-homepage-stack.md` | Covered | Archives Homepage config and Uptime Kuma data; backup requires root; Docker socket-backed services are accepted risk and internal/private. |
+| Caddy | Not found | `runbooks/restore-caddy.md` | Restore runbook only | Caddy data/config are persistent; no dedicated backup script found under `scripts/backups/`. |
+| Media drive | Not applicable in `scripts/backups/` | `runbooks/restore-media-drive.md` | Restore runbook only | Shared media storage restore documented separately. |
 
 ## Services Needing Backup / Restore Documentation
 
 | Service/stack | Reason |
 |---|---|
-| Authelia | Auth config, mounted secrets, Redis data |
-| n8n | Persistent workflows and likely credential data |
-| Homepage/Uptime Kuma | Dashboard config and monitoring history |
 | Logging | Grafana data and Loki data |
 | Monitoring | Prometheus data |
 | Arr stack | Persistent service configs |
@@ -998,5 +1031,5 @@ All Docker-socket-backed services must remain internal/private and should not be
 - Should Vaultwarden rely only on its own authentication, or should there be additional proxy-layer authentication?
 - Where are live `.env` files backed up, if at all?
 - Does Uptime Kuma monitor all public and critical private services?
-- Are Prometheus, Grafana, Loki, Authelia, n8n, and Arr configs intentionally excluded from current backup scripts?
+- Are Prometheus, Grafana, Loki, and Arr configs intentionally excluded from current backup scripts?
 - Should `inventory/services.md` link to this inventory to reduce documentation drift?
