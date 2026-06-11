@@ -38,11 +38,11 @@ The repo shows these main architectural pieces:
 | `jellyfin` | Jellyfin | Media streaming | Host network; Caddy route | Confirmed by `inventory/domains.md` | Config, `/mnt/media` | Needs service-specific backup docs |
 | `logging` | Loki, Grafana, Alloy | Log collection and dashboards | Localhost ports; Grafana Caddy route | Needs verification | Loki data, Grafana data | Needs backup docs |
 | `monitoring` | Prometheus, node-exporter, cAdvisor | Metrics collection | Localhost ports; proxy network for Prometheus | No public route found | Prometheus data | Needs backup docs |
-| `n8n` | n8n | Workflow automation and webhooks | `n8n.kai.coach` route; address-form webhook route | Needs verification | `/srv/docker/n8n` | Needs backup docs |
+| `n8n` | n8n | Workflow automation and webhooks | `n8n.kai.coach` internal route; address-form webhook route | Internal/private via Pi-hole DNS | `/srv/docker/n8n` | Needs backup docs |
 | `speedtest-tracker` | Speedtest Tracker | Network speed history | `100.77.136.106:8082`; proxy network | Needs verification | `./config` | Needs backup docs |
 | `vaultwarden` | Vaultwarden | Password manager | `vault.kai.coach` Caddy route | Internal/private via Pi-hole DNS | `./data` | Backup script and restore runbook exist |
 | `vpn` | Gluetun, qBittorrent | VPN-bound torrent client | `100.77.136.106:8080` | No | VPN config, qBittorrent config, `/mnt/media` | Needs backup docs |
-| `wedding-address-form` | nginx static site | Address form frontend | `address.kai.coach` route | Needs verification | Static `./html`; n8n handles webhook | Needs verification |
+| `wedding-address-form` | nginx static site | Address form frontend | `address.kai.coach` route | Public address form; webhook proxies internally to n8n | Static `./html`; n8n handles webhook | Needs verification |
 
 ## Stack Details
 
@@ -241,8 +241,10 @@ Security notes:
 
 - API key environment variable names are referenced.
 - No real secret values are included in this document.
-- `compose/ddns/compose.yaml` manages only these subdomains: `jellyfin`, `seerr`, `immich`, `home`, `status`, `grafana`, `n8n`, and `address`.
+- `compose/ddns/compose.yaml` manages only these subdomains for public DNS updates: `jellyfin`, `seerr`, `immich`, `home`, `status`, `grafana`, and `address`.
 - `vault.kai.coach`, `auth.kai.coach`, and `tools.kai.coach` are intentionally handled by Pi-hole internal DNS and are not managed by the Porkbun DDNS container.
+- `n8n.kai.coach` is also intentionally handled by Pi-hole internal DNS on both the Pi 4 and Pi-hole LXC, points to `100.77.136.106`, and is not public-Porkbun-DNS-managed.
+- The public Porkbun DNS record for `n8n.kai.coach` was removed; current public DNS no longer resolves.
 - `auth.kai.coach` previously had a manual/static Porkbun DNS record and was externally reachable.
 - The `auth.kai.coach` Porkbun DNS record was removed; current public DNS no longer resolves.
 - `vault.kai.coach` and `tools.kai.coach` also do not publicly resolve based on the current DNS check.
@@ -615,9 +617,13 @@ Ports and routes:
 
 Access classification:
 
-- n8n UI access through `n8n.kai.coach` needs verification.
-- Address-form webhook exposure through `address.kai.coach/api/wedding-address` is a separate concern and also needs verification.
-- Do not infer public exposure from the Caddy routes alone.
+- n8n UI/admin access through `n8n.kai.coach` is internal/private only and should not be publicly reachable.
+- `n8n.kai.coach` is resolved internally by Pi-hole on both the Pi 4 and Pi-hole LXC.
+- Internal DNS points `n8n.kai.coach` to `100.77.136.106`.
+- The public Porkbun DNS record for `n8n.kai.coach` was removed; current public DNS no longer resolves.
+- The n8n container is not directly host-published.
+- `address.kai.coach` remains public and points to the WAN IP.
+- `address.kai.coach/api/wedding-address` remains the public address-form webhook path and proxies internally to `n8n:5678`.
 
 Persistent volumes/bind mounts:
 
@@ -636,7 +642,8 @@ Security notes:
 
 - Treat n8n persistent data as sensitive.
 - Caddy route `n8n.kai.coach` does not import the Authelia forward-auth snippet.
-- The address-form webhook path may be intentionally reachable even if the n8n UI should remain private.
+- n8n UI/admin access should remain internal/private.
+- Public access should be limited to the address-form webhook path through `address.kai.coach/api/wedding-address`.
 
 ### `speedtest-tracker`
 
@@ -798,9 +805,9 @@ Ports and routes:
 
 Access classification:
 
-- Needs verification.
-- UI exposure for the static address form and webhook exposure to n8n should be reviewed separately.
-- Do not infer public exposure from the Caddy route alone.
+- `address.kai.coach` remains public and points to the WAN IP.
+- `address.kai.coach/api/wedding-address` proxies internally to `n8n:5678`.
+- Public address-form access is separate from n8n UI/admin access, which should not be publicly reachable.
 
 Persistent volumes/bind mounts:
 
@@ -817,22 +824,23 @@ Monitoring/logging relevance:
 
 Security notes:
 
-- Public/private intent needs verification.
-- The webhook path may expose n8n workflow execution even if n8n UI access is restricted.
+- `address.kai.coach` is intentionally public.
+- The webhook path exposes selected n8n workflow execution through `address.kai.coach/api/wedding-address`, while n8n UI/admin access remains internal/private.
 
 ## Confirmed Public-Facing Services
 
-Confirmed by `inventory/domains.md`:
+Confirmed by `inventory/domains.md` or current DNS/access decision:
 
 | Service | Domain | Evidence |
 |---|---|---|
 | Jellyfin | `jellyfin.kai.coach` | Listed under public domains and configured in Caddy |
 | Seerr | `seerr.kai.coach` | Listed under public domains and configured in Caddy |
 | Immich | `immich.kai.coach` | Listed under public domains and configured in Caddy |
+| Wedding address form | `address.kai.coach` | Remains public and points to the WAN IP; webhook path proxies internally to n8n |
 
-## Configured Routes Requiring Exposure Verification
+## Configured Routes With Exposure Notes
 
-These routes are configured in the repo, but public exposure is not confirmed by this inventory:
+These routes are configured in the repo and have internal/private or route-specific exposure notes:
 
 | Service | Domain / route | Reason verification is needed |
 |---|---|---|
@@ -840,9 +848,9 @@ These routes are configured in the repo, but public exposure is not confirmed by
 | Homepage | `home.kai.coach` | Inventory marks restricted/internal |
 | Uptime Kuma | `status.kai.coach` | Inventory marks restricted/internal |
 | Grafana | `grafana.kai.coach` | Uses internal TLS and Authelia forward auth |
-| n8n UI | `n8n.kai.coach` | UI access needs separate verification |
-| Address-form webhook | `address.kai.coach/api/wedding-address` | Webhook exposure needs separate verification from n8n UI access |
-| Wedding address form | `address.kai.coach` | Caddy route exists, exposure intent needs verification |
+| n8n UI | `n8n.kai.coach` | Internal/private via Pi-hole DNS on Pi 4 and Pi-hole LXC; points to `100.77.136.106`; public Porkbun DNS removed |
+| Address-form webhook | `address.kai.coach/api/wedding-address` | Public webhook path on `address.kai.coach`; proxies internally to `n8n:5678` |
+| Wedding address form | `address.kai.coach` | Public address form; points to WAN IP |
 | IT Tools | `tools.kai.coach` | Internal/private via Pi-hole DNS; Caddy route remains valid for internal access; not Porkbun-DDNS-managed |
 | Vaultwarden | `vault.kai.coach` | Internal/private via Pi-hole DNS; Caddy route remains valid for internal access; not Porkbun-DDNS-managed |
 
@@ -946,11 +954,11 @@ Needs verification:
 
 | Item | Reason |
 |---|---|
-| n8n UI exposure | Review separately from address-form webhook exposure |
-| Address-form webhook exposure | Webhook may need public reachability even if n8n UI should remain private |
-| Caddy routes without Authelia import | Review intended auth model for `n8n.kai.coach`, `vault.kai.coach`, `tools.kai.coach`, and `address.kai.coach` |
-| Internal DNS routes | `auth.kai.coach`, `vault.kai.coach`, and `tools.kai.coach` are intentionally internal/private through Pi-hole DNS; Caddy routes remain valid for internal access |
-| Non-DDNS Caddy routes | `vault.kai.coach`, `auth.kai.coach`, and `tools.kai.coach` are configured in Caddy but are not managed by the Porkbun DDNS container |
+| n8n UI exposure | `n8n.kai.coach` is internal/private only; UI/admin access should not be publicly reachable |
+| Address-form webhook exposure | `address.kai.coach` remains public and `/api/wedding-address` proxies internally to `n8n:5678` |
+| Caddy routes without Authelia import | Review intended auth model for `vault.kai.coach`, `tools.kai.coach`, and `address.kai.coach` |
+| Internal DNS routes | `auth.kai.coach`, `vault.kai.coach`, `tools.kai.coach`, and `n8n.kai.coach` are intentionally internal/private through Pi-hole DNS; Caddy routes remain valid for internal access |
+| Non-DDNS Caddy routes | `vault.kai.coach`, `auth.kai.coach`, `tools.kai.coach`, and `n8n.kai.coach` are configured in Caddy but are not managed by the Porkbun DDNS container |
 | Docker socket mounts | Homepage and Alloy have read-only Docker socket access |
 | Host mounts | Glances, node-exporter, cAdvisor, and Alloy mount host paths |
 | VPN stack privileges | Gluetun uses `NET_ADMIN` and `/dev/net/tun` |
@@ -958,9 +966,7 @@ Needs verification:
 ## Open Questions / Human Verification Needed
 
 - Which configured stacks are currently running in production?
-- Is `address.kai.coach` intentionally public-facing?
-- Should `n8n.kai.coach` expose the n8n UI, or should only selected webhook paths be reachable?
-- Does the `address.kai.coach/api/wedding-address` webhook need public access?
+- Which trusted client networks should use Pi-hole internal DNS for `n8n.kai.coach`?
 - Which trusted client networks should use Pi-hole internal DNS for `auth.kai.coach`, `vault.kai.coach`, and `tools.kai.coach`?
 - Are `grafana.kai.coach`, `home.kai.coach`, and `status.kai.coach` reachable only from trusted networks?
 - Should Vaultwarden rely only on its own authentication, or should there be additional proxy-layer authentication?
