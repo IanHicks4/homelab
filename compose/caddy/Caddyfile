@@ -72,5 +72,5 @@ auth.kai.coach {
 
 tools.kai.coach {
 	tls internal
-	reverse_proxy it-tools:8085
+	reverse_proxy it-tools:80
 }
