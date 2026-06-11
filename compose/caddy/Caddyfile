@@ -1,0 +1,76 @@
+{
+	email iehianhicks@proton.me
+}
+
+jellyfin.kai.coach {
+	encode zstd gzip
+	reverse_proxy host.docker.internal:8096
+}
+
+seerr.kai.coach {
+	encode zstd gzip
+	reverse_proxy seerr:5055
+}
+
+vault.kai.coach {
+        tls internal
+	reverse_proxy vaultwarden:80
+}
+
+immich.kai.coach {
+        encode zstd gzip
+        reverse_proxy immich-server:2283
+}
+
+(auth) {
+    forward_auth authelia:9091 {
+        uri /api/authz/forward-auth
+        copy_headers Remote-User Remote-Groups Remote-Email Remote-Name
+    }
+}
+
+home.kai.coach {
+        tls internal
+        import auth
+        reverse_proxy homepage:3000
+}
+
+status.kai.coach {
+        tls internal
+        import auth
+        reverse_proxy uptime-kuma:3001
+}
+
+grafana.kai.coach {
+        tls internal
+        import auth
+        reverse_proxy grafana:3000
+}
+
+n8n.kai.coach {
+        tls internal 
+        reverse_proxy n8n:5678
+}
+
+address.kai.coach {
+        encode zstd gzip
+
+        handle /api/wedding-address {
+	        rewrite * /webhook/wedding-address
+                reverse_proxy n8n:5678
+        }
+
+        handle {
+                reverse_proxy wedding-address-form:80
+        }
+}
+
+auth.kai.coach {
+        tls internal
+        reverse_proxy authelia:9091
+}
+
+tools.kai.coach {
+	tls internal
+	reverse_proxy it-tools:8085
+}
