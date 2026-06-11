@@ -39,7 +39,6 @@ The repo shows these main architectural pieces:
 | `logging` | Loki, Grafana, Alloy | Log collection and dashboards | Localhost ports; Grafana Caddy route | Needs verification | Loki data, Grafana data | Needs backup docs |
 | `monitoring` | Prometheus, node-exporter, cAdvisor | Metrics collection | Localhost ports; proxy network for Prometheus | No public route found | Prometheus data | Needs backup docs |
 | `n8n` | n8n | Workflow automation and webhooks | `n8n.kai.coach` route; address-form webhook route | Needs verification | `/srv/docker/n8n` | Needs backup docs |
-| `onlyoffice` | OnlyOffice Document Server | Document editing service | `8082:80` on all interfaces | Needs verification | No volume shown | Needs verification |
 | `speedtest-tracker` | Speedtest Tracker | Network speed history | `100.77.136.106:8082`; proxy network | Needs verification | `./config` | Needs backup docs |
 | `vaultwarden` | Vaultwarden | Password manager | `vault.kai.coach` Caddy route | No; inventory marks restricted/internal | `./data` | Backup script and restore runbook exist |
 | `vpn` | Gluetun, qBittorrent | VPN-bound torrent client | `100.77.136.106:8080` | No | VPN config, qBittorrent config, `/mnt/media` | Needs backup docs |
@@ -629,49 +628,6 @@ Security notes:
 - Caddy route `n8n.kai.coach` does not import the Authelia forward-auth snippet.
 - The address-form webhook path may be intentionally reachable even if the n8n UI should remain private.
 
-### `onlyoffice`
-
-Status:
-
-- Configured in repo: yes.
-- Confirmed running in production: needs verification.
-
-Main services:
-
-- `onlyoffice`
-
-Purpose:
-
-- Document server.
-
-Ports and routes:
-
-- `8082:80`
-
-Access classification:
-
-- Needs verification.
-- Compose binds `8082:80` without a specific host IP, which generally means all interfaces unless constrained elsewhere.
-
-Persistent volumes/bind mounts:
-
-- None shown.
-
-Backup relevance:
-
-- No persistent volume is shown.
-- Needs verification whether this deployment is intentionally stateless.
-
-Monitoring/logging relevance:
-
-- Docker logs should be collected by Alloy if the container is running.
-
-Security notes:
-
-- Security review item: `8082:80` is configured as an all-interface binding in compose.
-- `JWT_ENABLED=false` is configured.
-- Intended exposure and integration need human verification.
-
 ### `speedtest-tracker`
 
 Status:
@@ -943,7 +899,12 @@ Verified restore runbooks:
 | Gamebuilds | Database/settings and file storage |
 | DDNS | Infrastructure dependency and credential restore handling |
 | Wedding address form | Needs verification whether all state is static or handled by n8n |
-| OnlyOffice | Needs verification whether intentionally stateless |
+
+## Retired Services
+
+| Service | Reason | Retirement note |
+|---|---|---|
+| OnlyOffice | Unused service; Compose file exposed `8082:80` on all interfaces if started | Archived under `/srv/docker/_retired` and removed from active repo inventory |
 
 ## Monitoring And Logging Notes
 
@@ -970,8 +931,6 @@ Needs verification:
 
 | Item | Reason |
 |---|---|
-| OnlyOffice `8082:80` binding | Compose binds to all interfaces unless constrained elsewhere; review intended exposure |
-| OnlyOffice `JWT_ENABLED=false` | Review whether this is acceptable for the intended integration |
 | IT Tools Caddy target | Compose maps host `8085` to container `80`, while Caddy routes to `it-tools:8085`; verify route correctness |
 | n8n UI exposure | Review separately from address-form webhook exposure |
 | Address-form webhook exposure | Webhook may need public reachability even if n8n UI should remain private |
@@ -987,7 +946,6 @@ Needs verification:
 - Should `n8n.kai.coach` expose the n8n UI, or should only selected webhook paths be reachable?
 - Does the `address.kai.coach/api/wedding-address` webhook need public access?
 - Is the IT Tools Caddy route target port correct?
-- Is OnlyOffice intentionally reachable on all interfaces via `8082:80`?
 - Are `grafana.kai.coach`, `home.kai.coach`, and `status.kai.coach` reachable only from trusted networks?
 - Should Vaultwarden rely only on its own authentication, or should there be additional proxy-layer authentication?
 - Where are live `.env` files backed up, if at all?
