@@ -1,0 +1,21 @@
+services:
+  n8n:
+    image: n8nio/n8n
+    container_name: n8n
+    restart: unless-stopped
+#    ports:
+#      - "100.77.136.106:5678:5678"
+    environment:
+      - N8N_HOST=n8n.kai.coach
+      - WEBHOOK_URL=https://n8n.kai.coach/
+      - N8N_PROTOCOL=https
+      - N8N_PROXY_HOPS=1
+    volumes:
+      - /srv/docker/n8n:/home/node/.n8n
+    networks:
+      - default
+      - proxy
+
+networks:
+  proxy:
+    external: true

@@ -1,6 +1,7 @@
 .env
 **/.env
 *.env
+**/*.env
 *.db
 *.sqlite
 *.sqlite3
@@ -12,3 +13,5 @@ postgres/
 backups/docker/
 backups/database/
 node_modules/
+!*.env.example
+!**/*.env.example

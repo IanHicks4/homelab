@@ -1,0 +1,18 @@
+services:
+  speedtest-tracker:
+    image: ghcr.io/linuxserver/speedtest-tracker:latest
+    container_name: speedtest-tracker
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./config:/config
+    ports:
+      - "100.77.136.106:8082:80"
+    networks:
+      - default
+      - proxy
+
+networks:
+  proxy:
+    external: true
