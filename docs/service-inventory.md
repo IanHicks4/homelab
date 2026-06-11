@@ -347,8 +347,11 @@ Monitoring/logging relevance:
 
 Security notes:
 
-- Homepage has read-only Docker socket access.
-- Glances has host-level read-only mounts and host networking.
+- Runtime inspection and repo references confirm Docker socket mounts for Homepage and Glances in `compose/homepage-stack/compose.yaml`.
+- Homepage read-only Docker socket access is intentionally retained for Docker/container dashboard widgets.
+- Glances Docker socket and host-level read-only mounts are intentionally retained for host/process metrics consumed by Homepage widgets, including Opti CPU and top-process visibility.
+- Treat Docker socket access as high-trust even when mounted read-only; this is an accepted risk, not an immediate removal task.
+- Homepage and Glances must remain internal/private and should not be publicly exposed.
 - Caddy routes for Homepage and Uptime Kuma import Authelia forward auth.
 
 ### `immich`
@@ -548,7 +551,10 @@ Monitoring/logging relevance:
 Security notes:
 
 - Grafana admin password is referenced through environment configuration; no value is included here.
-- Alloy has read-only Docker socket and host journal access.
+- Runtime inspection and repo references confirm Alloy Docker socket use in `compose/logging/compose.yaml`.
+- Alloy read-only Docker socket access is intentionally retained for Docker log discovery and labeling.
+- Treat Docker socket access as high-trust even when mounted read-only; this is an accepted risk, not an immediate removal task.
+- Alloy and the logging admin surfaces must remain internal/private and should not be publicly exposed.
 
 ### `monitoring`
 
@@ -956,6 +962,20 @@ Needs verification:
 - Whether all expected running containers are visible to Alloy.
 - Whether the configured monitoring/logging stack is currently running.
 
+## Docker Socket Mount Risk
+
+Runtime inspection confirmed Docker socket mounts in Homepage, Glances, and Alloy. Repo references also confirm Docker socket use in `compose/homepage-stack/compose.yaml` and `compose/logging/compose.yaml`.
+
+Docker socket access is high-trust even when mounted read-only. These mounts are accepted risks for current functionality, not immediate removal tasks.
+
+| Service | Purpose | Risk decision |
+|---|---|---|
+| Homepage | Docker/container dashboard widgets | Accepted risk; intentionally retained |
+| Glances | Host/process metrics consumed by Homepage widgets, including Opti CPU and top-process visibility | Accepted risk; intentionally retained |
+| Alloy | Docker log discovery and labeling | Accepted risk; intentionally retained |
+
+All Docker-socket-backed services must remain internal/private and should not be publicly exposed.
+
 ## Security Review Items
 
 | Item | Reason |
@@ -965,8 +985,8 @@ Needs verification:
 | Caddy routes without Authelia import | Review intended auth model for `vault.kai.coach`, `tools.kai.coach`, and `address.kai.coach` |
 | Internal DNS routes | `auth.kai.coach`, `vault.kai.coach`, `tools.kai.coach`, `n8n.kai.coach`, `home.kai.coach`, `status.kai.coach`, and `grafana.kai.coach` are intentionally internal/private through Pi-hole DNS; Caddy routes remain valid for internal access |
 | Non-DDNS Caddy routes | `vault.kai.coach`, `auth.kai.coach`, `tools.kai.coach`, `n8n.kai.coach`, `home.kai.coach`, `status.kai.coach`, and `grafana.kai.coach` are configured in Caddy but are not managed by the Porkbun DDNS container |
-| Docker socket mounts | Homepage and Alloy have read-only Docker socket access |
-| Host mounts | Glances, node-exporter, cAdvisor, and Alloy mount host paths |
+| Docker socket mounts | Homepage, Glances, and Alloy use read-only Docker socket mounts as accepted high-trust risks for dashboard widgets, host/process metrics, and Docker log discovery |
+| Host mounts | Glances, node-exporter, cAdvisor, and Alloy mount host paths and should remain internal/private |
 | VPN stack privileges | Gluetun uses `NET_ADMIN` and `/dev/net/tun` |
 
 ## Open Questions / Human Verification Needed
