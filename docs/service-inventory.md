@@ -32,11 +32,11 @@ The repo shows these main architectural pieces:
 | `caddy` | Caddy | Reverse proxy / TLS | `80:80`, `443:443` | Configured edge ports; running/exposure needs verification | Caddy data/config | Restore runbook exists |
 | `ddns` | Porkbun DDNS | Dynamic DNS updates | Internal/background | Not applicable | No volume shown | Needs operational restore notes |
 | `gamebuilds` | Filebrowser | File access for game builds | `100.77.136.106:8088` | No | Database/settings, game-build files | Needs backup docs |
-| `homepage-stack` | Homepage, Glances, Uptime Kuma | Dashboard, host metrics, uptime checks | Tailscale-bound Homepage; Caddy routes for Homepage and Uptime Kuma | No; inventory marks restricted/internal | Homepage config, Uptime Kuma data | Needs backup docs |
+| `homepage-stack` | Homepage, Glances, Uptime Kuma | Dashboard, host metrics, uptime checks | Tailscale-bound Homepage; Caddy routes for Homepage and Uptime Kuma | Internal/private via Pi-hole DNS | Homepage config, Uptime Kuma data | Needs backup docs |
 | `immich` | Immich server, ML, Redis, Postgres | Photo library | Caddy route; no active host port | Confirmed by `inventory/domains.md` | Upload library, database, model cache | Backup script and restore runbook exist |
 | `it-tools` | IT Tools | Utility tools | `100.77.136.106:8085`; Caddy route | Internal/private via Pi-hole DNS | No volume shown | Low, based on repo config |
 | `jellyfin` | Jellyfin | Media streaming | Host network; Caddy route | Confirmed by `inventory/domains.md` | Config, `/mnt/media` | Needs service-specific backup docs |
-| `logging` | Loki, Grafana, Alloy | Log collection and dashboards | Localhost ports; Grafana Caddy route | Needs verification | Loki data, Grafana data | Needs backup docs |
+| `logging` | Loki, Grafana, Alloy | Log collection and dashboards | Localhost ports; Grafana Caddy route | Grafana internal/private via Pi-hole DNS | Loki data, Grafana data | Needs backup docs |
 | `monitoring` | Prometheus, node-exporter, cAdvisor | Metrics collection | Localhost ports; proxy network for Prometheus | No public route found | Prometheus data | Needs backup docs |
 | `n8n` | n8n | Workflow automation and webhooks | `n8n.kai.coach` internal route; address-form webhook route | Internal/private via Pi-hole DNS | `/srv/docker/n8n` | Needs backup docs |
 | `speedtest-tracker` | Speedtest Tracker | Network speed history | `100.77.136.106:8082`; proxy network | Needs verification | `./config` | Needs backup docs |
@@ -198,6 +198,7 @@ Monitoring/logging relevance:
 Security notes:
 
 - `home.kai.coach`, `status.kai.coach`, and `grafana.kai.coach` import the Authelia forward-auth snippet.
+- `home.kai.coach`, `status.kai.coach`, and `grafana.kai.coach` remain configured in Caddy for internal/private access.
 - Several Caddy routes use `tls internal`.
 - Caddy route configuration does not by itself confirm public internet exposure.
 
@@ -241,7 +242,9 @@ Security notes:
 
 - API key environment variable names are referenced.
 - No real secret values are included in this document.
-- `compose/ddns/compose.yaml` manages only these subdomains for public DNS updates: `jellyfin`, `seerr`, `immich`, `home`, `status`, `grafana`, and `address`.
+- Public Porkbun/DDNS records should remain limited to `jellyfin`, `seerr`, `immich`, and `address`.
+- `compose/ddns/compose.yaml` should not be treated as the source of access for internal/private routes.
+- `home.kai.coach`, `status.kai.coach`, and `grafana.kai.coach` are intentionally handled by Pi-hole internal DNS, resolve internally to `100.77.136.106`, are not managed by Porkbun DDNS, and should not publicly resolve.
 - `vault.kai.coach`, `auth.kai.coach`, and `tools.kai.coach` are intentionally handled by Pi-hole internal DNS and are not managed by the Porkbun DDNS container.
 - `n8n.kai.coach` is also intentionally handled by Pi-hole internal DNS on both the Pi 4 and Pi-hole LXC, points to `100.77.136.106`, and is not public-Porkbun-DNS-managed.
 - The public Porkbun DNS record for `n8n.kai.coach` was removed; current public DNS no longer resolves.
@@ -319,8 +322,9 @@ Ports and routes:
 Access classification:
 
 - Homepage has a Tailscale/private port binding.
-- Existing inventory classifies `home.kai.coach` and `status.kai.coach` as restricted/internal.
-- These routes are not classified as public by this document.
+- `home.kai.coach` and `status.kai.coach` remain configured in Caddy for internal/private access.
+- `home.kai.coach` and `status.kai.coach` are resolved internally by Pi-hole to `100.77.136.106`.
+- `home.kai.coach` and `status.kai.coach` are not managed by Porkbun DDNS and should not publicly resolve.
 
 Persistent volumes/bind mounts:
 
@@ -343,8 +347,11 @@ Monitoring/logging relevance:
 
 Security notes:
 
-- Homepage has read-only Docker socket access.
-- Glances has host-level read-only mounts and host networking.
+- Runtime inspection and repo references confirm Docker socket mounts for Homepage and Glances in `compose/homepage-stack/compose.yaml`.
+- Homepage read-only Docker socket access is intentionally retained for Docker/container dashboard widgets.
+- Glances Docker socket and host-level read-only mounts are intentionally retained for host/process metrics consumed by Homepage widgets, including Opti CPU and top-process visibility.
+- Treat Docker socket access as high-trust even when mounted read-only; this is an accepted risk, not an immediate removal task.
+- Homepage and Glances must remain internal/private and should not be publicly exposed.
 - Caddy routes for Homepage and Uptime Kuma import Authelia forward auth.
 
 ### `immich`
@@ -516,8 +523,10 @@ Ports and routes:
 Access classification:
 
 - Direct ports are localhost-bound.
-- Grafana Caddy route uses internal TLS and Authelia forward auth.
-- Public exposure needs verification.
+- Grafana Caddy route remains configured for internal/private access.
+- `grafana.kai.coach` uses internal TLS and Authelia forward auth.
+- `grafana.kai.coach` is resolved internally by Pi-hole to `100.77.136.106`.
+- `grafana.kai.coach` is not managed by Porkbun DDNS and should not publicly resolve.
 
 Persistent volumes/bind mounts:
 
@@ -542,7 +551,10 @@ Monitoring/logging relevance:
 Security notes:
 
 - Grafana admin password is referenced through environment configuration; no value is included here.
-- Alloy has read-only Docker socket and host journal access.
+- Runtime inspection and repo references confirm Alloy Docker socket use in `compose/logging/compose.yaml`.
+- Alloy read-only Docker socket access is intentionally retained for Docker log discovery and labeling.
+- Treat Docker socket access as high-trust even when mounted read-only; this is an accepted risk, not an immediate removal task.
+- Alloy and the logging admin surfaces must remain internal/private and should not be publicly exposed.
 
 ### `monitoring`
 
@@ -845,9 +857,9 @@ These routes are configured in the repo and have internal/private or route-speci
 | Service | Domain / route | Reason verification is needed |
 |---|---|---|
 | Authelia | `auth.kai.coach` | Internal/private via Pi-hole DNS after public Porkbun DNS cleanup; not Porkbun-DDNS-managed |
-| Homepage | `home.kai.coach` | Inventory marks restricted/internal |
-| Uptime Kuma | `status.kai.coach` | Inventory marks restricted/internal |
-| Grafana | `grafana.kai.coach` | Uses internal TLS and Authelia forward auth |
+| Homepage | `home.kai.coach` | Internal/private via Pi-hole DNS; points to `100.77.136.106`; not Porkbun-DDNS-managed |
+| Uptime Kuma | `status.kai.coach` | Internal/private via Pi-hole DNS; points to `100.77.136.106`; not Porkbun-DDNS-managed |
+| Grafana | `grafana.kai.coach` | Internal/private via Pi-hole DNS; points to `100.77.136.106`; uses internal TLS and Authelia forward auth; not Porkbun-DDNS-managed |
 | n8n UI | `n8n.kai.coach` | Internal/private via Pi-hole DNS on Pi 4 and Pi-hole LXC; points to `100.77.136.106`; public Porkbun DNS removed |
 | Address-form webhook | `address.kai.coach/api/wedding-address` | Public webhook path on `address.kai.coach`; proxies internally to `n8n:5678` |
 | Wedding address form | `address.kai.coach` | Public address form; points to WAN IP |
@@ -941,7 +953,7 @@ Configured in repo:
 - Alloy is configured to forward Docker logs to Loki.
 - Alloy includes journal relabeling configuration.
 - Loki retention is configured as `168h`.
-- Grafana is configured behind Caddy as `grafana.kai.coach` with internal TLS and Authelia forward auth.
+- Grafana is configured behind Caddy as internal/private `grafana.kai.coach` with internal TLS, Authelia forward auth, and Pi-hole DNS resolving to `100.77.136.106`.
 
 Needs verification:
 
@@ -950,6 +962,20 @@ Needs verification:
 - Whether all expected running containers are visible to Alloy.
 - Whether the configured monitoring/logging stack is currently running.
 
+## Docker Socket Mount Risk
+
+Runtime inspection confirmed Docker socket mounts in Homepage, Glances, and Alloy. Repo references also confirm Docker socket use in `compose/homepage-stack/compose.yaml` and `compose/logging/compose.yaml`.
+
+Docker socket access is high-trust even when mounted read-only. These mounts are accepted risks for current functionality, not immediate removal tasks.
+
+| Service | Purpose | Risk decision |
+|---|---|---|
+| Homepage | Docker/container dashboard widgets | Accepted risk; intentionally retained |
+| Glances | Host/process metrics consumed by Homepage widgets, including Opti CPU and top-process visibility | Accepted risk; intentionally retained |
+| Alloy | Docker log discovery and labeling | Accepted risk; intentionally retained |
+
+All Docker-socket-backed services must remain internal/private and should not be publicly exposed.
+
 ## Security Review Items
 
 | Item | Reason |
@@ -957,10 +983,10 @@ Needs verification:
 | n8n UI exposure | `n8n.kai.coach` is internal/private only; UI/admin access should not be publicly reachable |
 | Address-form webhook exposure | `address.kai.coach` remains public and `/api/wedding-address` proxies internally to `n8n:5678` |
 | Caddy routes without Authelia import | Review intended auth model for `vault.kai.coach`, `tools.kai.coach`, and `address.kai.coach` |
-| Internal DNS routes | `auth.kai.coach`, `vault.kai.coach`, `tools.kai.coach`, and `n8n.kai.coach` are intentionally internal/private through Pi-hole DNS; Caddy routes remain valid for internal access |
-| Non-DDNS Caddy routes | `vault.kai.coach`, `auth.kai.coach`, `tools.kai.coach`, and `n8n.kai.coach` are configured in Caddy but are not managed by the Porkbun DDNS container |
-| Docker socket mounts | Homepage and Alloy have read-only Docker socket access |
-| Host mounts | Glances, node-exporter, cAdvisor, and Alloy mount host paths |
+| Internal DNS routes | `auth.kai.coach`, `vault.kai.coach`, `tools.kai.coach`, `n8n.kai.coach`, `home.kai.coach`, `status.kai.coach`, and `grafana.kai.coach` are intentionally internal/private through Pi-hole DNS; Caddy routes remain valid for internal access |
+| Non-DDNS Caddy routes | `vault.kai.coach`, `auth.kai.coach`, `tools.kai.coach`, `n8n.kai.coach`, `home.kai.coach`, `status.kai.coach`, and `grafana.kai.coach` are configured in Caddy but are not managed by the Porkbun DDNS container |
+| Docker socket mounts | Homepage, Glances, and Alloy use read-only Docker socket mounts as accepted high-trust risks for dashboard widgets, host/process metrics, and Docker log discovery |
+| Host mounts | Glances, node-exporter, cAdvisor, and Alloy mount host paths and should remain internal/private |
 | VPN stack privileges | Gluetun uses `NET_ADMIN` and `/dev/net/tun` |
 
 ## Open Questions / Human Verification Needed
@@ -968,7 +994,7 @@ Needs verification:
 - Which configured stacks are currently running in production?
 - Which trusted client networks should use Pi-hole internal DNS for `n8n.kai.coach`?
 - Which trusted client networks should use Pi-hole internal DNS for `auth.kai.coach`, `vault.kai.coach`, and `tools.kai.coach`?
-- Are `grafana.kai.coach`, `home.kai.coach`, and `status.kai.coach` reachable only from trusted networks?
+- Which trusted client networks should use Pi-hole internal DNS for `home.kai.coach`, `status.kai.coach`, and `grafana.kai.coach`?
 - Should Vaultwarden rely only on its own authentication, or should there be additional proxy-layer authentication?
 - Where are live `.env` files backed up, if at all?
 - Does Uptime Kuma monitor all public and critical private services?
