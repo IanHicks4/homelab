@@ -29,7 +29,7 @@ services:
     network_mode: host
     environment:
       - TZ=America/New_York
-      - GLANCES_OPT=-w
+      - GLANCES_OPT=-w -B 100.77.136.106
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - /etc/os-release:/etc/os-release:ro
