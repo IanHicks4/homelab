@@ -31,7 +31,7 @@ The repo shows these main architectural pieces:
 | `authelia` | Authelia, Redis | Forward authentication | Proxy network; `auth.kai.coach` Caddy route | Internal/private; public DNS removed | Config, secrets mount, Redis data | Backup script and restore runbook exist |
 | `caddy` | Caddy | Reverse proxy / TLS | `80:80`, `443:443` | Configured edge ports; running/exposure needs verification | Caddy data/config | Backup script and restore runbook exist |
 | `ddns` | Porkbun DDNS | Dynamic DNS updates | Internal/background | Not applicable | Credential/config files | Backup script and restore runbook exist |
-| `homepage-stack` | Homepage, Glances, Uptime Kuma | Dashboard, host metrics, uptime checks | Tailscale-bound Homepage; Caddy routes for Homepage and Uptime Kuma | Internal/private via Pi-hole DNS | Homepage config, Uptime Kuma data | Backup script and restore runbook exist |
+| `homepage-stack` | Homepage, Glances, Uptime Kuma | Dashboard, host metrics, uptime checks | Tailscale-bound Homepage and Glances; Caddy routes for Homepage and Uptime Kuma | Internal/private via Pi-hole DNS/Tailscale | Homepage config, Uptime Kuma data | Backup script and restore runbook exist |
 | `immich` | Immich server, ML, Redis, Postgres | Photo library | Caddy route; no active host port | Confirmed by `inventory/domains.md` | Upload library, database, model cache | Backup script and restore runbook exist |
 | `it-tools` | IT Tools | Utility tools | `100.77.136.106:8085`; Caddy route | Internal/private via Pi-hole DNS | No volume shown | Low, based on repo config |
 | `jellyfin` | Jellyfin | Media streaming | Host network; Caddy route | Confirmed by `inventory/domains.md` | Config, `/mnt/media` | Backup script and restore runbook exist |
@@ -284,13 +284,15 @@ Purpose:
 Ports and routes:
 
 - Homepage: `100.77.136.106:3000:3000`
-- Glances: `network_mode: host`
+- Glances: `network_mode: host`, web service bound to `100.77.136.106:61208`
 - Caddy route `home.kai.coach`
 - Caddy route `status.kai.coach`
 
 Access classification:
 
 - Homepage has a Tailscale/private port binding.
+- Glances previously listened on `0.0.0.0:61208`; it is now bound only to the Tailscale IP at `100.77.136.106:61208`.
+- The Glances binding change reduces LAN-wide network exposure while preserving Homepage widget functionality.
 - `home.kai.coach` and `status.kai.coach` remain configured in Caddy for internal/private access.
 - `home.kai.coach` and `status.kai.coach` are resolved internally by Pi-hole to `100.77.136.106`.
 - `home.kai.coach` and `status.kai.coach` are not managed by Porkbun DDNS and should not publicly resolve.
@@ -314,7 +316,7 @@ Backup relevance:
 Monitoring/logging relevance:
 
 - Uptime Kuma is configured as a service in this stack, but specific monitors need verification.
-- Glances is configured for host metrics.
+- Glances is configured for host/process metrics, and Homepage widgets for Opti CPU and top-process visibility were verified after the Tailscale-only binding change.
 - Docker logs should be collected by Alloy if containers are running.
 
 Security notes:
@@ -322,6 +324,7 @@ Security notes:
 - Runtime inspection and repo references confirm Docker socket mounts for Homepage and Glances in `compose/homepage-stack/compose.yaml`.
 - Homepage read-only Docker socket access is intentionally retained for Docker/container dashboard widgets.
 - Glances Docker socket and host-level read-only mounts are intentionally retained for host/process metrics consumed by Homepage widgets, including Opti CPU and top-process visibility.
+- Binding Glances to `100.77.136.106:61208` reduces network exposure but does not eliminate the high-trust risk from host visibility and Docker socket access.
 - Homepage integration secrets and Uptime Kuma notification/monitor data are sensitive.
 - Treat Docker socket access as high-trust even when mounted read-only; this is an accepted risk, not an immediate removal task.
 - Homepage and Glances must remain internal/private and should not be publicly exposed.
@@ -1012,7 +1015,7 @@ Docker socket access is high-trust even when mounted read-only. These mounts are
 | Service | Purpose | Risk decision |
 |---|---|---|
 | Homepage | Docker/container dashboard widgets | Accepted risk; intentionally retained |
-| Glances | Host/process metrics consumed by Homepage widgets, including Opti CPU and top-process visibility | Accepted risk; intentionally retained |
+| Glances | Host/process metrics consumed by Homepage widgets, including Opti CPU and top-process visibility | Accepted risk; intentionally retained; web service hardened from `0.0.0.0:61208` to Tailscale-only `100.77.136.106:61208` |
 | Alloy | Docker log discovery and labeling | Accepted risk; intentionally retained |
 
 All Docker-socket-backed services must remain internal/private and should not be publicly exposed.
@@ -1026,8 +1029,8 @@ All Docker-socket-backed services must remain internal/private and should not be
 | Caddy routes without Authelia import | Review intended auth model for `vault.kai.coach`, `tools.kai.coach`, and `address.kai.coach` |
 | Internal DNS routes | `auth.kai.coach`, `vault.kai.coach`, `tools.kai.coach`, `n8n.kai.coach`, `home.kai.coach`, `status.kai.coach`, and `grafana.kai.coach` are intentionally internal/private through Pi-hole DNS; Caddy routes remain valid for internal access |
 | Non-DDNS Caddy routes | `vault.kai.coach`, `auth.kai.coach`, `tools.kai.coach`, `n8n.kai.coach`, `home.kai.coach`, `status.kai.coach`, and `grafana.kai.coach` are configured in Caddy but are not managed by the Porkbun DDNS container |
-| Docker socket mounts | Homepage, Glances, and Alloy use read-only Docker socket mounts as accepted high-trust risks for dashboard widgets, host/process metrics, and Docker log discovery |
-| Host mounts | Glances, node-exporter, cAdvisor, and Alloy mount host paths and should remain internal/private |
+| Docker socket mounts | Homepage, Glances, and Alloy use read-only Docker socket mounts as accepted high-trust risks for dashboard widgets, host/process metrics, and Docker log discovery; Glances' Tailscale-only binding reduces exposure but does not remove this risk |
+| Host mounts | Glances, node-exporter, cAdvisor, and Alloy mount host paths and should remain internal/private; Glances is bound to `100.77.136.106:61208` and must not be publicly exposed |
 | VPN stack privileges | Gluetun uses `NET_ADMIN` and `/dev/net/tun` |
 
 ## Open Questions / Human Verification Needed
