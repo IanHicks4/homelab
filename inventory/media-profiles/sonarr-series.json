@@ -1,0 +1,5963 @@
+[
+  {
+    "title": "The Pitt",
+    "alternateTitles": [
+      {
+        "title": "The Pitt 2024",
+        "seasonNumber": -1
+      }
+    ],
+    "sortTitle": "pitt",
+    "status": "continuing",
+    "ended": false,
+    "overview": "The staff of Pittsburgh's Trauma Medical Center work around the clock to save lives in an overcrowded and underfunded emergency department.",
+    "previousAiring": "2026-04-17T01:00:00Z",
+    "network": "HBO Max",
+    "airTime": "21:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/12/banner.jpg?lastWrite=639096709717421534",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/448176/banners/6972a4aba4c5d.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/12/poster.jpg?lastWrite=639096709717571536",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/448176/posters/6941c7b719bbb.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/12/fanart.jpg?lastWrite=639096709717731538",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/448176/backgrounds/675c4f787cfc4.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/12/clearlogo.png?lastWrite=639096709717791539",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/448176/clearlogo/675d049994d06.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 15,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2026-04-17T01:00:00Z",
+          "episodeFileCount": 15,
+          "episodeCount": 15,
+          "totalEpisodeCount": 15,
+          "sizeOnDisk": 48645698635,
+          "releaseGroups": [
+            "ETHEL",
+            "FLUX",
+            "Kitsune",
+            "MeM",
+            "NTb",
+            "playWEB"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2025,
+    "path": "/media/tv/The Pitt (2025)",
+    "qualityProfileId": 8,
+    "seasonFolder": true,
+    "monitored": false,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 48,
+    "tvdbId": 448176,
+    "tvRageId": 0,
+    "tvMazeId": 75632,
+    "tmdbId": 250307,
+    "firstAired": "2025-01-09T00:00:00Z",
+    "lastAired": "2026-04-16T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "thepitt",
+    "imdbId": "tt31938062",
+    "titleSlug": "the-pitt",
+    "rootFolderPath": "/media/tv",
+    "genres": [
+      "Drama"
+    ],
+    "tags": [],
+    "added": "2026-03-21T06:22:51Z",
+    "ratings": {
+      "votes": 155129,
+      "value": 8.9
+    },
+    "statistics": {
+      "seasonCount": 2,
+      "episodeFileCount": 15,
+      "episodeCount": 15,
+      "totalEpisodeCount": 30,
+      "sizeOnDisk": 48645698635,
+      "releaseGroups": [
+        "ETHEL",
+        "FLUX",
+        "Kitsune",
+        "MeM",
+        "NTb",
+        "playWEB"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 12
+  },
+  {
+    "title": "Abbott Elementary",
+    "alternateTitles": [
+      {
+        "title": "Colegio Abbott",
+        "seasonNumber": -1
+      }
+    ],
+    "sortTitle": "abbott elementary",
+    "status": "continuing",
+    "ended": false,
+    "overview": "A group of dedicated, passionate teachers and a slightly tone-deaf principal are brought together in a Philadelphia public school where, despite the odds stacked against them, they are determined to help their students succeed in life. Though these incredible public servants may be outnumbered and underfunded, they love what they do, even if they don’t love the school district’s less-than-stellar attitude toward educating children.",
+    "previousAiring": "2026-04-23T00:51:00Z",
+    "network": "ABC (US)",
+    "airTime": "20:30",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/14/banner.jpg?lastWrite=639098186296167547",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/402910/banners/6707c6f5ba43f.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/14/poster.jpg?lastWrite=639098186296267548",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/402910/posters/68d1ac3b20a0a.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/14/fanart.jpg?lastWrite=639098186296427550",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/402910/backgrounds/631c553d43765.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/14/clearlogo.png?lastWrite=639098186296507551",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/402910/clearlogo/61a269bb9a442.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 0,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 2,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 1,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 13,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 22,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 3,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 14,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 4,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 22,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 5,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2026-04-23T00:51:00Z",
+          "episodeFileCount": 14,
+          "episodeCount": 14,
+          "totalEpisodeCount": 22,
+          "sizeOnDisk": 14568339756,
+          "releaseGroups": [
+            "ETHEL",
+            "FLU",
+            "FLUX",
+            "NTb",
+            "playWEB"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2021,
+    "path": "/media/tv/Abbott Elementary (2021)",
+    "qualityProfileId": 8,
+    "seasonFolder": true,
+    "monitored": true,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 21,
+    "tvdbId": 402910,
+    "tvRageId": 0,
+    "tvMazeId": 55350,
+    "tmdbId": 125935,
+    "firstAired": "2021-12-07T00:00:00Z",
+    "lastAired": "2026-04-22T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "abbottelementary",
+    "imdbId": "tt14218830",
+    "titleSlug": "abbott-elementary",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-PG",
+    "genres": [
+      "Comedy"
+    ],
+    "tags": [],
+    "added": "2026-03-22T23:23:49Z",
+    "ratings": {
+      "votes": 53251,
+      "value": 8.2
+    },
+    "statistics": {
+      "seasonCount": 5,
+      "episodeFileCount": 14,
+      "episodeCount": 14,
+      "totalEpisodeCount": 95,
+      "sizeOnDisk": 14568339756,
+      "releaseGroups": [
+        "ETHEL",
+        "FLU",
+        "FLUX",
+        "NTb",
+        "playWEB"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 14
+  },
+  {
+    "title": "ONE PIECE (2023)",
+    "alternateTitles": [
+      {
+        "title": "One Piece",
+        "seasonNumber": -1,
+        "comment": "LostFilm / POWER / PTHD"
+      },
+      {
+        "title": "One Piece",
+        "seasonNumber": -1,
+        "comment": "LostFilm"
+      }
+    ],
+    "sortTitle": "one piece 2023",
+    "status": "continuing",
+    "ended": false,
+    "overview": "With his straw hat and ragtag crew, young pirate Monkey D. Luffy goes on an epic voyage for treasure in this live-action adaptation of the popular manga.",
+    "previousAiring": "2026-03-10T07:00:00Z",
+    "network": "Netflix",
+    "airTime": "03:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/15/banner.jpg?lastWrite=639098192688360902",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/392276/banners/64f03e2609d69.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/15/poster.jpg?lastWrite=639098192688570905",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/392276/posters/698b6d19dd600.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/15/fanart.jpg?lastWrite=639098192688770907",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/392276/backgrounds/64c113625ee67.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/15/clearlogo.png?lastWrite=639098192689130912",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/392276/clearlogo/64c112a3357ce.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 0,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 14,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 1,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2026-03-10T07:00:00Z",
+          "episodeFileCount": 8,
+          "episodeCount": 8,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 91278646860,
+          "releaseGroups": [
+            "VARYG"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2023,
+    "path": "/media/tv/ONE PIECE (2023)",
+    "qualityProfileId": 8,
+    "seasonFolder": true,
+    "monitored": false,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 59,
+    "tvdbId": 392276,
+    "tvRageId": 0,
+    "tvMazeId": 46065,
+    "tmdbId": 111110,
+    "firstAired": "2023-08-31T00:00:00Z",
+    "lastAired": "2026-03-10T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "onepiece2023",
+    "imdbId": "tt11737520",
+    "titleSlug": "one-piece-2023",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-14",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Fantasy"
+    ],
+    "tags": [],
+    "added": "2026-03-22T23:34:28Z",
+    "ratings": {
+      "votes": 208125,
+      "value": 8.3
+    },
+    "statistics": {
+      "seasonCount": 2,
+      "episodeFileCount": 8,
+      "episodeCount": 8,
+      "totalEpisodeCount": 30,
+      "sizeOnDisk": 91278646860,
+      "releaseGroups": [
+        "VARYG"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 15
+  },
+  {
+    "title": "The Dinosaurs",
+    "alternateTitles": [
+      {
+        "title": "Die Dinosaurier",
+        "seasonNumber": -1
+      }
+    ],
+    "sortTitle": "dinosaurs",
+    "status": "ended",
+    "ended": true,
+    "overview": "From the first dinosaurs to the last, this epic documentary series examines their 165 million years on Earth and the forces that shaped their evolution.",
+    "network": "Netflix",
+    "airTime": "00:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/16/banner.jpg?lastWrite=639098196092781602",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/473613/banners/699defcc8827d.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/16/poster.jpg?lastWrite=639098196092891603",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/473613/posters/6984ebc741fa9.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/16/fanart.jpg?lastWrite=639161284366949370",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/473613/backgrounds/69feac1fa66c6.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/16/clearlogo.png?lastWrite=639135345696830707",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/473613/clearlogo/69ef1e6604be2.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 4,
+          "episodeCount": 4,
+          "totalEpisodeCount": 4,
+          "sizeOnDisk": 10902532628,
+          "releaseGroups": [
+            "TheBlackKing"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2026,
+    "path": "/media/tv/The Dinosaurs (2026)",
+    "qualityProfileId": 8,
+    "seasonFolder": true,
+    "monitored": false,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 46,
+    "tvdbId": 473613,
+    "tvRageId": 0,
+    "tvMazeId": 90213,
+    "tmdbId": 313298,
+    "firstAired": "2026-03-06T00:00:00Z",
+    "lastAired": "2026-03-06T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "thedinosaurs",
+    "imdbId": "tt32493765",
+    "titleSlug": "the-dinosaurs",
+    "rootFolderPath": "/media/tv",
+    "certification": "10",
+    "genres": [
+      "Documentary",
+      "History"
+    ],
+    "tags": [],
+    "added": "2026-03-22T23:40:09Z",
+    "ratings": {
+      "votes": 8145,
+      "value": 7.5
+    },
+    "statistics": {
+      "seasonCount": 1,
+      "episodeFileCount": 4,
+      "episodeCount": 4,
+      "totalEpisodeCount": 4,
+      "sizeOnDisk": 10902532628,
+      "releaseGroups": [
+        "TheBlackKing"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 16
+  },
+  {
+    "title": "A Knight of the Seven Kingdoms",
+    "alternateTitles": [
+      {
+        "title": "El caballero de los Siete Reinos",
+        "seasonNumber": -1
+      }
+    ],
+    "sortTitle": "knight of the seven kingdoms",
+    "status": "continuing",
+    "ended": false,
+    "overview": "A century before the events of Game of Thrones, two unlikely heroes wandered Westeros, a young knight, Ser Duncan the Tall, and his squire, Egg, set in an age when the Targaryen line still holds the Iron Throne.",
+    "network": "HBO",
+    "airTime": "22:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/17/banner.jpg?lastWrite=639098197178004324",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/433631/banners/696d01d889ebf.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/17/poster.jpg?lastWrite=639098197178104326",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/433631/posters/6934ab30720ee.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/17/fanart.jpg?lastWrite=639098197178274328",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/433631/backgrounds/6934a76d9bbba.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/17/clearlogo.png?lastWrite=639098197178404329",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/433631/clearlogo/696cfcd38cd4e.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 0,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 9,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 1,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 6,
+          "episodeCount": 6,
+          "totalEpisodeCount": 6,
+          "sizeOnDisk": 13501291443,
+          "releaseGroups": [
+            "ETHEL",
+            "FLUX",
+            "HiggsBoson",
+            "NTb"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2026,
+    "path": "/media/tv/A Knight of the Seven Kingdoms (2026)",
+    "qualityProfileId": 8,
+    "seasonFolder": true,
+    "monitored": true,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 33,
+    "tvdbId": 433631,
+    "tvRageId": 0,
+    "tvMazeId": 53063,
+    "tmdbId": 224372,
+    "firstAired": "2026-01-18T00:00:00Z",
+    "lastAired": "2026-02-22T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "aknightsevenkingdoms",
+    "imdbId": "tt27497448",
+    "titleSlug": "a-knight-of-the-seven-kingdoms",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-MA",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Fantasy"
+    ],
+    "tags": [],
+    "added": "2026-03-22T23:41:57Z",
+    "ratings": {
+      "votes": 254588,
+      "value": 8.6
+    },
+    "statistics": {
+      "seasonCount": 1,
+      "episodeFileCount": 6,
+      "episodeCount": 6,
+      "totalEpisodeCount": 15,
+      "sizeOnDisk": 13501291443,
+      "releaseGroups": [
+        "ETHEL",
+        "FLUX",
+        "HiggsBoson",
+        "NTb"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 17
+  },
+  {
+    "title": "Seinfeld",
+    "alternateTitles": [],
+    "sortTitle": "seinfeld",
+    "status": "ended",
+    "ended": true,
+    "overview": "The \"show about nothing\" is a sitcom landmark, with comic Jerry and his three sardonic friends finding laughs in both the mundane and the ridiculous.",
+    "network": "NBC",
+    "airTime": "21:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/19/banner.jpg?lastWrite=639098799732657397",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/graphical/112-g2.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/19/poster.jpg?lastWrite=639098799732797399",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/posters/79169-2.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/19/fanart.jpg?lastWrite=639098799732957400",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/79169/backgrounds/61f9e2c21c8e3.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/19/clearlogo.png?lastWrite=639098799733067402",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/79169/clearlogo/611b5c0cdc617.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 0,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 7,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 1,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 5,
+          "episodeCount": 5,
+          "totalEpisodeCount": 5,
+          "sizeOnDisk": 12606167954,
+          "releaseGroups": [
+            "NTb"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 12,
+          "episodeCount": 12,
+          "totalEpisodeCount": 12,
+          "sizeOnDisk": 30435518600,
+          "releaseGroups": [
+            "NTb"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 3,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 23,
+          "episodeCount": 23,
+          "totalEpisodeCount": 23,
+          "sizeOnDisk": 58448051101,
+          "releaseGroups": [
+            "NTb"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 4,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 24,
+          "episodeCount": 24,
+          "totalEpisodeCount": 24,
+          "sizeOnDisk": 61454835347,
+          "releaseGroups": [
+            "NTb"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 5,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 22,
+          "episodeCount": 22,
+          "totalEpisodeCount": 22,
+          "sizeOnDisk": 55547560076,
+          "releaseGroups": [
+            "NTb"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 6,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 24,
+          "episodeCount": 24,
+          "totalEpisodeCount": 24,
+          "sizeOnDisk": 61652766333,
+          "releaseGroups": [
+            "NTb"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 7,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 24,
+          "episodeCount": 24,
+          "totalEpisodeCount": 24,
+          "sizeOnDisk": 60262950868,
+          "releaseGroups": [
+            "NTb"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 8,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 22,
+          "episodeCount": 22,
+          "totalEpisodeCount": 22,
+          "sizeOnDisk": 56539614541,
+          "releaseGroups": [
+            "NTb"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 9,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 24,
+          "episodeCount": 24,
+          "totalEpisodeCount": 24,
+          "sizeOnDisk": 62046645686,
+          "releaseGroups": [
+            "NTb"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 1989,
+    "path": "/media/tv/Seinfeld (1988)",
+    "qualityProfileId": 8,
+    "seasonFolder": true,
+    "monitored": false,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 25,
+    "tvdbId": 79169,
+    "tvRageId": 5145,
+    "tvMazeId": 530,
+    "tmdbId": 1400,
+    "firstAired": "1989-07-05T00:00:00Z",
+    "lastAired": "1998-05-14T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "seinfeld",
+    "imdbId": "tt0098904",
+    "titleSlug": "seinfeld",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-PG",
+    "genres": [
+      "Comedy"
+    ],
+    "tags": [],
+    "added": "2026-03-23T16:26:13Z",
+    "ratings": {
+      "votes": 385439,
+      "value": 8.9
+    },
+    "statistics": {
+      "seasonCount": 9,
+      "episodeFileCount": 180,
+      "episodeCount": 180,
+      "totalEpisodeCount": 187,
+      "sizeOnDisk": 458994110506,
+      "releaseGroups": [
+        "NTb"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 19
+  },
+  {
+    "title": "Shrinking",
+    "alternateTitles": [
+      {
+        "title": "Terapia sin filtro",
+        "seasonNumber": -1
+      }
+    ],
+    "sortTitle": "shrinking",
+    "status": "continuing",
+    "ended": false,
+    "overview": "Jimmy is struggling to grieve the loss of his wife while being a dad, friend, and therapist. He decides to try a new approach with everyone in his path: unfiltered, brutal honesty. Can he help himself by helping others? Will it bring him back into the light?",
+    "previousAiring": "2026-02-25T05:00:00Z",
+    "network": "Apple TV",
+    "airTime": "00:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/20/banner.jpg?lastWrite=639099144116987822",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/411364/banners/63d289b354457.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/20/poster.jpg?lastWrite=639099144117437826",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/411364/posters/63c83d3aa0819.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/20/fanart.jpg?lastWrite=639099144117607828",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/411364/backgrounds/69851923926ac.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/20/clearlogo.png?lastWrite=639099144117677829",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/411364/clearlogo/63c83faaa089f.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 0,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 1,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 1,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 10,
+          "episodeCount": 10,
+          "totalEpisodeCount": 10,
+          "sizeOnDisk": 25753261571,
+          "releaseGroups": [
+            "NTb"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2024-12-24T05:00:00Z",
+          "episodeFileCount": 12,
+          "episodeCount": 12,
+          "totalEpisodeCount": 12,
+          "sizeOnDisk": 34646197055,
+          "releaseGroups": [
+            "FLUX",
+            "MeM",
+            "NTb"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 3,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2026-02-25T05:00:00Z",
+          "episodeFileCount": 11,
+          "episodeCount": 11,
+          "totalEpisodeCount": 11,
+          "sizeOnDisk": 33502774537,
+          "releaseGroups": [
+            "ETHEL",
+            "Kitsune",
+            "NTb",
+            "playWEB",
+            "TheShrink"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2023,
+    "path": "/media/tv/Shrinking (2023)",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": false,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 35,
+    "tvdbId": 411364,
+    "tvRageId": 0,
+    "tvMazeId": 58323,
+    "tmdbId": 136311,
+    "firstAired": "2023-01-27T00:00:00Z",
+    "lastAired": "2026-04-08T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "shrinking",
+    "imdbId": "tt15677150",
+    "titleSlug": "shrinking",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-MA",
+    "genres": [
+      "Comedy"
+    ],
+    "tags": [],
+    "added": "2026-03-24T02:00:10Z",
+    "ratings": {
+      "votes": 125666,
+      "value": 8.2
+    },
+    "statistics": {
+      "seasonCount": 3,
+      "episodeFileCount": 33,
+      "episodeCount": 33,
+      "totalEpisodeCount": 34,
+      "sizeOnDisk": 93902233163,
+      "releaseGroups": [
+        "NTb",
+        "FLUX",
+        "MeM",
+        "ETHEL",
+        "Kitsune",
+        "playWEB",
+        "TheShrink"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 20
+  },
+  {
+    "title": "Doctor Who (2005)",
+    "alternateTitles": [
+      {
+        "title": "Doctor Who",
+        "seasonNumber": -1,
+        "comment": "Limited matching"
+      }
+    ],
+    "sortTitle": "doctor who 2005",
+    "status": "ended",
+    "ended": true,
+    "overview": "The Doctor is an alien Time Lord from the planet Gallifrey who travels through all of time and space in the TARDIS. The Doctor has a long list of friends and companions who have shared journeys along the way. Instead of dying, the Doctor is able to “regenerate” into a new body, taking on a new personality with each regeneration.",
+    "network": "BBC One",
+    "airTime": "18:30",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/21/banner.jpg?lastWrite=639099145545951657",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/graphical/78804-g29.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/21/poster.jpg?lastWrite=639099145546271660",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/posters/78804-52.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/21/fanart.jpg?lastWrite=639099145546411661",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/fanart/original/78804-100.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/21/clearlogo.png?lastWrite=639099145546541662",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/78804/clearlogo/611b52389b2a5.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 0,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 169,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 1,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 13,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 13,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 3,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 13,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 4,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 13,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 5,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 13,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 6,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 13,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 7,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 13,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 8,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 12,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 9,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 12,
+          "episodeCount": 12,
+          "totalEpisodeCount": 12,
+          "sizeOnDisk": 23673765361,
+          "releaseGroups": [
+            "CtrlHD"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 10,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 12,
+          "episodeCount": 12,
+          "totalEpisodeCount": 12,
+          "sizeOnDisk": 38192839238,
+          "releaseGroups": [
+            "D",
+            "N",
+            "NTb"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 11,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 8,
+          "episodeCount": 8,
+          "totalEpisodeCount": 10,
+          "sizeOnDisk": 13765057075,
+          "releaseGroups": [
+            "BTW",
+            "NTb",
+            "ViSUM"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 12,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 10,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 13,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 6,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      }
+    ],
+    "year": 2005,
+    "path": "/media/tv/Doctor Who (2005)",
+    "qualityProfileId": 8,
+    "seasonFolder": true,
+    "monitored": false,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 47,
+    "tvdbId": 78804,
+    "tvRageId": 3332,
+    "tvMazeId": 210,
+    "tmdbId": 57243,
+    "firstAired": "2005-03-26T00:00:00Z",
+    "lastAired": "2021-12-05T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "doctorwho2005",
+    "imdbId": "tt0436992",
+    "titleSlug": "doctor-who-2005",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-PG",
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Science Fiction"
+    ],
+    "tags": [],
+    "added": "2026-03-24T02:02:34Z",
+    "ratings": {
+      "votes": 262709,
+      "value": 8.5
+    },
+    "statistics": {
+      "seasonCount": 13,
+      "episodeFileCount": 32,
+      "episodeCount": 32,
+      "totalEpisodeCount": 322,
+      "sizeOnDisk": 75631661674,
+      "releaseGroups": [
+        "CtrlHD",
+        "D",
+        "N",
+        "NTb",
+        "BTW",
+        "ViSUM"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 21
+  },
+  {
+    "title": "INVINCIBLE (2021)",
+    "alternateTitles": [
+      {
+        "title": "Invencible",
+        "seasonNumber": -1
+      },
+      {
+        "title": "Invincible",
+        "seasonNumber": -1
+      },
+      {
+        "title": "Unbesiegbar",
+        "seasonNumber": -1
+      }
+    ],
+    "sortTitle": "invincible 2021",
+    "status": "continuing",
+    "ended": false,
+    "overview": "Mark Grayson is a normal teenager, except for the fact that his father is the most powerful superhero on the planet. Shortly after his seventeenth birthday, Mark begins to develop powers of his own and enters into his father’s tutelage.",
+    "previousAiring": "2026-04-22T07:00:00Z",
+    "network": "Prime Video",
+    "airTime": "03:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/22/banner.jpg?lastWrite=639099160316437089",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/series/368207/banners/6035ee845aadf.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/22/poster.jpg?lastWrite=639099160316577091",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/368207/posters/652a5ef981eab.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/22/fanart.jpg?lastWrite=639099160316737092",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/368207/backgrounds/65412c202452a.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/22/clearlogo.png?lastWrite=639112001664157321",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/368207/clearlogo/611c62c6f30f0.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 0,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 1,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 1,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 3,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 4,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2026-04-22T07:00:00Z",
+          "episodeFileCount": 8,
+          "episodeCount": 8,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 13012627245,
+          "releaseGroups": [
+            "FLUX",
+            "MeM",
+            "playWEB"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2021,
+    "path": "/media/tv/Invincible (2021)",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": true,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 50,
+    "tvdbId": 368207,
+    "tvRageId": 0,
+    "tvMazeId": 37196,
+    "tmdbId": 95557,
+    "firstAired": "2021-03-26T00:00:00Z",
+    "lastAired": "2026-04-22T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "invincible2021",
+    "imdbId": "tt6741278",
+    "titleSlug": "invincible-2021",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-MA",
+    "genres": [
+      "Action",
+      "Animation",
+      "Drama",
+      "Science Fiction"
+    ],
+    "tags": [],
+    "added": "2026-03-24T02:27:10Z",
+    "ratings": {
+      "votes": 343767,
+      "value": 8.7
+    },
+    "statistics": {
+      "seasonCount": 4,
+      "episodeFileCount": 8,
+      "episodeCount": 8,
+      "totalEpisodeCount": 33,
+      "sizeOnDisk": 13012627245,
+      "releaseGroups": [
+        "FLUX",
+        "MeM",
+        "playWEB"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 22
+  },
+  {
+    "title": "The Secret Lives of Mormon Wives",
+    "alternateTitles": [],
+    "sortTitle": "secret lives of mormon wives",
+    "status": "continuing",
+    "ended": false,
+    "overview": "The scandalous world of a group of Mormon mom influencers implodes when they get caught amid a swinging sex scandal that makes international headlines. Now, their sisterhood is shaken to its core. Faith, friendship and reputations are all on the line. Will #MomTok be able to survive and continue to give the rulebook a run for its money, or will this group fall from grace?",
+    "previousAiring": "2026-03-12T04:00:00Z",
+    "network": "Hulu",
+    "airTime": "00:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/23/banner.jpg?lastWrite=639100040686290075",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/452714/banners/6770726673f3b.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/23/poster.jpg?lastWrite=639100040686460078",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/452714/posters/680d686bd86a4.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/23/fanart.jpg?lastWrite=639100040686680081",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/452714/backgrounds/66da86d12608c.jpg"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 11,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 3,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 11,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 4,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2026-03-12T04:00:00Z",
+          "episodeFileCount": 10,
+          "episodeCount": 10,
+          "totalEpisodeCount": 10,
+          "sizeOnDisk": 16636667011,
+          "releaseGroups": [
+            "720-web",
+            "EDITH"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2024,
+    "path": "/media/tv/The Secret Lives of Mormon Wives (2024)",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": false,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 51,
+    "tvdbId": 452714,
+    "tvRageId": 0,
+    "tvMazeId": 78970,
+    "tmdbId": 261102,
+    "firstAired": "2024-09-06T00:00:00Z",
+    "lastAired": "2026-03-12T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "thesecretlivesmormonwives",
+    "imdbId": "tt31091039",
+    "titleSlug": "the-secret-lives-of-mormon-wives",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-MA",
+    "genres": [
+      "Drama",
+      "Family",
+      "Reality"
+    ],
+    "tags": [],
+    "added": "2026-03-25T02:54:28Z",
+    "ratings": {
+      "votes": 3506,
+      "value": 5.5
+    },
+    "statistics": {
+      "seasonCount": 4,
+      "episodeFileCount": 10,
+      "episodeCount": 10,
+      "totalEpisodeCount": 40,
+      "sizeOnDisk": 16636667011,
+      "releaseGroups": [
+        "720-web",
+        "EDITH"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 23
+  },
+  {
+    "title": "Love is Blind",
+    "alternateTitles": [
+      {
+        "title": "Liebe macht blind",
+        "seasonNumber": -1
+      }
+    ],
+    "sortTitle": "love is blind",
+    "status": "continuing",
+    "ended": false,
+    "overview": "A group of singles chat up others through the safety of their private pod walls and attempt to make meaningful connections before laying their eyes on their potential partners for the first time.",
+    "network": "Netflix",
+    "airTime": "03:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/24/banner.jpg?lastWrite=639100807379218547",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/376459/banners/636bbbd7d268d.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/24/poster.jpg?lastWrite=639100807379378550",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/series/376459/posters/62072350.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/24/fanart.jpg?lastWrite=639100807379708554",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/376459/backgrounds/679a7c769c08c.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/24/clearlogo.png?lastWrite=639100807379818556",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/376459/clearlogo/611f54900deb0.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 14,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 14,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 3,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 15,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 4,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 16,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 5,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 11,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 6,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 13,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 7,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 13,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 8,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 14,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 9,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 13,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 10,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 12,
+          "episodeCount": 12,
+          "totalEpisodeCount": 13,
+          "sizeOnDisk": 40364434492,
+          "releaseGroups": [
+            "EDITH",
+            "FLUX",
+            "RAWR"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2020,
+    "path": "/media/tv/Love is Blind (2020)",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": false,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 61,
+    "tvdbId": 376459,
+    "tvRageId": 0,
+    "tvMazeId": 46167,
+    "tmdbId": 99353,
+    "firstAired": "2020-02-13T00:00:00Z",
+    "lastAired": "2026-03-11T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "loveisblind",
+    "imdbId": "tt11704040",
+    "titleSlug": "love-is-blind",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-MA",
+    "genres": [
+      "Reality",
+      "Romance"
+    ],
+    "tags": [],
+    "added": "2026-03-26T00:12:17Z",
+    "ratings": {
+      "votes": 13547,
+      "value": 6.2
+    },
+    "statistics": {
+      "seasonCount": 10,
+      "episodeFileCount": 12,
+      "episodeCount": 12,
+      "totalEpisodeCount": 136,
+      "sizeOnDisk": 40364434492,
+      "releaseGroups": [
+        "EDITH",
+        "FLUX",
+        "RAWR"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 24
+  },
+  {
+    "title": "Age of Attraction",
+    "alternateTitles": [],
+    "sortTitle": "age of attraction",
+    "status": "continuing",
+    "ended": false,
+    "overview": "Age is thrown out the window when singles search for their soulmates. Is love truly ageless, or will the years come between them?",
+    "network": "Netflix",
+    "airTime": "04:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/25/banner.jpg?lastWrite=639100807394618767",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/461944/banners/69b05a3bb0135.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/25/poster.jpg?lastWrite=639100807394728769",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/461944/posters/69b34941200fb.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/25/fanart.jpg?lastWrite=639100807394858771",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/461944/backgrounds/69b46653ef8a1.jpg"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 0,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 1,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 1,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 8,
+          "episodeCount": 8,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 19958159620,
+          "releaseGroups": [
+            "EDITH",
+            "HHWEB",
+            "RAWR"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2026,
+    "path": "/media/tv/Age of Attraction (2026)",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": false,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 57,
+    "tvdbId": 461944,
+    "tvRageId": 0,
+    "tvMazeId": 90122,
+    "tmdbId": 287390,
+    "firstAired": "2026-03-11T00:00:00Z",
+    "lastAired": "2026-03-25T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "ageattraction",
+    "imdbId": "tt37610452",
+    "titleSlug": "age-of-attraction",
+    "rootFolderPath": "/media/tv",
+    "genres": [
+      "Reality"
+    ],
+    "tags": [],
+    "added": "2026-03-26T00:12:19Z",
+    "ratings": {
+      "votes": 751,
+      "value": 5.3
+    },
+    "statistics": {
+      "seasonCount": 1,
+      "episodeFileCount": 8,
+      "episodeCount": 8,
+      "totalEpisodeCount": 9,
+      "sizeOnDisk": 19958159620,
+      "releaseGroups": [
+        "EDITH",
+        "HHWEB",
+        "RAWR"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 25
+  },
+  {
+    "title": "Scrubs (2026)",
+    "alternateTitles": [],
+    "sortTitle": "scrubs 2026",
+    "status": "continuing",
+    "ended": false,
+    "overview": "JD and Turk scrub in together for the first time in a long time: Medicine has changed; interns have changed; but their bromance has stood the test of time. Characters new and old navigate the waters of Sacred Heart with laughter, heart and some surprises along the way.",
+    "previousAiring": "2026-04-16T00:00:00Z",
+    "network": "ABC (US)",
+    "airTime": "20:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/26/banner.jpg?lastWrite=639102227118295271",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/465690/banners/697bbcc6a2a71.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/26/poster.jpg?lastWrite=639102227118465272",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/465690/posters/69693b1200cc2.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/26/fanart.jpg?lastWrite=639102227118605274",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/465690/backgrounds/69752bb6bfdaa.jpg"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2026-04-16T00:00:00Z",
+          "episodeFileCount": 9,
+          "episodeCount": 9,
+          "totalEpisodeCount": 9,
+          "sizeOnDisk": 10626901928,
+          "releaseGroups": [
+            "FLUX",
+            "NTb",
+            "TheBlackKing"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2026,
+    "path": "/media/tv/Scrubs (2026)",
+    "qualityProfileId": 8,
+    "seasonFolder": true,
+    "monitored": true,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 21,
+    "tvdbId": 465690,
+    "tvRageId": 0,
+    "tvMazeId": 84836,
+    "tmdbId": 295778,
+    "firstAired": "2026-02-25T00:00:00Z",
+    "lastAired": "2026-04-15T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "scrubs2026",
+    "imdbId": "tt40197357",
+    "titleSlug": "scrubs-2026",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-14",
+    "genres": [
+      "Comedy"
+    ],
+    "tags": [],
+    "added": "2026-03-27T15:38:31Z",
+    "ratings": {
+      "votes": 10612,
+      "value": 8.3
+    },
+    "statistics": {
+      "seasonCount": 1,
+      "episodeFileCount": 9,
+      "episodeCount": 9,
+      "totalEpisodeCount": 9,
+      "sizeOnDisk": 10626901928,
+      "releaseGroups": [
+        "FLUX",
+        "NTb",
+        "TheBlackKing"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 26
+  },
+  {
+    "title": "Euphoria (US)",
+    "alternateTitles": [
+      {
+        "title": "Euphoria",
+        "seasonNumber": -1
+      },
+      {
+        "title": "Euphoria 2019",
+        "seasonNumber": -1
+      }
+    ],
+    "sortTitle": "euphoria us",
+    "status": "ended",
+    "ended": true,
+    "overview": "A group of teenagers experience the ups and downs of love and friendship in a world of social media, sex, drugs, and violence.",
+    "previousAiring": "2026-06-01T01:00:00Z",
+    "network": "HBO",
+    "airTime": "21:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/27/banner.jpg?lastWrite=639105683744339616",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/graphical/5ce96ebf8d4d4.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/27/poster.jpg?lastWrite=639105683744499618",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/360261/posters/61ca158605238.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/27/fanart.jpg?lastWrite=639154367332648811",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/series/360261/backgrounds/5f36a638d4aa4.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/27/clearlogo.png?lastWrite=639105683744739621",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/360261/clearlogo/611c659e1d35f.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 0,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 2,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 1,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 3,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2026-06-01T01:00:00Z",
+          "episodeFileCount": 8,
+          "episodeCount": 8,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 38364834588,
+          "releaseGroups": [
+            "FLUX",
+            "GRACE",
+            "MeM",
+            "NTb"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2019,
+    "path": "/media/tv/Euphoria (US) (2019) [tvdbid-360261]",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": false,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 61,
+    "tvdbId": 360261,
+    "tvRageId": 0,
+    "tvMazeId": 28826,
+    "tmdbId": 85552,
+    "firstAired": "2019-06-16T00:00:00Z",
+    "lastAired": "2026-05-31T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "euphoriaus",
+    "imdbId": "tt8772296",
+    "titleSlug": "euphoria-us",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-MA",
+    "genres": [
+      "Drama"
+    ],
+    "tags": [],
+    "added": "2026-03-31T15:39:34Z",
+    "ratings": {
+      "votes": 314655,
+      "value": 8.1
+    },
+    "statistics": {
+      "seasonCount": 3,
+      "episodeFileCount": 8,
+      "episodeCount": 8,
+      "totalEpisodeCount": 26,
+      "sizeOnDisk": 38364834588,
+      "releaseGroups": [
+        "FLUX",
+        "GRACE",
+        "MeM",
+        "NTb"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 27
+  },
+  {
+    "title": "The Sopranos",
+    "alternateTitles": [
+      {
+        "title": "Die Sopranos",
+        "seasonNumber": -1
+      },
+      {
+        "title": "Los Soprano",
+        "seasonNumber": -1
+      },
+      {
+        "title": "I Soprano",
+        "seasonNumber": -1
+      }
+    ],
+    "sortTitle": "sopranos",
+    "status": "ended",
+    "ended": true,
+    "overview": "New Jersey mob boss Tony Soprano deals with personal and professional issues in his home and business life that affect his mental state, leading him to seek professional psychiatric counseling.",
+    "network": "HBO",
+    "airTime": "21:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/28/banner.jpg?lastWrite=639106960164873296",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/graphical/75299-g6.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/28/poster.jpg?lastWrite=639106960165023297",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/posters/75299-17.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/28/fanart.jpg?lastWrite=639106960165213299",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/fanart/original/75299-13.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/28/clearlogo.png?lastWrite=639106960165343301",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/75299/clearlogo/611b5efa3c8e0.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 0,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 5,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 1,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 13,
+          "episodeCount": 13,
+          "totalEpisodeCount": 13,
+          "sizeOnDisk": 12329575487,
+          "releaseGroups": [
+            "HazMatt"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 13,
+          "episodeCount": 13,
+          "totalEpisodeCount": 13,
+          "sizeOnDisk": 12528516031,
+          "releaseGroups": [
+            "HazMatt"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 3,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 13,
+          "episodeCount": 13,
+          "totalEpisodeCount": 13,
+          "sizeOnDisk": 12803492138,
+          "releaseGroups": [
+            "HazMatt"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 4,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 13,
+          "episodeCount": 13,
+          "totalEpisodeCount": 13,
+          "sizeOnDisk": 31263119541,
+          "releaseGroups": [
+            "HazMatt",
+            "playWEB"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 5,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 13,
+          "episodeCount": 13,
+          "totalEpisodeCount": 13,
+          "sizeOnDisk": 12637210165,
+          "releaseGroups": [
+            "HazMatt"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 6,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 21,
+          "episodeCount": 21,
+          "totalEpisodeCount": 21,
+          "sizeOnDisk": 20638398699,
+          "releaseGroups": [
+            "HazMatt"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 1999,
+    "path": "/media/tv/The Sopranos (1999) [tvdbid-75299]",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": false,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 54,
+    "tvdbId": 75299,
+    "tvRageId": 6206,
+    "tvMazeId": 527,
+    "tmdbId": 1398,
+    "firstAired": "1999-01-10T00:00:00Z",
+    "lastAired": "2007-06-10T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "thesopranos",
+    "imdbId": "tt0141842",
+    "titleSlug": "the-sopranos",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-MA",
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "tags": [],
+    "added": "2026-04-02T03:06:56Z",
+    "ratings": {
+      "votes": 581211,
+      "value": 9.2
+    },
+    "statistics": {
+      "seasonCount": 6,
+      "episodeFileCount": 86,
+      "episodeCount": 86,
+      "totalEpisodeCount": 91,
+      "sizeOnDisk": 102200312061,
+      "releaseGroups": [
+        "HazMatt",
+        "playWEB"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 28
+  },
+  {
+    "title": "Man on Fire",
+    "alternateTitles": [],
+    "sortTitle": "man on fire",
+    "status": "continuing",
+    "ended": false,
+    "overview": "Haunted by his past and hunted by his enemies, a Special Forces veteran fights to keep a teenage girl alive on the deadly streets of Rio de Janeiro.",
+    "previousAiring": "2026-04-30T08:00:00Z",
+    "network": "Netflix",
+    "airTime": "04:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/29/banner.jpg?lastWrite=639126699836081795",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/433027/banners/69ebcd80825ad.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/29/poster.jpg?lastWrite=639122376922287339",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/433027/posters/69e4fd261e7e0.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/29/fanart.jpg?lastWrite=639133616830409865",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/433027/backgrounds/69e4bfbdaea01.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/29/clearlogo.png?lastWrite=639121512518957312",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/433027/clearlogo/69e3ce5ce90b1.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2026-04-30T08:00:00Z",
+          "episodeFileCount": 7,
+          "episodeCount": 7,
+          "totalEpisodeCount": 7,
+          "sizeOnDisk": 13472056145,
+          "releaseGroups": [
+            "FLUX",
+            "GRACE"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2026,
+    "path": "/media/tv/Man on Fire (2026) [tvdbid-433027]",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": false,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 48,
+    "tvdbId": 433027,
+    "tvRageId": 0,
+    "tvMazeId": 67765,
+    "tmdbId": 223386,
+    "firstAired": "2026-04-30T00:00:00Z",
+    "lastAired": "2026-04-30T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "manonfire",
+    "imdbId": "tt27331527",
+    "titleSlug": "man-on-fire",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-MA",
+    "genres": [
+      "Action",
+      "Drama",
+      "Suspense"
+    ],
+    "tags": [],
+    "added": "2026-04-03T22:54:19Z",
+    "ratings": {
+      "votes": 11815,
+      "value": 6.7
+    },
+    "statistics": {
+      "seasonCount": 1,
+      "episodeFileCount": 7,
+      "episodeCount": 7,
+      "totalEpisodeCount": 7,
+      "sizeOnDisk": 13472056145,
+      "releaseGroups": [
+        "FLUX",
+        "GRACE"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 29
+  },
+  {
+    "title": "The Fall and Rise of Reggie Dinkins",
+    "alternateTitles": [],
+    "sortTitle": "fall and rise of reggie dinkins",
+    "status": "continuing",
+    "ended": false,
+    "overview": "Disgraced former football star Reggie Dinkins is on a mission to rehabilitate his image with the help of award-winning filmmaker Arthur Tobin. In order to earn back the admiration of his fans and the respect of his family, Reggie will also have to confront the ghosts of his past.",
+    "previousAiring": "2026-04-14T00:52:00Z",
+    "network": "NBC",
+    "airTime": "20:30",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/30/banner.jpg?lastWrite=639109928994189875",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/463588/banners/696e16751742d.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/30/poster.jpg?lastWrite=639109928994459878",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/463588/posters/696c0ade26875.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/30/fanart.jpg?lastWrite=639109928994869884",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/463588/backgrounds/6970be50a377a.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/30/clearlogo.png?lastWrite=639109928995029886",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/463588/clearlogo/696e1659ae954.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2026-04-14T00:52:00Z",
+          "episodeFileCount": 10,
+          "episodeCount": 10,
+          "totalEpisodeCount": 10,
+          "sizeOnDisk": 12158762689,
+          "releaseGroups": [
+            "ETHEL",
+            "RAWR"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2026,
+    "path": "/media/tv/The Fall and Rise of Reggie Dinkins (2026) [tvdbid-463588]",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": true,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 22,
+    "tvdbId": 463588,
+    "tvRageId": 0,
+    "tvMazeId": 84605,
+    "tmdbId": 291334,
+    "firstAired": "2026-01-18T00:00:00Z",
+    "lastAired": "2026-04-13T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "thefallrisereggiedinkins",
+    "imdbId": "tt36153709",
+    "titleSlug": "the-fall-and-rise-of-reggie-dinkins",
+    "rootFolderPath": "/media/tv",
+    "genres": [
+      "Comedy"
+    ],
+    "tags": [],
+    "added": "2026-04-05T13:34:59Z",
+    "ratings": {
+      "votes": 2286,
+      "value": 6.9
+    },
+    "statistics": {
+      "seasonCount": 1,
+      "episodeFileCount": 10,
+      "episodeCount": 10,
+      "totalEpisodeCount": 10,
+      "sizeOnDisk": 12158762689,
+      "releaseGroups": [
+        "ETHEL",
+        "RAWR"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 30
+  },
+  {
+    "title": "Severance",
+    "alternateTitles": [
+      {
+        "title": "Separación",
+        "seasonNumber": -1
+      },
+      {
+        "title": "Scissione",
+        "seasonNumber": -1
+      },
+      {
+        "title": "Severence Scissione",
+        "seasonNumber": -1
+      },
+      {
+        "title": "Separacion",
+        "seasonNumber": -1
+      }
+    ],
+    "sortTitle": "severance",
+    "status": "continuing",
+    "ended": false,
+    "overview": "Mark leads a team of office workers whose memories have been surgically divided between their work and personal lives. When a mysterious colleague appears outside of work, it begins a journey to discover the truth about their jobs.",
+    "network": "Apple TV",
+    "airTime": "21:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/31/banner.jpg?lastWrite=639111370311031735",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/371980/banners/67d3854a3f3f2.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/31/poster.jpg?lastWrite=639111370311331739",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/371980/posters/621096b26f0e2.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/31/fanart.jpg?lastWrite=639111370311801744",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/371980/backgrounds/61bdee7c62d99.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/31/clearlogo.png?lastWrite=639111370311951746",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/371980/clearlogo/67deb201804b5.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 0,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 21,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 1,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 9,
+          "episodeCount": 9,
+          "totalEpisodeCount": 9,
+          "sizeOnDisk": 35653516466,
+          "releaseGroups": [
+            "TEPES"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 10,
+          "episodeCount": 10,
+          "totalEpisodeCount": 10,
+          "sizeOnDisk": 40779216167,
+          "releaseGroups": [
+            "FLUX"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2022,
+    "path": "/media/tv/Severance (2022) [tvdbid-371980]",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": false,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 49,
+    "tvdbId": 371980,
+    "tvRageId": 0,
+    "tvMazeId": 44933,
+    "tmdbId": 95396,
+    "firstAired": "2022-02-18T00:00:00Z",
+    "lastAired": "2025-03-20T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "severance",
+    "imdbId": "tt11280740",
+    "titleSlug": "severance",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-MA",
+    "genres": [
+      "Drama",
+      "Mystery",
+      "Science Fiction",
+      "Thriller"
+    ],
+    "tags": [],
+    "added": "2026-04-07T05:37:10Z",
+    "ratings": {
+      "votes": 393108,
+      "value": 8.6
+    },
+    "statistics": {
+      "seasonCount": 2,
+      "episodeFileCount": 19,
+      "episodeCount": 19,
+      "totalEpisodeCount": 40,
+      "sizeOnDisk": 76432732633,
+      "releaseGroups": [
+        "TEPES",
+        "FLUX"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 31
+  },
+  {
+    "title": "The Audacity",
+    "alternateTitles": [],
+    "sortTitle": "audacity",
+    "status": "continuing",
+    "ended": false,
+    "overview": "A scandal is sparked by the exploitation of personal data which unravels out of a rift between a self-appointed \"inventor of the future\" tech CEO and his self-serving \"performance psychologist.\" This act of corruption quickly spirals out of control for all involved, exposing the absurdities of ambition, corporate ethics, and the fallibility of the people who are shaping the future of our world.",
+    "previousAiring": "2026-06-01T01:00:00Z",
+    "network": "AMC",
+    "airTime": "21:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/32/banner.jpg?lastWrite=639112242090192068",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/459000/banners/69cae0078a050.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/32/poster.jpg?lastWrite=639112242090342070",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/459000/posters/69aef40e7a15d.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/32/fanart.jpg?lastWrite=639112242090512072",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/459000/backgrounds/69b270fbc337f.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/32/clearlogo.png?lastWrite=639116324849262535",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/459000/clearlogo/69dbe28dac8c6.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 0,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 1,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 1,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2026-06-01T01:00:00Z",
+          "episodeFileCount": 8,
+          "episodeCount": 8,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 33043649292,
+          "releaseGroups": [
+            "ETHEL",
+            "GRACE",
+            "Kitsune",
+            "RAWR"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2026,
+    "path": "/media/tv/The Audacity (2026) [tvdbid-459000]",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": true,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 62,
+    "tvdbId": 459000,
+    "tvRageId": 0,
+    "tvMazeId": 89708,
+    "tmdbId": 258036,
+    "firstAired": "2026-04-12T00:00:00Z",
+    "lastAired": "2026-05-31T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "theaudacity",
+    "imdbId": "tt30923123",
+    "titleSlug": "the-audacity",
+    "rootFolderPath": "/media/tv",
+    "genres": [
+      "Drama"
+    ],
+    "tags": [],
+    "added": "2026-04-08T05:50:08Z",
+    "ratings": {
+      "votes": 1674,
+      "value": 6.2
+    },
+    "statistics": {
+      "seasonCount": 1,
+      "episodeFileCount": 8,
+      "episodeCount": 8,
+      "totalEpisodeCount": 9,
+      "sizeOnDisk": 33043649292,
+      "releaseGroups": [
+        "ETHEL",
+        "GRACE",
+        "Kitsune",
+        "RAWR"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 32
+  },
+  {
+    "title": "Top Gear",
+    "alternateTitles": [
+      {
+        "title": "Top Gear UK",
+        "seasonNumber": -1
+      },
+      {
+        "title": "Top Gear ft Clarkson-Hammond-May",
+        "seasonNumber": -1
+      }
+    ],
+    "sortTitle": "top gear",
+    "status": "ended",
+    "ended": true,
+    "overview": "Tests whether cars, both mundane and extraordinary, live up to their manufacturers' claims. Travels to locations around the world, performing extreme stunts and challenges to see what the featured cars are capable of doing. Celebrity guests appear on some episodes to help test the vehicles. Things don't always go as planned, though, with broken bones and mechanical mishaps sometimes part of the experiments.",
+    "network": "BBC One",
+    "airTime": "20:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/33/banner.jpg?lastWrite=639112674732503820",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/graphical/74608-g2.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/33/poster.jpg?lastWrite=639112674733603832",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/posters/74608-5.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/33/fanart.jpg?lastWrite=639112674734853847",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/fanart/original/74608-13.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/33/clearlogo.png?lastWrite=639112674735553854",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/74608/clearlogo/611b55c0bb113.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 0,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 115,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 1,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 10,
+          "episodeCount": 10,
+          "totalEpisodeCount": 10,
+          "sizeOnDisk": 6382360318,
+          "releaseGroups": [
+            "Zero00"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 10,
+          "episodeCount": 10,
+          "totalEpisodeCount": 10,
+          "sizeOnDisk": 8290666251,
+          "releaseGroups": [],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 3,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 9,
+          "episodeCount": 9,
+          "totalEpisodeCount": 9,
+          "sizeOnDisk": 8537514706,
+          "releaseGroups": [],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 4,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 10,
+          "episodeCount": 10,
+          "totalEpisodeCount": 10,
+          "sizeOnDisk": 9528800621,
+          "releaseGroups": [],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 5,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 9,
+          "episodeCount": 9,
+          "totalEpisodeCount": 9,
+          "sizeOnDisk": 8524525624,
+          "releaseGroups": [
+            "Type"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 6,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 11,
+          "episodeCount": 11,
+          "totalEpisodeCount": 11,
+          "sizeOnDisk": 10484566560,
+          "releaseGroups": [
+            "Door",
+            "Road"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 7,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 7,
+          "episodeCount": 7,
+          "totalEpisodeCount": 7,
+          "sizeOnDisk": 6724310285,
+          "releaseGroups": [],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 8,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 8,
+          "episodeCount": 8,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 7665253428,
+          "releaseGroups": [],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 9,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 6,
+          "episodeCount": 6,
+          "totalEpisodeCount": 6,
+          "sizeOnDisk": 5666035603,
+          "releaseGroups": [],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 10,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 10,
+          "episodeCount": 10,
+          "totalEpisodeCount": 10,
+          "sizeOnDisk": 9607817884,
+          "releaseGroups": [
+            "Hour"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 11,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 6,
+          "episodeCount": 6,
+          "totalEpisodeCount": 6,
+          "sizeOnDisk": 5753177576,
+          "releaseGroups": [],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 12,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 8,
+          "episodeCount": 8,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 8182493794,
+          "releaseGroups": [],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 13,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 7,
+          "episodeCount": 7,
+          "totalEpisodeCount": 7,
+          "sizeOnDisk": 7475868705,
+          "releaseGroups": [],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 14,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 7,
+          "episodeCount": 7,
+          "totalEpisodeCount": 7,
+          "sizeOnDisk": 11296688841,
+          "releaseGroups": [],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 15,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 6,
+          "episodeCount": 6,
+          "totalEpisodeCount": 6,
+          "sizeOnDisk": 8621581731,
+          "releaseGroups": [],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 16,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 6,
+          "episodeCount": 6,
+          "totalEpisodeCount": 6,
+          "sizeOnDisk": 9206565249,
+          "releaseGroups": [],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 17,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 6,
+          "episodeCount": 6,
+          "totalEpisodeCount": 6,
+          "sizeOnDisk": 9403470433,
+          "releaseGroups": [],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 18,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 7,
+          "episodeCount": 7,
+          "totalEpisodeCount": 7,
+          "sizeOnDisk": 10837759674,
+          "releaseGroups": [],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 19,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 7,
+          "episodeCount": 7,
+          "totalEpisodeCount": 7,
+          "sizeOnDisk": 10952932322,
+          "releaseGroups": [],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 20,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 6,
+          "episodeCount": 6,
+          "totalEpisodeCount": 6,
+          "sizeOnDisk": 9428065617,
+          "releaseGroups": [],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 21,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 7,
+          "episodeCount": 7,
+          "totalEpisodeCount": 7,
+          "sizeOnDisk": 11257114438,
+          "releaseGroups": [],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 22,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 8,
+          "episodeCount": 8,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 12722053322,
+          "releaseGroups": [],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 23,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 6,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 24,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 7,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 25,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 6,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 26,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 5,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 27,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 5,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 28,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 6,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 29,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 5,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 30,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 4,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 31,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 5,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 32,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 5,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 33,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 5,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      }
+    ],
+    "year": 2002,
+    "path": "/media/tv/Top Gear (2002) [tvdbid-74608]",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": false,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 60,
+    "tvdbId": 74608,
+    "tvRageId": 6753,
+    "tvMazeId": 522,
+    "tmdbId": 45,
+    "firstAired": "2002-10-20T00:00:00Z",
+    "lastAired": "2022-12-18T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "topgear",
+    "imdbId": "tt1628033",
+    "titleSlug": "top-gear",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-PG",
+    "genres": [
+      "Comedy",
+      "Documentary",
+      "Talk Show",
+      "Travel"
+    ],
+    "tags": [],
+    "added": "2026-04-08T17:51:12Z",
+    "ratings": {
+      "votes": 136938,
+      "value": 8.7
+    },
+    "statistics": {
+      "seasonCount": 33,
+      "episodeFileCount": 171,
+      "episodeCount": 171,
+      "totalEpisodeCount": 345,
+      "sizeOnDisk": 196549622982,
+      "releaseGroups": [
+        "Zero00",
+        "Type",
+        "Door",
+        "Road",
+        "Hour"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 33
+  },
+  {
+    "title": "The Grand Tour (2016)",
+    "alternateTitles": [
+      {
+        "title": "The Grand Tour",
+        "seasonNumber": -1
+      }
+    ],
+    "sortTitle": "grand tour 2016",
+    "status": "continuing",
+    "ended": false,
+    "overview": "Jeremy Clarkson, Richard Hammond and James May are back with a show about adventure, excitement and friendship... as long as you accept that the people you call friends are also the ones you find extremely annoying. Sometimes it's even a show about cars. Follow them on their global adventure.",
+    "network": "Prime Video",
+    "airTime": "08:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/34/banner.jpg?lastWrite=639112674890705605",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/graphical/314087-g2.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/34/poster.jpg?lastWrite=639112674891725616",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/posters/5c447607aa2e8.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/34/fanart.jpg?lastWrite=639112674892525625",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/fanart/original/314087-4.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/34/clearlogo.png?lastWrite=639112674892875629",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/314087/clearlogo/611b8da0c3814.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 0,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 38,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 1,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 13,
+          "episodeCount": 13,
+          "totalEpisodeCount": 13,
+          "sizeOnDisk": 30415573583,
+          "releaseGroups": [
+            "RZeroX"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 11,
+          "episodeCount": 11,
+          "totalEpisodeCount": 11,
+          "sizeOnDisk": 60442754814,
+          "releaseGroups": [
+            "DEFLATE",
+            "QOQ",
+            "SKGTV",
+            "STRiFE"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 3,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 14,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 4,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 4,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 5,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 3,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 6,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 1,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      }
+    ],
+    "year": 2016,
+    "path": "/media/tv/The Grand Tour (2016) [tvdbid-314087]",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": false,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 71,
+    "tvdbId": 314087,
+    "tvRageId": 0,
+    "tvMazeId": 17078,
+    "tmdbId": 67557,
+    "firstAired": "2016-11-18T00:00:00Z",
+    "lastAired": "2024-09-13T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "thegrandtour2016",
+    "imdbId": "tt5712554",
+    "titleSlug": "the-grand-tour-2016",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-14",
+    "genres": [
+      "Comedy",
+      "Documentary",
+      "Reality",
+      "Travel"
+    ],
+    "tags": [],
+    "added": "2026-04-08T17:51:28Z",
+    "ratings": {
+      "votes": 95106,
+      "value": 8.7
+    },
+    "statistics": {
+      "seasonCount": 6,
+      "episodeFileCount": 24,
+      "episodeCount": 24,
+      "totalEpisodeCount": 84,
+      "sizeOnDisk": 90858328397,
+      "releaseGroups": [
+        "RZeroX",
+        "DEFLATE",
+        "QOQ",
+        "SKGTV",
+        "STRiFE"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 34
+  },
+  {
+    "title": "Barry",
+    "alternateTitles": [],
+    "sortTitle": "barry",
+    "status": "ended",
+    "ended": true,
+    "overview": "After following his intended target to an acting class, a hitman finds himself intrigued and decides to become an actor and change his life.",
+    "previousAiring": "2023-05-29T02:00:00Z",
+    "network": "HBO",
+    "airTime": "22:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/35/banner.jpg?lastWrite=639116416231742816",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/graphical/333072-g2.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/35/poster.jpg?lastWrite=639116416231932818",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/posters/333072-3.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/35/fanart.jpg?lastWrite=639116416232122820",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/fanart/original/333072-3.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/35/clearlogo.png?lastWrite=639116416232252822",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/333072/clearlogo/611be3e7414ca.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 3,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 4,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2023-05-29T02:00:00Z",
+          "episodeFileCount": 8,
+          "episodeCount": 8,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 16786308916,
+          "releaseGroups": [
+            "cakes",
+            "NTb"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2018,
+    "path": "/media/tv/Barry (2018) [tvdbid-333072]",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": false,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 30,
+    "tvdbId": 333072,
+    "tvRageId": 0,
+    "tvMazeId": 11538,
+    "tmdbId": 73107,
+    "firstAired": "2018-03-25T00:00:00Z",
+    "lastAired": "2023-05-28T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "barry",
+    "imdbId": "tt5348176",
+    "titleSlug": "barry",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-MA",
+    "genres": [
+      "Comedy",
+      "Crime",
+      "Drama"
+    ],
+    "tags": [],
+    "added": "2026-04-13T01:47:03Z",
+    "ratings": {
+      "votes": 143416,
+      "value": 8.3
+    },
+    "statistics": {
+      "seasonCount": 4,
+      "episodeFileCount": 8,
+      "episodeCount": 8,
+      "totalEpisodeCount": 32,
+      "sizeOnDisk": 16786308916,
+      "releaseGroups": [
+        "cakes",
+        "NTb"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 35
+  },
+  {
+    "title": "Big Mistakes",
+    "alternateTitles": [],
+    "sortTitle": "big mistakes",
+    "status": "continuing",
+    "ended": false,
+    "overview": "Blackmailed into working for gangsters, two deeply incapable siblings become the most disorganized duo in organized crime.",
+    "previousAiring": "2026-04-09T07:00:00Z",
+    "network": "Netflix",
+    "airTime": "03:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/36/banner.jpg?lastWrite=639136642566690658",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/466852/banners/69fa0b142f76f.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/36/poster.jpg?lastWrite=639118486245963264",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/466852/posters/69d0461c7d26f.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/36/fanart.jpg?lastWrite=639117964176557147",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/466852/backgrounds/69da53298d9f0.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/36/clearlogo.png?lastWrite=639117964176617148",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/466852/clearlogo/69d17e3ec3a87.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2026-04-09T07:00:00Z",
+          "episodeFileCount": 8,
+          "episodeCount": 8,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 14964699534,
+          "releaseGroups": [
+            "FLUX",
+            "HHWEB"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2026,
+    "path": "/media/tv/Big Mistakes (2026) [tvdbid-466852]",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": true,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 33,
+    "tvdbId": 466852,
+    "tvRageId": 0,
+    "tvMazeId": 86488,
+    "tmdbId": 291506,
+    "firstAired": "2026-04-09T00:00:00Z",
+    "lastAired": "2026-04-09T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "bigmistakes",
+    "imdbId": "tt36957934",
+    "titleSlug": "big-mistakes",
+    "rootFolderPath": "/media/tv",
+    "certification": "14",
+    "genres": [
+      "Comedy",
+      "Crime"
+    ],
+    "tags": [],
+    "added": "2026-04-14T20:46:57Z",
+    "ratings": {
+      "votes": 11389,
+      "value": 7.2
+    },
+    "statistics": {
+      "seasonCount": 1,
+      "episodeFileCount": 8,
+      "episodeCount": 8,
+      "totalEpisodeCount": 8,
+      "sizeOnDisk": 14964699534,
+      "releaseGroups": [
+        "FLUX",
+        "HHWEB"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 36
+  },
+  {
+    "title": "Paradise (2025)",
+    "alternateTitles": [
+      {
+        "title": "Paradise -",
+        "seasonNumber": -1,
+        "comment": "LostFilm"
+      },
+      {
+        "title": "Paradise",
+        "seasonNumber": -1,
+        "comment": "LostFilm"
+      }
+    ],
+    "sortTitle": "paradise 2025",
+    "status": "continuing",
+    "ended": false,
+    "overview": "A security service team gets assigned to safeguard a former president.",
+    "previousAiring": "2026-03-30T04:00:00Z",
+    "network": "Hulu",
+    "airTime": "00:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/37/banner.jpg?lastWrite=639118358982385360",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/454565/banners/697664c68ee06.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/37/poster.jpg?lastWrite=639118358982495361",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/454565/posters/699f8961a2007.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/37/fanart.jpg?lastWrite=639152638062410001",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/454565/backgrounds/69f4c76540324.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/37/clearlogo.png?lastWrite=639118358982775365",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/454565/clearlogo/679758f52a82b.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 0,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 9,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 1,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2025-03-04T05:00:00Z",
+          "episodeFileCount": 8,
+          "episodeCount": 8,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 16526776614,
+          "releaseGroups": [
+            "Kitsune",
+            "MeM",
+            "RAWR"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2026-03-30T04:00:00Z",
+          "episodeFileCount": 8,
+          "episodeCount": 8,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 16376559797,
+          "releaseGroups": [
+            "ETHEL",
+            "FLU",
+            "FLUX",
+            "RAWR"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2025,
+    "path": "/media/tv/Paradise (2025) [tvdbid-454565]",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": true,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 52,
+    "tvdbId": 454565,
+    "tvRageId": 0,
+    "tvMazeId": 75030,
+    "tmdbId": 245927,
+    "firstAired": "2025-01-26T00:00:00Z",
+    "lastAired": "2026-03-30T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "paradise2025",
+    "imdbId": "tt27444205",
+    "titleSlug": "paradise-2025",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-MA",
+    "genres": [
+      "Drama",
+      "Science Fiction",
+      "Thriller"
+    ],
+    "tags": [],
+    "added": "2026-04-15T07:44:57Z",
+    "ratings": {
+      "votes": 82906,
+      "value": 7.9
+    },
+    "statistics": {
+      "seasonCount": 2,
+      "episodeFileCount": 16,
+      "episodeCount": 16,
+      "totalEpisodeCount": 25,
+      "sizeOnDisk": 32903336411,
+      "releaseGroups": [
+        "Kitsune",
+        "MeM",
+        "RAWR",
+        "ETHEL",
+        "FLU",
+        "FLUX"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 37
+  },
+  {
+    "title": "Baylen Out Loud",
+    "alternateTitles": [
+      {
+        "title": "Life of Baylen Ich ticke anders",
+        "seasonNumber": -1
+      }
+    ],
+    "sortTitle": "baylen out loud",
+    "status": "continuing",
+    "ended": false,
+    "overview": "Baylen Out Loud follows the journey of Baylen Dupree, a young woman living with an extreme case of Tourette Syndrome. Despite her daily challenges, Baylen and her family aren't afraid to laugh and embrace the chaos that makes their everyday lives in West Virginia unique. With Baylen yearning for independence, she'll need to rely less on her family as she takes steps toward being in the world on her own.",
+    "nextAiring": "2026-06-24T01:00:00Z",
+    "previousAiring": "2026-06-17T01:00:00Z",
+    "network": "TLC",
+    "airTime": "21:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/38/banner.jpg?lastWrite=639120622810015663",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/457477/banners/69028246c9c81.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/38/poster.jpg?lastWrite=639120622810175665",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/457477/posters/69e0028673ceb.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/38/fanart.jpg?lastWrite=639120622810305667",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/457477/backgrounds/690274328cd84.jpg"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 0,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 2,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 1,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 9,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2025-12-31T02:00:00Z",
+          "episodeFileCount": 13,
+          "episodeCount": 13,
+          "totalEpisodeCount": 13,
+          "sizeOnDisk": 29510634497,
+          "releaseGroups": [
+            "FREQUENCY",
+            "Kit",
+            "Kitsune",
+            "RAWR",
+            "STC"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 3,
+        "monitored": true,
+        "statistics": {
+          "nextAiring": "2026-06-24T01:00:00Z",
+          "previousAiring": "2026-06-17T01:00:00Z",
+          "episodeFileCount": 5,
+          "episodeCount": 5,
+          "totalEpisodeCount": 9,
+          "sizeOnDisk": 15379587756,
+          "releaseGroups": [
+            "EDITH",
+            "RAWR"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2025,
+    "path": "/media/tv/Baylen Out Loud (2025) [tvdbid-457477]",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": true,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 43,
+    "tvdbId": 457477,
+    "tvRageId": 0,
+    "tvMazeId": 81240,
+    "tmdbId": 279644,
+    "firstAired": "2025-01-13T00:00:00Z",
+    "lastAired": "2026-07-14T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "baylenoutloud",
+    "imdbId": "tt34881067",
+    "titleSlug": "baylen-out-loud",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-MA",
+    "genres": [
+      "Reality"
+    ],
+    "tags": [],
+    "added": "2026-04-17T22:38:00Z",
+    "ratings": {
+      "votes": 949,
+      "value": 7.4
+    },
+    "statistics": {
+      "seasonCount": 3,
+      "episodeFileCount": 18,
+      "episodeCount": 18,
+      "totalEpisodeCount": 33,
+      "sizeOnDisk": 44890222253,
+      "releaseGroups": [
+        "FREQUENCY",
+        "Kit",
+        "Kitsune",
+        "RAWR",
+        "STC",
+        "EDITH"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 38
+  },
+  {
+    "title": "Mr. Robot",
+    "alternateTitles": [],
+    "sortTitle": "mr robot",
+    "status": "ended",
+    "ended": true,
+    "overview": "Elliot, a young programmer who works as a cyber-security engineer by day and a vigilante hacker by night. Elliot finds himself at a crossroads when the mysterious leader of an underground hacker group recruits him to destroy the corporation.",
+    "network": "USA Network",
+    "airTime": "22:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/39/banner.jpg?lastWrite=639121340343303718",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/graphical/289590-g8.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/39/poster.jpg?lastWrite=639121340343433719",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/posters/289590-12.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/39/fanart.jpg?lastWrite=639121340343563721",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/fanart/original/289590-18.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/39/clearlogo.png?lastWrite=639121340343643722",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/289590/clearlogo/611b6bc7169dc.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 0,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 3,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 1,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 10,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 12,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 3,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 10,
+          "episodeCount": 10,
+          "totalEpisodeCount": 10,
+          "sizeOnDisk": 26519283925,
+          "releaseGroups": [
+            "FLUX"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 4,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 13,
+          "episodeCount": 13,
+          "totalEpisodeCount": 13,
+          "sizeOnDisk": 38390295265,
+          "releaseGroups": [
+            "NTG"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2015,
+    "path": "/media/tv/Mr. Robot (2015) [tvdbid-289590]",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": false,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 50,
+    "tvdbId": 289590,
+    "tvRageId": 42422,
+    "tvMazeId": 1871,
+    "tmdbId": 62560,
+    "firstAired": "2015-06-24T00:00:00Z",
+    "lastAired": "2019-12-22T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "mrrobot",
+    "imdbId": "tt4158110",
+    "titleSlug": "mr-robot",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-MA",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "tags": [],
+    "added": "2026-04-18T18:33:54Z",
+    "ratings": {
+      "votes": 469036,
+      "value": 8.5
+    },
+    "statistics": {
+      "seasonCount": 4,
+      "episodeFileCount": 23,
+      "episodeCount": 23,
+      "totalEpisodeCount": 48,
+      "sizeOnDisk": 64909579190,
+      "releaseGroups": [
+        "FLUX",
+        "NTG"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 39
+  },
+  {
+    "title": "The Boys",
+    "alternateTitles": [
+      {
+        "title": "The Boys 2019",
+        "seasonNumber": -1
+      },
+      {
+        "title": "Пацаны",
+        "seasonNumber": -1
+      }
+    ],
+    "sortTitle": "boys",
+    "status": "ended",
+    "ended": true,
+    "overview": "In a world where superheroes embrace the darker side of their massive celebrity and fame, a group of vigilantes known informally as \"The Boys\" set out to take down corrupt superheroes with no more than blue collar grit and a willingness to fight dirty.",
+    "previousAiring": "2026-05-20T07:00:00Z",
+    "network": "Prime Video",
+    "airTime": "03:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/40/banner.jpg?lastWrite=639122536257909750",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/series/355567/banners/5f208242a5940.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/40/poster.jpg?lastWrite=639122536258089752",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/posters/5c5c402b075cc.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/40/fanart.jpg?lastWrite=639122536258319754",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/fanart/original/5d120186c0c5f.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/40/clearlogo.png?lastWrite=639122536258449756",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/355567/clearlogo/611bb6e6d40ef.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 0,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 83,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 1,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 3,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2022-07-08T07:00:00Z",
+          "episodeFileCount": 8,
+          "episodeCount": 8,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 33319220046,
+          "releaseGroups": [
+            "BlackBit",
+            "NTb"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 4,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2024-07-18T07:00:00Z",
+          "episodeFileCount": 8,
+          "episodeCount": 8,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 33866149737,
+          "releaseGroups": [
+            "FLUX",
+            "NTb",
+            "XEBEC"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 5,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2026-05-20T07:00:00Z",
+          "episodeFileCount": 8,
+          "episodeCount": 8,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 37483329397,
+          "releaseGroups": [
+            "FLUX",
+            "GRACE",
+            "playWEB",
+            "SYLiX"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2019,
+    "path": "/media/tv/The Boys (2019) [tvdbid-355567]",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": false,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 64,
+    "tvdbId": 355567,
+    "tvRageId": 0,
+    "tvMazeId": 15299,
+    "tmdbId": 76479,
+    "firstAired": "2019-07-26T00:00:00Z",
+    "lastAired": "2026-05-20T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "theboys",
+    "imdbId": "tt1190634",
+    "titleSlug": "the-boys",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-MA",
+    "genres": [
+      "Action",
+      "Comedy",
+      "Crime",
+      "Drama",
+      "Fantasy",
+      "Science Fiction"
+    ],
+    "tags": [],
+    "added": "2026-04-20T03:47:05Z",
+    "ratings": {
+      "votes": 996820,
+      "value": 8.5
+    },
+    "statistics": {
+      "seasonCount": 5,
+      "episodeFileCount": 24,
+      "episodeCount": 24,
+      "totalEpisodeCount": 123,
+      "sizeOnDisk": 104668699180,
+      "releaseGroups": [
+        "BlackBit",
+        "NTb",
+        "FLUX",
+        "XEBEC",
+        "GRACE",
+        "playWEB",
+        "SYLiX"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 40
+  },
+  {
+    "title": "Daredevil: Born Again",
+    "alternateTitles": [
+      {
+        "title": "Daredevil: Rinascita",
+        "seasonNumber": -1
+      },
+      {
+        "title": "Daredevil: Odrodzenie / Daredevil: Born Again",
+        "seasonNumber": -1
+      },
+      {
+        "title": "Daredevil: Odrodzenie / Daredevil: Born Again (2025)",
+        "seasonNumber": -1
+      }
+    ],
+    "sortTitle": "daredevil born again",
+    "status": "continuing",
+    "ended": false,
+    "overview": "Matt Murdock finds himself on a collision course with Wilson Fisk when their past identities begin to emerge.",
+    "previousAiring": "2026-05-06T01:00:00Z",
+    "network": "Disney+",
+    "airTime": "21:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/41/banner.jpg?lastWrite=639122536562393127",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/422712/banners/6787d1d7187c6.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/41/poster.jpg?lastWrite=639122536562573129",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/422712/posters/6978fefe94ea5.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/41/fanart.jpg?lastWrite=639128861438988866",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/422712/backgrounds/69bef1d230b9d.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/41/clearlogo.png?lastWrite=639122536562853132",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/422712/clearlogo/67e60e559c1f8.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2025-04-16T01:00:00Z",
+          "episodeFileCount": 9,
+          "episodeCount": 9,
+          "totalEpisodeCount": 9,
+          "sizeOnDisk": 17876921028,
+          "releaseGroups": [
+            "NTB"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2026-05-06T01:00:00Z",
+          "episodeFileCount": 8,
+          "episodeCount": 8,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 16189277606,
+          "releaseGroups": [
+            "FLUX",
+            "Kitsune",
+            "MeM",
+            "N",
+            "NTb"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2025,
+    "path": "/media/tv/Daredevil Born Again (2025) [tvdbid-422712]",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": true,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 48,
+    "tvdbId": 422712,
+    "tvRageId": 0,
+    "tvMazeId": 63234,
+    "tmdbId": 202555,
+    "firstAired": "2025-03-04T00:00:00Z",
+    "lastAired": "2026-05-05T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "daredevilbornagain",
+    "imdbId": "tt18923754",
+    "titleSlug": "daredevil-born-again",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-MA",
+    "genres": [
+      "Action",
+      "Drama"
+    ],
+    "tags": [],
+    "added": "2026-04-20T03:47:36Z",
+    "ratings": {
+      "votes": 109540,
+      "value": 8.1
+    },
+    "statistics": {
+      "seasonCount": 2,
+      "episodeFileCount": 17,
+      "episodeCount": 17,
+      "totalEpisodeCount": 17,
+      "sizeOnDisk": 34066198634,
+      "releaseGroups": [
+        "NTB",
+        "FLUX",
+        "Kitsune",
+        "MeM",
+        "N",
+        "NTb"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 41
+  },
+  {
+    "title": "FROM",
+    "alternateTitles": [
+      {
+        "title": "Stamtąd / From",
+        "seasonNumber": -1
+      }
+    ],
+    "sortTitle": "from",
+    "status": "continuing",
+    "ended": false,
+    "overview": "In a nightmarish town in middle America that traps everyone who enters, unwilling residents fight to stay alive and search for a way out. But they are plagued by the threats of the surrounding forest including terrifying nocturnal creatures.",
+    "nextAiring": "2026-06-28T04:00:00Z",
+    "previousAiring": "2026-06-21T04:00:00Z",
+    "network": "MGM+",
+    "airTime": "00:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/42/banner.jpg?lastWrite=639123112006877391",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/401003/banners/623a7c7e1f518.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/42/poster.jpg?lastWrite=639123112007007392",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/401003/posters/6415dbaec770c.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/42/fanart.jpg?lastWrite=639123112007207394",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/401003/backgrounds/619eb10caf5bc.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/42/clearlogo.png?lastWrite=639123112007357395",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/401003/clearlogo/6206d93cdb469.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2022-04-24T04:00:00Z",
+          "episodeFileCount": 10,
+          "episodeCount": 10,
+          "totalEpisodeCount": 10,
+          "sizeOnDisk": 25812532453,
+          "releaseGroups": [
+            "GOSSIP",
+            "Kitsune",
+            "MeM",
+            "TEPES",
+            "UBWEB"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2023-06-25T04:00:00Z",
+          "episodeFileCount": 10,
+          "episodeCount": 10,
+          "totalEpisodeCount": 10,
+          "sizeOnDisk": 27493201635,
+          "releaseGroups": [
+            "MeM",
+            "NTb"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 3,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2024-11-24T05:00:00Z",
+          "episodeFileCount": 10,
+          "episodeCount": 10,
+          "totalEpisodeCount": 10,
+          "sizeOnDisk": 28767672651,
+          "releaseGroups": [
+            "NTb"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 4,
+        "monitored": true,
+        "statistics": {
+          "nextAiring": "2026-06-28T04:00:00Z",
+          "previousAiring": "2026-06-21T04:00:00Z",
+          "episodeFileCount": 9,
+          "episodeCount": 9,
+          "totalEpisodeCount": 10,
+          "sizeOnDisk": 26204326301,
+          "releaseGroups": [
+            "FLUX",
+            "G66",
+            "NTb"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2022,
+    "path": "/media/tv/FROM (2022) [tvdbid-401003]",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": true,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 51,
+    "tvdbId": 401003,
+    "tvRageId": 0,
+    "tvMazeId": 54729,
+    "tmdbId": 124364,
+    "firstAired": "2022-02-20T00:00:00Z",
+    "lastAired": "2026-06-28T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "from",
+    "imdbId": "tt9813792",
+    "titleSlug": "from",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-MA",
+    "genres": [
+      "Drama",
+      "Horror",
+      "Mystery",
+      "Science Fiction",
+      "Thriller"
+    ],
+    "tags": [],
+    "added": "2026-04-20T19:46:40Z",
+    "ratings": {
+      "votes": 190146,
+      "value": 7.8
+    },
+    "statistics": {
+      "seasonCount": 4,
+      "episodeFileCount": 39,
+      "episodeCount": 39,
+      "totalEpisodeCount": 40,
+      "sizeOnDisk": 108277733040,
+      "releaseGroups": [
+        "GOSSIP",
+        "Kitsune",
+        "MeM",
+        "TEPES",
+        "UBWEB",
+        "NTb",
+        "FLUX",
+        "G66"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 42
+  },
+  {
+    "title": "I Love LA",
+    "alternateTitles": [],
+    "sortTitle": "i love la",
+    "status": "continuing",
+    "ended": false,
+    "overview": "A codependent friend group reunites, navigating how the time apart, ambition, and new relationships have changed them.",
+    "previousAiring": "2025-12-22T03:30:00Z",
+    "network": "HBO",
+    "airTime": "22:30",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/43/banner.jpg?lastWrite=639128216602649197",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/454337/banners/6903f2e227f85.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/43/poster.jpg?lastWrite=639128216602799198",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/454337/posters/6907fe6c2b38a.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/43/fanart.jpg?lastWrite=639128216603009200",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/454337/backgrounds/6911d0e37c4b1.jpg"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2025-12-22T03:30:00Z",
+          "episodeFileCount": 8,
+          "episodeCount": 8,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 15250735226,
+          "releaseGroups": [
+            "ADWeb",
+            "BLOOM",
+            "ETHEL",
+            "playWEB"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2025,
+    "path": "/media/tv/I Love LA (2025) [tvdbid-454337]",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": true,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 32,
+    "tvdbId": 454337,
+    "tvRageId": 0,
+    "tvMazeId": 86738,
+    "tmdbId": 271053,
+    "firstAired": "2025-11-02T00:00:00Z",
+    "lastAired": "2025-12-21T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "ilovela",
+    "imdbId": "tt33362589",
+    "titleSlug": "i-love-la",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-MA",
+    "genres": [
+      "Comedy"
+    ],
+    "tags": [],
+    "added": "2026-04-26T17:34:19Z",
+    "ratings": {
+      "votes": 13387,
+      "value": 6.7
+    },
+    "statistics": {
+      "seasonCount": 1,
+      "episodeFileCount": 8,
+      "episodeCount": 8,
+      "totalEpisodeCount": 8,
+      "sizeOnDisk": 15250735226,
+      "releaseGroups": [
+        "ADWeb",
+        "BLOOM",
+        "ETHEL",
+        "playWEB"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 43
+  },
+  {
+    "title": "Star Wars: Maul – Shadow Lord",
+    "alternateTitles": [
+      {
+        "title": "Star Wars Maul Señor de las sombras",
+        "seasonNumber": -1
+      },
+      {
+        "title": "Star Wars Maul Senor de las sombras",
+        "seasonNumber": -1
+      }
+    ],
+    "sortTitle": "star wars maul shadow lord",
+    "status": "continuing",
+    "ended": false,
+    "overview": "After the Clone Wars, Maul plots to rebuild his criminal syndicate on a planet untouched by the Empire.",
+    "previousAiring": "2026-05-04T04:24:00Z",
+    "network": "Disney+",
+    "airTime": "00:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/44/banner.jpg?lastWrite=639136145985315789",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/462715/banners/699d050b410d4.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/44/poster.jpg?lastWrite=639136145985445792",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/462715/posters/69be7f3c24740.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/44/fanart.jpg?lastWrite=639136145985825800",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/462715/backgrounds/69be7f94c4e96.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/44/clearlogo.png?lastWrite=639136145985945803",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/462715/clearlogo/69a07f277262a.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2026-05-04T04:24:00Z",
+          "episodeFileCount": 10,
+          "episodeCount": 10,
+          "totalEpisodeCount": 10,
+          "sizeOnDisk": 8799058337,
+          "releaseGroups": [
+            "FLUX",
+            "playWEB",
+            "TheBlackKing"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2026,
+    "path": "/media/tv/Star Wars Maul – Shadow Lord (2026) [tvdbid-462715]",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": true,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 24,
+    "tvdbId": 462715,
+    "tvRageId": 0,
+    "tvMazeId": 84190,
+    "tmdbId": 289219,
+    "firstAired": "2026-04-06T00:00:00Z",
+    "lastAired": "2026-05-04T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "starwarsmaulshadowlord",
+    "imdbId": "tt36594331",
+    "titleSlug": "star-wars-maul--shadow-lord",
+    "rootFolderPath": "/media/tv",
+    "genres": [
+      "Animation",
+      "Science Fiction"
+    ],
+    "tags": [],
+    "added": "2026-05-05T21:49:58Z",
+    "ratings": {
+      "votes": 26210,
+      "value": 8.6
+    },
+    "statistics": {
+      "seasonCount": 1,
+      "episodeFileCount": 10,
+      "episodeCount": 10,
+      "totalEpisodeCount": 10,
+      "sizeOnDisk": 8799058337,
+      "releaseGroups": [
+        "FLUX",
+        "playWEB",
+        "TheBlackKing"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 44
+  },
+  {
+    "title": "I Think You Should Leave with Tim Robinson",
+    "alternateTitles": [],
+    "sortTitle": "i think you should leave with tim robinson",
+    "status": "ended",
+    "ended": true,
+    "overview": "There is no such thing as an ordinary interaction in this offbeat sketch comedy series that features a deep roster of guest stars.",
+    "previousAiring": "2023-05-30T07:00:00Z",
+    "network": "Netflix",
+    "airTime": "03:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/46/banner.jpg?lastWrite=639138906468398780",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/362753/banners/680bcc0e47f41.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/46/poster.jpg?lastWrite=639138906468648784",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/posters/5cf724a448b15.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/46/fanart.jpg?lastWrite=639138906468838788",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/fanart/original/5cbeca9122f61.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/46/clearlogo.png?lastWrite=639138906468998791",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/362753/clearlogo/612332e9c184b.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 0,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 1,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 1,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2019-04-23T07:00:00Z",
+          "episodeFileCount": 6,
+          "episodeCount": 6,
+          "totalEpisodeCount": 6,
+          "sizeOnDisk": 1297033422,
+          "releaseGroups": [
+            "pussyfoot",
+            "wayne"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2021-07-06T07:00:00Z",
+          "episodeFileCount": 6,
+          "episodeCount": 6,
+          "totalEpisodeCount": 6,
+          "sizeOnDisk": 3422027671,
+          "releaseGroups": [
+            "ggez",
+            "GGWP",
+            "GLHF"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 3,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2023-05-30T07:00:00Z",
+          "episodeFileCount": 6,
+          "episodeCount": 6,
+          "totalEpisodeCount": 6,
+          "sizeOnDisk": 4463853665,
+          "releaseGroups": [
+            "ETHEL",
+            "ggwp",
+            "GGWP",
+            "GLHF"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2019,
+    "path": "/media/tv/I Think You Should Leave with Tim Robinson (2019) [tvdbid-362753]",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": false,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 17,
+    "tvdbId": 362753,
+    "tvRageId": 0,
+    "tvMazeId": 41904,
+    "tmdbId": 88728,
+    "firstAired": "2019-04-23T00:00:00Z",
+    "lastAired": "2023-05-30T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "ithinkyoushouldleavewithtimrobinson",
+    "imdbId": "tt10050772",
+    "titleSlug": "i-think-you-should-leave-with-tim-robinson",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-MA",
+    "genres": [
+      "Comedy"
+    ],
+    "tags": [],
+    "added": "2026-05-09T02:30:46Z",
+    "ratings": {
+      "votes": 26827,
+      "value": 8.1
+    },
+    "statistics": {
+      "seasonCount": 3,
+      "episodeFileCount": 18,
+      "episodeCount": 18,
+      "totalEpisodeCount": 19,
+      "sizeOnDisk": 9182914758,
+      "releaseGroups": [
+        "pussyfoot",
+        "wayne",
+        "ggez",
+        "GGWP",
+        "GLHF",
+        "ETHEL",
+        "ggwp"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 46
+  },
+  {
+    "title": "Good Omens",
+    "alternateTitles": [],
+    "sortTitle": "good omens",
+    "status": "ended",
+    "ended": true,
+    "overview": "The End of the World is coming, which means a fussy Angel and a loose-living Demon who've become overly fond of life on Earth are forced to form an unlikely alliance to stop Armageddon. But they have lost the Antichrist, an 11-year-old boy unaware he's meant to bring upon the end of days, forcing them to embark on an adventure to find him and save the world before it's too late.",
+    "previousAiring": "2026-05-13T04:00:00Z",
+    "network": "Prime Video",
+    "airTime": "00:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/48/banner.jpg?lastWrite=639143358387860713",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/graphical/5c899cdc2b713.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/48/poster.jpg?lastWrite=639143358388170717",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/posters/5c65fa5e7fa62.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/48/fanart.jpg?lastWrite=639143358388400720",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/fanart/original/5c65faebc315e.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/48/clearlogo.png?lastWrite=639143358388520721",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/359569/clearlogo/611c8fafe967e.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 0,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 4,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 1,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2019-05-30T04:00:00Z",
+          "episodeFileCount": 6,
+          "episodeCount": 6,
+          "totalEpisodeCount": 6,
+          "sizeOnDisk": 6598300494,
+          "releaseGroups": [
+            "R"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2023-07-28T04:00:00Z",
+          "episodeFileCount": 6,
+          "episodeCount": 6,
+          "totalEpisodeCount": 6,
+          "sizeOnDisk": 16653171294,
+          "releaseGroups": [
+            "amb3r",
+            "AMB3R",
+            "ETHEL"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 3,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2026-05-13T04:00:00Z",
+          "episodeFileCount": 1,
+          "episodeCount": 1,
+          "totalEpisodeCount": 1,
+          "sizeOnDisk": 5557025717,
+          "releaseGroups": [
+            "FLUX"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2019,
+    "path": "/media/tv/Good Omens (2019) [tvdbid-359569]",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": false,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 57,
+    "tvdbId": 359569,
+    "tvRageId": 0,
+    "tvMazeId": 28717,
+    "tmdbId": 71915,
+    "firstAired": "2019-05-30T00:00:00Z",
+    "lastAired": "2026-05-13T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "goodomens",
+    "imdbId": "tt1869454",
+    "titleSlug": "good-omens",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-MA",
+    "genres": [
+      "Comedy",
+      "Fantasy"
+    ],
+    "tags": [],
+    "added": "2026-05-14T06:10:38Z",
+    "ratings": {
+      "votes": 125742,
+      "value": 8.0
+    },
+    "statistics": {
+      "seasonCount": 3,
+      "episodeFileCount": 13,
+      "episodeCount": 13,
+      "totalEpisodeCount": 17,
+      "sizeOnDisk": 28808497505,
+      "releaseGroups": [
+        "R",
+        "amb3r",
+        "AMB3R",
+        "ETHEL",
+        "FLUX"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 48
+  },
+  {
+    "title": "Nathan for You",
+    "alternateTitles": [],
+    "sortTitle": "nathan for you",
+    "status": "ended",
+    "ended": true,
+    "overview": "Writer, director and comedian Nathan Fielder also has a business degree, and he combines that knowledge with his unusual life experiences to help struggling small businesses boost their sales. However, Fielder's marketing campaigns for each business can best be described as unorthodox, to the point where no traditional sales consultant would ever attempt what he does.",
+    "previousAiring": "2017-11-10T03:00:00Z",
+    "network": "Comedy Central",
+    "airTime": "22:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/49/banner.jpg?lastWrite=639144110538053504",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/graphical/267002-g.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/49/poster.jpg?lastWrite=639144110538223506",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/posters/267002-2.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/49/fanart.jpg?lastWrite=639144110538353508",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/fanart/original/267002-1.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/49/clearlogo.png?lastWrite=639144110538583511",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/267002/clearlogo/611bec5a4e292.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 0,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 31,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 1,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2013-04-19T02:00:00Z",
+          "episodeFileCount": 8,
+          "episodeCount": 8,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 12660853300,
+          "releaseGroups": [
+            "Kitsune"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2014-08-20T02:00:00Z",
+          "episodeFileCount": 8,
+          "episodeCount": 8,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 12594618381,
+          "releaseGroups": [
+            "Kitsune"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 3,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2015-12-11T03:00:00Z",
+          "episodeFileCount": 8,
+          "episodeCount": 8,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 12356953314,
+          "releaseGroups": [
+            "Kitsune"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 4,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2017-11-10T03:00:00Z",
+          "episodeFileCount": 7,
+          "episodeCount": 7,
+          "totalEpisodeCount": 7,
+          "sizeOnDisk": 13400014074,
+          "releaseGroups": [
+            "Kitsune",
+            "playWEB"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2013,
+    "path": "/media/tv/Nathan for You (2013) [tvdbid-267002]",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": false,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 27,
+    "tvdbId": 267002,
+    "tvRageId": 33290,
+    "tvMazeId": 3136,
+    "tmdbId": 58957,
+    "firstAired": "2013-02-28T00:00:00Z",
+    "lastAired": "2017-11-09T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "nathanforyou",
+    "imdbId": "tt2297757",
+    "titleSlug": "nathan-for-you",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-14",
+    "genres": [
+      "Comedy",
+      "Documentary"
+    ],
+    "tags": [],
+    "added": "2026-05-15T03:04:13Z",
+    "ratings": {
+      "votes": 50061,
+      "value": 8.9
+    },
+    "statistics": {
+      "seasonCount": 4,
+      "episodeFileCount": 31,
+      "episodeCount": 31,
+      "totalEpisodeCount": 62,
+      "sizeOnDisk": 51012439069,
+      "releaseGroups": [
+        "Kitsune",
+        "playWEB"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 49
+  },
+  {
+    "title": "Widow's Bay",
+    "alternateTitles": [
+      {
+        "title": "La maldición de Widow's Bay",
+        "seasonNumber": -1
+      },
+      {
+        "title": "La maldición de window's bay",
+        "seasonNumber": -1
+      }
+    ],
+    "sortTitle": "widows bay",
+    "status": "continuing",
+    "ended": false,
+    "overview": "A New England mayor trying to boost tourism on his island must navigate strange events suggesting it might be cursed.",
+    "previousAiring": "2026-06-17T04:00:00Z",
+    "network": "Apple TV",
+    "airTime": "00:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/50/banner.jpg?lastWrite=639151764936696634",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/454109/banners/69f60b9e6651a.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/50/poster.jpg?lastWrite=639151764937496643",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/454109/posters/69ceb33ba3b1e.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/50/fanart.jpg?lastWrite=639151764938616656",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/454109/backgrounds/69f1a685b66e0.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/50/clearlogo.png?lastWrite=639151764938946660",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/454109/clearlogo/69f60bc7eaa54.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2026-06-17T04:00:00Z",
+          "episodeFileCount": 10,
+          "episodeCount": 10,
+          "totalEpisodeCount": 10,
+          "sizeOnDisk": 30944030768,
+          "releaseGroups": [
+            "FLUX",
+            "GRACE",
+            "RAWR"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2026,
+    "path": "/media/tv/Widow's Bay (2026) [tvdbid-454109]",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": true,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 38,
+    "tvdbId": 454109,
+    "tvRageId": 0,
+    "tvMazeId": 79390,
+    "tmdbId": 270476,
+    "firstAired": "2026-04-29T00:00:00Z",
+    "lastAired": "2026-06-17T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "widowsbay",
+    "imdbId": "tt33332385",
+    "titleSlug": "widows-bay",
+    "rootFolderPath": "/media/tv",
+    "genres": [
+      "Comedy",
+      "Horror"
+    ],
+    "tags": [],
+    "added": "2026-05-23T23:41:33Z",
+    "ratings": {
+      "votes": 25333,
+      "value": 8.3
+    },
+    "statistics": {
+      "seasonCount": 1,
+      "episodeFileCount": 10,
+      "episodeCount": 10,
+      "totalEpisodeCount": 10,
+      "sizeOnDisk": 30944030768,
+      "releaseGroups": [
+        "FLUX",
+        "GRACE",
+        "RAWR"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 50
+  },
+  {
+    "title": "Off Campus",
+    "alternateTitles": [],
+    "sortTitle": "off campus",
+    "status": "continuing",
+    "ended": false,
+    "overview": "The series depicts the elite ice hockey team, and the women in their lives, as they grapple with love, heartbreak, and self-discovery — forging deep friendships and enduring bonds while navigating the complexities that come with transitioning into adulthood.",
+    "previousAiring": "2026-05-13T07:00:00Z",
+    "network": "Prime Video",
+    "airTime": "03:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/52/banner.jpg?lastWrite=639156985270186050",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/455086/banners/69f2202b87f26.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/52/poster.jpg?lastWrite=639156985270516054",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/455086/posters/6a026868b78ca.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/52/fanart.jpg?lastWrite=639156985270676056",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/455086/backgrounds/69ee1961753ea.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/52/clearlogo.png?lastWrite=639156985270816058",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/455086/clearlogo/69e3d7da57e09.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2026-05-13T07:00:00Z",
+          "episodeFileCount": 8,
+          "episodeCount": 8,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 26533289606,
+          "releaseGroups": [
+            "EDITH",
+            "FLUX",
+            "HiggsBoson"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2026,
+    "path": "/media/tv/Off Campus (2026) [tvdbid-455086]",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": true,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 52,
+    "tvdbId": 455086,
+    "tvRageId": 0,
+    "tvMazeId": 79932,
+    "tmdbId": 273240,
+    "firstAired": "2026-05-13T00:00:00Z",
+    "lastAired": "2026-05-13T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "offcampus",
+    "imdbId": "tt33546863",
+    "titleSlug": "off-campus",
+    "rootFolderPath": "/media/tv",
+    "certification": "16",
+    "genres": [
+      "Drama",
+      "Romance",
+      "Sport"
+    ],
+    "tags": [],
+    "added": "2026-05-30T00:42:06Z",
+    "ratings": {
+      "votes": 34367,
+      "value": 8.0
+    },
+    "statistics": {
+      "seasonCount": 1,
+      "episodeFileCount": 8,
+      "episodeCount": 8,
+      "totalEpisodeCount": 8,
+      "sizeOnDisk": 26533289606,
+      "releaseGroups": [
+        "EDITH",
+        "FLUX",
+        "HiggsBoson"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 52
+  },
+  {
+    "title": "Love Island USA",
+    "alternateTitles": [
+      {
+        "title": "Love Island",
+        "seasonNumber": -1,
+        "comment": "Limited matching"
+      },
+      {
+        "title": "Love Island US",
+        "seasonNumber": -1
+      },
+      {
+        "title": "Error Example:  Love Island",
+        "seasonNumber": -1
+      }
+    ],
+    "sortTitle": "love island usa",
+    "status": "continuing",
+    "ended": false,
+    "overview": "A group of single islanders compete for a chance at love and friendship in a gorgeous villa. Every few days, participants must find a partner, and those who fail to do so risk being cast out from the island, while the remaining couples must win over not only each other, but viewers, to take home the cash prize.",
+    "nextAiring": "2026-06-22T01:00:00Z",
+    "previousAiring": "2026-06-21T01:00:00Z",
+    "network": "Peacock",
+    "airTime": "21:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/53/banner.jpg?lastWrite=639164458826231494",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/364107/banners/64bcf1e50f80a.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/53/poster.jpg?lastWrite=639164458826391496",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/364107/posters/6a0c13dd2c233.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/53/fanart.jpg?lastWrite=639164458826641500",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/364107/backgrounds/62d6d1849ddb9.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/53/clearlogo.png?lastWrite=639164458826801502",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/364107/clearlogo/611e89a1be624.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 0,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 15,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 1,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 22,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 34,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 3,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 29,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 4,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 38,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 5,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 37,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 6,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 37,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 7,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 37,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 8,
+        "monitored": true,
+        "statistics": {
+          "nextAiring": "2026-06-22T01:00:00Z",
+          "previousAiring": "2026-06-21T01:00:00Z",
+          "episodeFileCount": 16,
+          "episodeCount": 16,
+          "totalEpisodeCount": 36,
+          "sizeOnDisk": 61816575755,
+          "releaseGroups": [
+            "EDITH",
+            "FLUX",
+            "Kitsune",
+            "RAWR"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2019,
+    "path": "/media/tv/Love Island USA (2019) [tvdbid-364107]",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": true,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 56,
+    "tvdbId": 364107,
+    "tvRageId": 0,
+    "tvMazeId": 0,
+    "tmdbId": 90521,
+    "firstAired": "2019-07-09T00:00:00Z",
+    "lastAired": "2026-07-13T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "loveislandusa",
+    "imdbId": "tt8819906",
+    "titleSlug": "love-island-usa",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-MA",
+    "genres": [
+      "Reality",
+      "Romance"
+    ],
+    "tags": [],
+    "added": "2026-06-07T16:18:02Z",
+    "ratings": {
+      "votes": 3698,
+      "value": 5.2
+    },
+    "statistics": {
+      "seasonCount": 8,
+      "episodeFileCount": 16,
+      "episodeCount": 16,
+      "totalEpisodeCount": 285,
+      "sizeOnDisk": 61816575755,
+      "releaseGroups": [
+        "EDITH",
+        "FLUX",
+        "Kitsune",
+        "RAWR"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 53
+  },
+  {
+    "title": "Not Suitable for Work",
+    "alternateTitles": [],
+    "sortTitle": "not suitable for work",
+    "status": "continuing",
+    "ended": false,
+    "overview": "Five work-obsessed twenty-somethings strive for professional success and, if they have time, personal happiness in Manhattan's most glamorous neighborhood, Murray Hill.",
+    "nextAiring": "2026-06-23T07:00:00Z",
+    "previousAiring": "2026-06-16T07:33:00Z",
+    "network": "Hulu",
+    "airTime": "03:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/54/banner.jpg?lastWrite=639165446350195591",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/460383/banners/6a203d0f4411c.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/54/poster.jpg?lastWrite=639165446350345593",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/460383/posters/6a107abf3e119.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/54/fanart.jpg?lastWrite=639165446350505595",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/460383/backgrounds/6a0cb1faa0539.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/54/clearlogo.png?lastWrite=639165446350595597",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/460383/clearlogo/6a1ebc194586a.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "monitored": true,
+        "statistics": {
+          "nextAiring": "2026-06-23T07:00:00Z",
+          "previousAiring": "2026-06-16T07:33:00Z",
+          "episodeFileCount": 7,
+          "episodeCount": 7,
+          "totalEpisodeCount": 9,
+          "sizeOnDisk": 10131252158,
+          "releaseGroups": [
+            "GRACE",
+            "HdT"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2026,
+    "path": "/media/tv/Not Suitable for Work (2026) [tvdbid-460383]",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": true,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 33,
+    "tvdbId": 460383,
+    "tvRageId": 0,
+    "tvMazeId": 83015,
+    "tmdbId": 284725,
+    "firstAired": "2026-06-02T00:00:00Z",
+    "lastAired": "2026-06-23T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "notsuitableforwork",
+    "imdbId": "tt35823838",
+    "titleSlug": "not-suitable-for-work",
+    "rootFolderPath": "/media/tv",
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "tags": [],
+    "added": "2026-06-08T19:43:54Z",
+    "ratings": {
+      "votes": 1680,
+      "value": 6.7
+    },
+    "statistics": {
+      "seasonCount": 1,
+      "episodeFileCount": 7,
+      "episodeCount": 7,
+      "totalEpisodeCount": 9,
+      "sizeOnDisk": 10131252158,
+      "releaseGroups": [
+        "GRACE",
+        "HdT"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 54
+  },
+  {
+    "title": "Your Friends & Neighbors",
+    "alternateTitles": [
+      {
+        "title": "Vicios ocultos",
+        "seasonNumber": -1
+      },
+      {
+        "title": "Your Friends and Neighbours",
+        "seasonNumber": -1
+      },
+      {
+        "title": "Vrais voisins, faux amis",
+        "seasonNumber": -1
+      }
+    ],
+    "sortTitle": "your friends neighbors",
+    "status": "continuing",
+    "ended": false,
+    "overview": "When a financial titan suddenly finds himself divorced and jobless, he starts robbing his wealthy neighbors to stay afloat. Stealing from his own social circle strangely exhilarates him—but he gradually gets tangled in a deadly web.",
+    "previousAiring": "2026-06-05T04:00:00Z",
+    "network": "Apple TV",
+    "airTime": "00:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/55/banner.jpg?lastWrite=639172597517049585",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/443433/banners/67f9d62c3f56c.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/55/poster.jpg?lastWrite=639172597517239587",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/443433/posters/69cfad558ba40.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/55/fanart.jpg?lastWrite=639172597517429589",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/443433/backgrounds/69cfae6d8c479.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/55/clearlogo.png?lastWrite=639172597517549591",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/443433/clearlogo/67f9d4d1ad904.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2025-05-30T04:00:00Z",
+          "episodeFileCount": 9,
+          "episodeCount": 9,
+          "totalEpisodeCount": 9,
+          "sizeOnDisk": 38147026826,
+          "releaseGroups": [
+            "ETHEL",
+            "STC"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2026-06-05T04:00:00Z",
+          "episodeFileCount": 10,
+          "episodeCount": 10,
+          "totalEpisodeCount": 10,
+          "sizeOnDisk": 44004431170,
+          "releaseGroups": [
+            "ETHEL",
+            "FLUX",
+            "GRACE",
+            "HHWEB",
+            "Kitsune"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2025,
+    "path": "/media/tv/Your Friends & Neighbors (2025) [tvdbid-443433]",
+    "qualityProfileId": 8,
+    "seasonFolder": false,
+    "monitored": true,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 54,
+    "tvdbId": 443433,
+    "tvRageId": 0,
+    "tvMazeId": 73484,
+    "tmdbId": 241609,
+    "firstAired": "2025-04-11T00:00:00Z",
+    "lastAired": "2026-06-05T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "yourfriendsneighbors",
+    "imdbId": "tt30459041",
+    "titleSlug": "your-friends-and-neighbors",
+    "rootFolderPath": "/media/tv",
+    "certification": "TV-MA",
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "tags": [],
+    "added": "2026-06-17T02:22:31Z",
+    "ratings": {
+      "votes": 59876,
+      "value": 7.7
+    },
+    "statistics": {
+      "seasonCount": 2,
+      "episodeFileCount": 19,
+      "episodeCount": 19,
+      "totalEpisodeCount": 19,
+      "sizeOnDisk": 82151457996,
+      "releaseGroups": [
+        "ETHEL",
+        "STC",
+        "FLUX",
+        "GRACE",
+        "HHWEB",
+        "Kitsune"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 55
+  }
+]
