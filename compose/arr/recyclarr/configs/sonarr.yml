@@ -1,0 +1,16 @@
+sonarr:
+  series:
+    base_url: !secret sonarr_url
+    api_key: !secret sonarr_api_key
+
+    quality_definition:
+      type: series
+
+    quality_profiles:
+      - trash_id: 72dae194fc92bf828f32cde7744e51a1  # WEB-1080p
+        name: TV - Main 1080p
+        reset_unmatched_scores:
+          enabled: true
+
+    delete_old_custom_formats: true
+    replace_existing_custom_formats: true

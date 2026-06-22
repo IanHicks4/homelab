@@ -1,0 +1,16 @@
+radarr:
+  movies:
+    base_url: !secret radarr_url
+    api_key: !secret radarr_api_key
+
+    quality_definition:
+      type: movie
+
+    quality_profiles:
+      - trash_id: d1d67249d3890e49bc12e275d989a7e9  # HD Bluray + WEB
+        name: Movies - Main 1080p
+        reset_unmatched_scores:
+          enabled: true
+
+    delete_old_custom_formats: true
+    replace_existing_custom_formats: true
