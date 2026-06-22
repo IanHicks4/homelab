@@ -15,3 +15,9 @@ backups/database/
 node_modules/
 !*.env.example
 !**/*.env.example
+compose/arr/recyclarr/secrets.yml
+
+# Recyclarr secrets and generated data
+compose/arr/recyclarr/secrets.yml
+compose/arr/recyclarr/resources/
+compose/arr/recyclarr/logs/
