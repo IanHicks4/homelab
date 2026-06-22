@@ -15,6 +15,18 @@ The lowest-risk decision is to keep the current source, codec, language, and edi
 
 No media quality policy is universally correct. Wider source/codec acceptance improves availability and can reduce storage use, while narrower acceptance improves consistency and compatibility. More aggressive upgrades improve preference matching at the cost of bandwidth, disk writes, and repeated downloads.
 
+## Owner Decisions - 2026-06-22
+
+- Keep `TV - Main 1080p` as strict WEB-only 1080p.
+- Keep `Movies - Main 1080p` with Bluray-720p fallback plus WEB/Bluray 1080p.
+- Keep rejecting x265 HD and AV1 for now.
+- Keep original-language TV behavior.
+- Keep current movie edition rejection/neutral behavior.
+- Keep the upgrade-until custom-format score at 10000 for now.
+- Do not change quality definitions until Sonarr/Radarr UI semantics are verified.
+
+No Recyclarr sync/apply is authorized. No profile cleanup is authorized yet. Revisit these decisions only if there is evidence of missing downloads, excessive upgrade churn, playback compatibility issues, or storage pressure.
+
 ## Evidence used
 
 - `docs/media-quality-profile-review.md`
