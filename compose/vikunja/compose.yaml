@@ -1,0 +1,39 @@
+services:
+  vikunja:
+    image: vikunja/vikunja:latest
+    container_name: vikunja
+    restart: unless-stopped
+    depends_on:
+      - vikunja-db
+    environment:
+      VIKUNJA_SERVICE_PUBLICURL: "https://vikunja.kai.coach/"
+      VIKUNJA_DATABASE_TYPE: "postgres"
+      VIKUNJA_DATABASE_HOST: "vikunja-db"
+      VIKUNJA_DATABASE_DATABASE: "${VIKUNJA_DB_NAME}"
+      VIKUNJA_DATABASE_USER: "${VIKUNJA_DB_USER}"
+      VIKUNJA_DATABASE_PASSWORD: "${VIKUNJA_DB_PASSWORD}"
+      VIKUNJA_SERVICE_ENABLEREGISTRATION: "false"
+    volumes:
+      - ./files:/app/vikunja/files
+    networks:
+      - vikunja
+      - proxy
+
+  vikunja-db:
+    image: postgres:16-alpine
+    container_name: vikunja-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: "${VIKUNJA_DB_NAME}"
+      POSTGRES_USER: "${VIKUNJA_DB_USER}"
+      POSTGRES_PASSWORD: "${VIKUNJA_DB_PASSWORD}"
+    volumes:
+      - ./db:/var/lib/postgresql/data
+    networks:
+      - vikunja
+
+networks:
+  vikunja:
+    name: vikunja
+  proxy:
+    external: true

@@ -21,3 +21,8 @@ compose/arr/recyclarr/secrets.yml
 compose/arr/recyclarr/secrets.yml
 compose/arr/recyclarr/resources/
 compose/arr/recyclarr/logs/
+
+# Vikunja runtime data and secrets
+compose/vikunja/.env
+compose/vikunja/db/
+compose/vikunja/files/
