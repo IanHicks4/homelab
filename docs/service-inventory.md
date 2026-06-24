@@ -9,6 +9,8 @@ This inventory is based on repository evidence only. It distinguishes between:
 
 Public exposure is marked as confirmed only when supported by `inventory/domains.md` or other explicit repository evidence. A Caddy route alone is treated as configured routing, not proof of public exposure.
 
+The Vikunja entry additionally incorporates runtime facts explicitly provided by the human owner; those facts are labeled where they are not represented by checked-in Compose or Caddy configuration.
+
 ## Overview
 
 The repository documents a Docker-based homelab centered on the `server` host. Existing inventory identifies this host as a Dell OptiPlex with LAN IP `192.168.1.100` and Tailscale IP `100.77.136.106`.
@@ -40,6 +42,7 @@ The repo shows these main architectural pieces:
 | `n8n` | n8n | Workflow automation and webhooks | `n8n.kai.coach` internal route; address-form webhook route | Internal/private via Pi-hole DNS | `/srv/docker/n8n` | Backup script and restore runbook exist |
 | `speedtest-tracker` | Speedtest Tracker | Network speed history | `100.77.136.106:8082`; proxy network | Needs verification | `./config` | Backup script and restore runbook exist |
 | `vaultwarden` | Vaultwarden | Password manager | `vault.kai.coach` Caddy route | Internal/private via Pi-hole DNS | `./data` | Backup script and restore runbook exist |
+| `vikunja` | Vikunja, PostgreSQL | Internal task and project management | `vikunja.kai.coach`; `tls internal`; proxy to `vikunja:3456` | Internal/private; no public exposure claimed | `/srv/docker/vikunja/files`, `/srv/docker/vikunja/db`, `.env` | Backup script and restore runbook exist; scheduling needs verification |
 | `vpn` | Gluetun, qBittorrent | VPN-bound torrent client | `100.77.136.106:8080` | No | VPN config, qBittorrent config, `/mnt/media` | Backup script and restore runbook exist |
 | `wedding-address-form` | nginx static site | Address form frontend | `address.kai.coach` route | Public address form; webhook proxies internally to n8n | Static `./html`; n8n handles webhook | Needs verification |
 
@@ -644,6 +647,66 @@ Security notes:
 - n8n UI/admin access should remain internal/private.
 - Public access should be limited to the address-form webhook path through `address.kai.coach/api/wedding-address`.
 
+### `vikunja`
+
+Status:
+
+- Configured in repo: no Vikunja Compose stack is present in this checkout; backup and restore support is documented in repo.
+- Confirmed running in production: yes, based on human-provided runtime facts.
+
+Main services:
+
+- `vikunja`, image `vikunja/vikunja:latest`
+- `vikunja-db`, image `postgres:16-alpine`
+
+Purpose:
+
+- Internal task manager for brain dumping, task breakdown, homelab/project organization, and possible future n8n/Ollama-assisted task extraction.
+
+Ports and routes:
+
+- Human-provided runtime route: `vikunja.kai.coach`.
+- The route uses Caddy `tls internal` and proxies to `vikunja:3456`.
+- The checked-in `compose/caddy/Caddyfile` did not contain this route at documentation time, so repository/runtime Caddy parity needs verification.
+
+Access classification:
+
+- Internal/private only.
+- No public DNS or public exposure is claimed.
+- Vikunja should remain private and registration is disabled.
+
+Compose and environment paths:
+
+- `/srv/docker/vikunja/compose.yaml`
+- `/srv/docker/vikunja/.env`
+
+Persistent paths:
+
+- `/srv/docker/vikunja/files` for app files and attachments.
+- `/srv/docker/vikunja/db` for live PostgreSQL data.
+- The total Vikunja directory size was reported as approximately 49M at inspection time.
+
+Backup relevance:
+
+- Verified backup script: `scripts/backups/backup-vikunja.sh`.
+- Verified restore runbook: `runbooks/restore-vikunja.md`.
+- Logical PostgreSQL dumps are written to `/mnt/backupshare/vikunja/postgres`.
+- App-state archives containing `compose.yaml`, `.env`, and `files/` are written to `/mnt/backupshare/vikunja/archive`.
+- Raw live `db/` data is excluded; the logical dump is the primary database restore method.
+- No `/mnt/backupshare/vikunja` directory was present at inspection time. The backup script creates the required directories after verifying the backup share is mounted.
+- Backup scheduling needs verification; repository evidence proves script presence, not cron or another scheduler.
+
+Monitoring/logging relevance:
+
+- Docker logs should be collected by Alloy if the containers are running.
+- No Vikunja-specific alerting rule was found.
+
+Security notes:
+
+- Task/project data, files/attachments, `.env`, and PostgreSQL dumps are sensitive.
+- Do not commit live `.env`, database dumps, archives, raw database data, or extracted backups.
+- Keep the service internal/private and do not enable public registration or public exposure.
+
 ### `speedtest-tracker`
 
 Status:
@@ -894,6 +957,7 @@ The following services are configured to bind to `100.77.136.106`, which invento
 | Speedtest Tracker | App config/history and env-file usage |
 | Arr stack | Service configs and possible API tokens in persistent config |
 | Jellyfin | Media library config and user/server metadata |
+| Vikunja | Task/project data, files/attachments, `.env`, and PostgreSQL dumps |
 
 ## Existing Backup And Restore Evidence
 
@@ -919,6 +983,7 @@ Verified backup scripts:
 | n8n | `scripts/backups/backup-n8n.sh` |
 | Speedtest Tracker | `scripts/backups/backup-speedtest-tracker.sh` |
 | Vaultwarden | `scripts/backups/backup-vault.sh` |
+| Vikunja | `scripts/backups/backup-vikunja.sh` |
 | VPN/qBittorrent/Gluetun | `scripts/backups/backup-vpn.sh` |
 
 Verified restore runbooks:
@@ -938,6 +1003,7 @@ Verified restore runbooks:
 | n8n | `runbooks/restore-n8n.md` |
 | Speedtest Tracker | `runbooks/restore-speedtest-tracker.md` |
 | Vaultwarden | `runbooks/restore-vaultwarden.md` |
+| Vikunja | `runbooks/restore-vikunja.md` |
 | VPN/qBittorrent/Gluetun | `runbooks/restore-vpn.md` |
 
 Other operational runbooks present:
@@ -966,6 +1032,7 @@ Backup coverage summary:
 | Speedtest Tracker | `scripts/backups/backup-speedtest-tracker.sh` | `runbooks/restore-speedtest-tracker.md` | `/srv/docker/speedtest-tracker` archive excluding logs | `.env`, app config, and database/history may be sensitive | complete |
 | Monitoring/Prometheus | `scripts/backups/backup-monitoring.sh` | `runbooks/restore-monitoring.md` | `/srv/docker/monitoring` archive excluding Prometheus lock/active query files | Prometheus history and host metadata may be sensitive | complete |
 | DDNS | `scripts/backups/backup-ddns.sh` | `runbooks/restore-ddns.md` | `/srv/docker/ddns` archive excluding logs | Porkbun API credentials are sensitive | complete |
+| Vikunja | `scripts/backups/backup-vikunja.sh` | `runbooks/restore-vikunja.md` | PostgreSQL logical dump plus `compose.yaml`, `.env`, and `files/` archive; raw `db/` excluded | Task/project data, attachments, `.env`, and database dump are sensitive | complete; scheduling needs verification |
 
 ## Services Needing Backup / Restore Documentation
 
