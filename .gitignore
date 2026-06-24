@@ -22,7 +22,9 @@ compose/arr/recyclarr/secrets.yml
 compose/arr/recyclarr/resources/
 compose/arr/recyclarr/logs/
 
-# Vikunja runtime data and secrets
-compose/vikunja/.env
+# Vikunja runtime data and backup artifacts
 compose/vikunja/db/
 compose/vikunja/files/
+compose/vikunja/backups/
+vikunja-*.sql.gz
+vikunja-*.tar.gz
