@@ -74,3 +74,9 @@ tools.kai.coach {
 	tls internal
 	reverse_proxy it-tools:80
 }
+
+vikunja.kai.coach {
+	tls internal
+	encode zstd gzip
+	reverse_proxy vikunja:3456
+}
