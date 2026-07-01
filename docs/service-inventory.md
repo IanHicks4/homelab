@@ -42,7 +42,7 @@ The repo shows these main architectural pieces:
 | `n8n` | n8n | Workflow automation and webhooks | `n8n.kai.coach` internal route; address-form webhook route | Internal/private via Pi-hole DNS | `/srv/docker/n8n` | Backup script and restore runbook exist |
 | `speedtest-tracker` | Speedtest Tracker | Network speed history | `100.77.136.106:8082`; proxy network | Needs verification | `./config` | Backup script and restore runbook exist |
 | `vaultwarden` | Vaultwarden | Password manager | `vault.kai.coach` Caddy route | Internal/private via Pi-hole DNS | `./data` | Backup script and restore runbook exist |
-| `vikunja` | Vikunja, PostgreSQL | Internal task and project management | `vikunja.kai.coach`; `tls internal`; proxy to `vikunja:3456` | Internal/private; no public exposure claimed | `/srv/docker/vikunja/files`, `/srv/docker/vikunja/db`, `.env` | Backup script and restore runbook exist; scheduling needs verification |
+| `vikunja` | Vikunja, PostgreSQL | Internal task and project management | `vikunja.kai.coach`; `tls internal`; proxy to `vikunja:3456` | Internal/private; no public exposure claimed | `/srv/docker/vikunja/files`, `/srv/docker/vikunja/db`, `.env` | Backup script and restore runbook exist |
 | `vpn` | Gluetun, qBittorrent | VPN-bound torrent client | `100.77.136.106:8080` | No | VPN config, qBittorrent config, `/mnt/media` | Backup script and restore runbook exist |
 | `wedding-address-form` | nginx static site | Address form frontend | `address.kai.coach` route | Public address form; webhook proxies internally to n8n | Static `./html`; n8n handles webhook | Needs verification |
 
@@ -53,7 +53,7 @@ The repo shows these main architectural pieces:
 Status:
 
 - Configured in repo: yes.
-- Confirmed running in production: needs verification.
+- Confirmed running in production: yes.
 
 Main services:
 
@@ -169,7 +169,7 @@ Security notes:
 Status:
 
 - Configured in repo: yes.
-- Confirmed running in production: needs verification.
+- Confirmed running in production: yes.
 
 Main services:
 
@@ -219,7 +219,7 @@ Security notes:
 Status:
 
 - Configured in repo: yes.
-- Confirmed running in production: needs verification.
+- Confirmed running in production: yes.
 
 Main services:
 
@@ -272,7 +272,7 @@ Security notes:
 Status:
 
 - Configured in repo: yes.
-- Confirmed running in production: needs verification.
+- Confirmed running in production: yes.
 
 Main services:
 
@@ -338,7 +338,7 @@ Security notes:
 Status:
 
 - Configured in repo: yes.
-- Confirmed running in production: needs verification.
+- Confirmed running in production: yes.
 
 Main services:
 
@@ -391,7 +391,7 @@ Security notes:
 Status:
 
 - Configured in repo: yes.
-- Confirmed running in production: needs verification.
+- Confirmed running in production: yes.
 
 Main services:
 
@@ -435,7 +435,7 @@ Security notes:
 Status:
 
 - Configured in repo: yes.
-- Confirmed running in production: needs verification.
+- Confirmed running in production: yes.
 
 Main services:
 
@@ -483,7 +483,7 @@ Security notes:
 Status:
 
 - Configured in repo: yes.
-- Confirmed running in production: needs verification.
+- Confirmed running in production: yes.
 
 Main services:
 
@@ -546,7 +546,7 @@ Security notes:
 Status:
 
 - Configured in repo: yes.
-- Confirmed running in production: needs verification.
+- Confirmed running in production: yes.
 
 Main services:
 
@@ -597,7 +597,7 @@ Security notes:
 Status:
 
 - Configured in repo: yes.
-- Confirmed running in production: needs verification.
+- Confirmed running in production: yes.
 
 Main services:
 
@@ -606,6 +606,7 @@ Main services:
 Purpose:
 
 - Workflow automation and webhook handling.
+- Only workflow configured is for wedding-address-form
 
 Ports and routes:
 
@@ -652,7 +653,7 @@ Security notes:
 Status:
 
 - Configured in repo: no Vikunja Compose stack is present in this checkout; backup and restore support is documented in repo.
-- Confirmed running in production: yes, based on human-provided runtime facts.
+- Confirmed running in production: yes.
 
 Main services:
 
@@ -667,7 +668,6 @@ Ports and routes:
 
 - Human-provided runtime route: `vikunja.kai.coach`.
 - The route uses Caddy `tls internal` and proxies to `vikunja:3456`.
-- The checked-in `compose/caddy/Caddyfile` did not contain this route at documentation time, so repository/runtime Caddy parity needs verification.
 
 Access classification:
 
@@ -712,7 +712,7 @@ Security notes:
 Status:
 
 - Configured in repo: yes.
-- Confirmed running in production: needs verification.
+- Confirmed running in production: yes.
 
 Main services:
 
@@ -756,7 +756,7 @@ Security notes:
 Status:
 
 - Configured in repo: yes.
-- Confirmed running in production: needs verification.
+- Confirmed running in production: yes.
 
 Main services:
 
@@ -807,7 +807,7 @@ Security notes:
 Status:
 
 - Configured in repo: yes.
-- Confirmed running in production: needs verification.
+- Confirmed running in production: yes.
 
 Main services:
 
@@ -856,7 +856,7 @@ Security notes:
 Status:
 
 - Configured in repo: yes.
-- Confirmed running in production: needs verification.
+- Confirmed running in production: yes.
 
 Main services:
 
@@ -1032,7 +1032,7 @@ Backup coverage summary:
 | Speedtest Tracker | `scripts/backups/backup-speedtest-tracker.sh` | `runbooks/restore-speedtest-tracker.md` | `/srv/docker/speedtest-tracker` archive excluding logs | `.env`, app config, and database/history may be sensitive | complete |
 | Monitoring/Prometheus | `scripts/backups/backup-monitoring.sh` | `runbooks/restore-monitoring.md` | `/srv/docker/monitoring` archive excluding Prometheus lock/active query files | Prometheus history and host metadata may be sensitive | complete |
 | DDNS | `scripts/backups/backup-ddns.sh` | `runbooks/restore-ddns.md` | `/srv/docker/ddns` archive excluding logs | Porkbun API credentials are sensitive | complete |
-| Vikunja | `scripts/backups/backup-vikunja.sh` | `runbooks/restore-vikunja.md` | PostgreSQL logical dump plus `compose.yaml`, `.env`, and `files/` archive; raw `db/` excluded | Task/project data, attachments, `.env`, and database dump are sensitive | complete; scheduling needs verification |
+| Vikunja | `scripts/backups/backup-vikunja.sh` | `runbooks/restore-vikunja.md` | PostgreSQL logical dump plus `compose.yaml`, `.env`, and `files/` archive; raw `db/` excluded | Task/project data, attachments, `.env`, and database dump are sensitive | complete |
 
 ## Services Needing Backup / Restore Documentation
 
