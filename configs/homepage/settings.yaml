@@ -42,11 +42,11 @@ layout:
 
     Apps:
       style: column
-      rows: 2
+      rows: 3
 
     Network & DNS:
       style: column
-      rows: 2
+      rows: 3
 
     Monitoring:
       style: column

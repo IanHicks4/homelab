@@ -63,6 +63,18 @@
             key: "{{HOMEPAGE_VAR_IMMICH_API_KEY}}"
             version: 2
 
+      - Calibre:
+          href: https://books.kai.coach
+          description: Book Library
+          icon: calibre-web.png
+          siteMonitor: https://books.kai.coach
+          widget:
+            type: calibreweb
+            url: http://calibre-web-automated:8083
+            username: "{{HOMEPAGE_VAR_CALIBREWEB_USERNAME}}"
+            password: "{{HOMEPAGE_VAR_CALIBREWEB_PASSWORD}}"
+            fields: ["books", "authors", "series"]
+
   - Apps:
       - Vaultwarden:
           href: https://vault.kai.coach
@@ -76,16 +88,16 @@
           icon: authelia.png
           siteMonitor: https://auth.kai.coach
 
-      - n8n:
-          href: https://n8n.kai.coach
-          description: Workflow automation
-          icon: n8n.png
-          siteMonitor: https://n8n.kai.coach
+      - It-Tools:
+          href: http://100.77.136.106:8085
+          description: Handy tools for developers
+          icon: it-tools.png
+          siteMonitor: http://100.77.136.106:8085
 
   - Network & DNS:
-      - Pi-hole:
+      - Pi-hole Pi4:
           href: http://100.111.36.105/admin
-          description: DNS filtering
+          description: Primary
           icon: pi-hole.png
           widget:
             type: pihole
@@ -97,11 +109,19 @@
               - blocked
               - blocked_percent
 
-      - Caddy:
-          href: https://jellyfin.kai.coach
-          description: Reverse proxy entrypoint
-          icon: caddy.png
-          siteMonitor: https://jellyfin.kai.coach
+      - Pi-hole LXC:
+          icon: pi-hole.png
+          href: http://192.168.1.53/admin
+          description: Secondary
+          widget:
+            type: pihole
+            url: http://192.168.1.53
+            version: 6
+            key: "{{HOMEPAGE_VAR_PIHOLE_API_KEY}}"
+            fields:
+              - queries
+              - blocked
+              - blocked_percent
 
       - Speedtest Tracker:
           icon: speedtest-tracker.png
@@ -131,6 +151,12 @@
           description: Centralized logging
           icon: grafana.png
           siteMonitor: https://grafana.kai.coach
+
+      - Vikunja:
+          href: https://vikunja.kai.coach
+          description: Task management and To-Do list
+          icon: vikunja.png
+          siteMonitor: https://vikunja.kai.coach
 
 - Arr Stack:
   - Discovery:
