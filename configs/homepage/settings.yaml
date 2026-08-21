@@ -1,7 +1,7 @@
 title: Hope Homelab
 description: HomeLab Central Dashboard
 background:
-  image: https://immich.kai.coach/api/assets/de687057-c78b-4029-afdd-6621ae1752dd/thumbnail?size=preview&c=HtcJVYiXeIiPiIiCeDh3d4eAhwh4&edited=true
+  image: "{{HOMEPAGE_VAR_BACKGROUND_IMAGE}}"
   opacity: 25
 cardBlur: sm # xs, md, etc... see https://tailwindcss.com/docs/backdrop-blur
 theme: dark
