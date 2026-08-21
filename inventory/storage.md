@@ -38,3 +38,11 @@
 ## Notes
 - `/mnt/media` is the primary content/storage mount for media-related services.
 - `/mnt/backupshare` is the remote backup target mounted from the desktop PC.
+
+## Books Storage
+
+- `/mnt/media/books/library` is the canonical book library mounted by Calibre Web Automated.
+- `/mnt/media/books/ingest` is the shared ingest path used by Calibre Web Automated and Shelfmark.
+- Shelfmark also has the current intentional writable bind mount `/mnt/media:/media`.
+- The broad Shelfmark mount should be reviewed later, but it must not be narrowed without testing existing behavior.
+- Books backup design is pending; no books backup script or tested restore is represented in the repository.

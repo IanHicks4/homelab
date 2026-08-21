@@ -9,7 +9,7 @@ This inventory is based on repository evidence only. It distinguishes between:
 
 Public exposure is marked as confirmed only when supported by `inventory/domains.md` or other explicit repository evidence. A Caddy route alone is treated as configured routing, not proof of public exposure.
 
-The Vikunja entry additionally incorporates runtime facts explicitly provided by the human owner; those facts are labeled where they are not represented by checked-in Compose or Caddy configuration.
+The Vikunja entry additionally incorporates runtime facts explicitly provided by the human owner; those facts are labeled where they are not represented by checked-in Compose or Caddy configuration. The Books entry incorporates the dated, value-redacted evidence in `docs/audits/books-stack-review-2026-08-21.md`.
 
 ## Overview
 
@@ -31,6 +31,7 @@ The repo shows these main architectural pieces:
 |---|---|---|---|---|---|---|
 | `arr` | Sonarr, Radarr, Prowlarr, Seerr, FlareSolverr, Bazarr, Recyclarr | Media automation and requests | Tailscale-bound admin ports; Seerr Caddy route | Seerr confirmed by `inventory/domains.md` | Config dirs, `/mnt/media` | Backup script and restore runbook exist |
 | `authelia` | Authelia, Redis | Forward authentication | Proxy network; `auth.kai.coach` Caddy route | Internal/private; public DNS removed | Config, secrets mount, Redis data | Backup script and restore runbook exist |
+| `books` | Calibre Web Automated, Shelfmark | Book library management, search, and viewing | Tailscale-bound ports `8083`/`8084`; internal Caddy routes | No public exposure claimed | Two config trees, book library, shared ingest path | Backup design pending; planning-level restore runbook exists |
 | `caddy` | Caddy | Reverse proxy / TLS | `80:80`, `443:443` | Configured edge ports; running/exposure needs verification | Caddy data/config | Backup script and restore runbook exist |
 | `ddns` | Porkbun DDNS | Dynamic DNS updates | Internal/background | Not applicable | Credential/config files | Backup script and restore runbook exist |
 | `homepage-stack` | Homepage, Glances, Uptime Kuma | Dashboard, host metrics, uptime checks | Tailscale-bound Homepage and Glances; Caddy routes for Homepage and Uptime Kuma | Internal/private via Pi-hole DNS/Tailscale | Homepage config, Uptime Kuma data | Backup script and restore runbook exist |
@@ -163,6 +164,80 @@ Security notes:
 - Do not treat example env files as proof of live secret values.
 - `config/.env` and files under `secrets/` are sensitive and must not be committed to Git.
 - Authelia should remain internal/private even if a Caddy route is configured.
+
+### `books`
+
+Evidence source:
+
+- Dated, value-redacted live audit: `docs/audits/books-stack-review-2026-08-21.md`.
+- Reconciled repository definition: `compose/books/compose.yaml`.
+- Existing internal routes: `configs/caddy/Caddyfile`.
+
+Status:
+
+- Configured in repo: yes.
+- Confirmed running in production: both services were running and healthy at the 2026-08-21 audit; current runtime status needs verification.
+
+Main services:
+
+- `calibre-web-automated`, image `crocodilestick/calibre-web-automated:latest`.
+- `shelfmark`, image `ghcr.io/calibrain/shelfmark:latest`.
+
+Purpose:
+
+- Book library management, ingest, search, and viewing.
+
+Ports and routes:
+
+- Calibre Web Automated: `100.77.136.106:8083:8083`.
+- Shelfmark: `100.77.136.106:8084:8084`.
+- `books.kai.coach` uses Caddy internal TLS and proxies to `calibre-web-automated:8083`.
+- `shelf.kai.coach` uses Caddy internal TLS and proxies to `shelfmark:8084`.
+
+Access classification:
+
+- Active internal/private service.
+- Direct ports are bound to the inventory-defined server Tailscale address.
+- Both services join the project-local `books_default` network and external `proxy` network.
+- No public exposure is claimed. A Caddy route does not by itself prove public reachability.
+
+Declared environment names:
+
+- Calibre Web Automated: `NETWORK_SHARE_MODE`, `PGID`, `PUID`, and `TZ`.
+- Shelfmark: `PGID`, `PUID`, `SEARCH_MODE`, `SESSION_COOKIE_SECURE`, and `TZ`.
+- The audit found no `/srv/docker/books/.env`. Live values were intentionally not recorded.
+- `compose/books/.env.example` is a non-secret schema for later reviewed deployment; `SEARCH_MODE` requires verification.
+
+Persistent volumes/bind mounts:
+
+- `./calibre-web-automated/config:/config`.
+- `/mnt/media/books/ingest:/cwa-book-ingest`.
+- `/mnt/media/books/library:/calibre-library`.
+- `./shelfmark/config:/config`.
+- `/mnt/media/books/ingest:/books`.
+- `/mnt/media:/media`.
+
+The broad writable Shelfmark mount of `/mnt/media` is intentional/current audited topology. It is worth a later least-scope review but must not be narrowed without testing.
+
+Backup relevance:
+
+- Persistent data includes Calibre Web Automated config/databases; Shelfmark config, users, covers, plugins, and generated secrets; the book library; and shared ingest state.
+- No books backup script exists.
+- No books backup was found by the audit.
+- Planning-level restore runbook: `runbooks/restore-books.md`.
+- Backup design and application-consistent capture are pending; no restore has been tested.
+
+Monitoring/logging relevance:
+
+- The audit found both containers healthy at inspection time.
+- Docker logs should be collected by Alloy if the containers are currently running.
+- Uptime Kuma coverage and any books-specific alerting need verification.
+
+Security notes:
+
+- Both runtime config directories contain sensitive application state and must remain out of Git.
+- Treat book media, user data, application databases, generated secrets, config directories, covers, and plugins as sensitive.
+- Keep direct ports Tailscale-bound and routes internal/private unless a separate approved exposure change is made.
 
 ### `caddy`
 
@@ -923,6 +998,8 @@ These routes are configured in the repo and have internal/private or route-speci
 | Wedding address form | `address.kai.coach` | Public address form; points to WAN IP |
 | IT Tools | `tools.kai.coach` | Internal/private via Pi-hole DNS; Caddy route remains valid for internal access; not Porkbun-DDNS-managed |
 | Vaultwarden | `vault.kai.coach` | Internal/private via Pi-hole DNS; Caddy route remains valid for internal access; not Porkbun-DDNS-managed |
+| Calibre Web Automated | `books.kai.coach` | Internal/private route using Caddy internal TLS; public exposure is not claimed |
+| Shelfmark | `shelf.kai.coach` | Internal/private route using Caddy internal TLS; public exposure is not claimed |
 
 ## Tailscale / Private-Bound Services
 
@@ -938,6 +1015,8 @@ The following services are configured to bind to `100.77.136.106`, which invento
 | Homepage | `3000` |
 | IT Tools | `8085` |
 | Speedtest Tracker | `8082` |
+| Calibre Web Automated | `8083` |
+| Shelfmark | `8084` |
 
 ## Services With Sensitive Data
 
@@ -958,6 +1037,7 @@ The following services are configured to bind to `100.77.136.106`, which invento
 | Arr stack | Service configs and possible API tokens in persistent config |
 | Jellyfin | Media library config and user/server metadata |
 | Vikunja | Task/project data, files/attachments, `.env`, and PostgreSQL dumps |
+| Books stack | Book library, user data, app databases, generated secrets, config directories, covers, and plugins |
 
 ## Existing Backup And Restore Evidence
 
@@ -1005,6 +1085,7 @@ Verified restore runbooks:
 | Vaultwarden | `runbooks/restore-vaultwarden.md` |
 | Vikunja | `runbooks/restore-vikunja.md` |
 | VPN/qBittorrent/Gluetun | `runbooks/restore-vpn.md` |
+| Books stack | `runbooks/restore-books.md` (planning-level; no backup design or tested restore yet) |
 
 Other operational runbooks present:
 
@@ -1033,6 +1114,7 @@ Backup coverage summary:
 | Monitoring/Prometheus | `scripts/backups/backup-monitoring.sh` | `runbooks/restore-monitoring.md` | `/srv/docker/monitoring` archive excluding Prometheus lock/active query files | Prometheus history and host metadata may be sensitive | complete |
 | DDNS | `scripts/backups/backup-ddns.sh` | `runbooks/restore-ddns.md` | `/srv/docker/ddns` archive excluding logs | Porkbun API credentials are sensitive | complete |
 | Vikunja | `scripts/backups/backup-vikunja.sh` | `runbooks/restore-vikunja.md` | PostgreSQL logical dump plus `compose.yaml`, `.env`, and `files/` archive; raw `db/` excluded | Task/project data, attachments, `.env`, and database dump are sensitive | complete |
+| Books stack | None | `runbooks/restore-books.md` | Backup design pending for both config trees, library, and ingest workflow | Book library, user data, app databases, generated secrets, config directories, covers, and plugins are sensitive | planning only; no backup script or tested restore |
 
 ## Services Needing Backup / Restore Documentation
 
@@ -1044,6 +1126,7 @@ Backup coverage summary:
 | Offsite backup strategy | `/mnt/backupshare` is documented as the backup target; offsite copy strategy needs documentation. |
 | Periodic restore testing | Restore test cadence and evidence need documentation. |
 | Wedding address form state | Needs verification whether all state is static or handled by n8n. |
+| Books stack | Active and stateful, but backup design is pending, no backup script exists, and the restore runbook is planning-level until a backup and restore are tested. |
 
 ## Retired Services
 
@@ -1099,6 +1182,7 @@ All Docker-socket-backed services must remain internal/private and should not be
 | Docker socket mounts | Homepage, Glances, and Alloy use read-only Docker socket mounts as accepted high-trust risks for dashboard widgets, host/process metrics, and Docker log discovery; Glances' Tailscale-only binding reduces exposure but does not remove this risk |
 | Host mounts | Glances, node-exporter, cAdvisor, and Alloy mount host paths and should remain internal/private; Glances is bound to `100.77.136.106:61208` and must not be publicly exposed |
 | VPN stack privileges | Gluetun uses `NET_ADMIN` and `/dev/net/tun` |
+| Books direct access and broad mount | Both apps retain Tailscale-bound direct ports; Shelfmark has intentional/current writable access to all of `/mnt/media`. Preserve now and review scope later. |
 
 ## Open Questions / Human Verification Needed
 
@@ -1112,3 +1196,6 @@ All Docker-socket-backed services must remain internal/private and should not be
 - Are backup scripts scheduled operationally? Verify with crontab or the active host scheduler because scheduling is not proven by the repo.
 - Which missing restore runbooks should be created first for stacks that now have backup scripts?
 - Should `inventory/services.md` link to this inventory to reduce documentation drift?
+- What is the approved books backup consistency, retention, and restore-test design?
+- Does Shelfmark still require writable access to all of `/mnt/media`, and are both direct Tailscale ports still intended long term?
+- What is the verified live value and supported semantics for Shelfmark `SEARCH_MODE` before any repo-defined deployment is attempted?

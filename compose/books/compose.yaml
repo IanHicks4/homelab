@@ -1,0 +1,46 @@
+name: books
+
+services:
+  calibre-web-automated:
+    image: crocodilestick/calibre-web-automated:latest
+    container_name: calibre-web-automated
+    restart: unless-stopped
+    environment:
+      NETWORK_SHARE_MODE: "${NETWORK_SHARE_MODE:?Verify NETWORK_SHARE_MODE against the audited live config}"
+      PGID: "${PGID:?Set PGID before deployment}"
+      PUID: "${PUID:?Set PUID before deployment}"
+      TZ: "${TZ:?Set TZ before deployment}"
+    volumes:
+      - ./calibre-web-automated/config:/config
+      - /mnt/media/books/ingest:/cwa-book-ingest
+      - /mnt/media/books/library:/calibre-library
+    ports:
+      - "100.77.136.106:8083:8083"
+    networks:
+      - default
+      - proxy
+
+  shelfmark:
+    image: ghcr.io/calibrain/shelfmark:latest
+    container_name: shelfmark
+    restart: unless-stopped
+    environment:
+      PGID: "${PGID:?Set PGID before deployment}"
+      PUID: "${PUID:?Set PUID before deployment}"
+      SEARCH_MODE: "${SEARCH_MODE:?Verify SEARCH_MODE against the audited live config}"
+      SESSION_COOKIE_SECURE: "${SESSION_COOKIE_SECURE:?Set SESSION_COOKIE_SECURE before deployment}"
+      TZ: "${TZ:?Set TZ before deployment}"
+    volumes:
+      - ./shelfmark/config:/config
+      - /mnt/media/books/ingest:/books
+      - /mnt/media:/media
+    ports:
+      - "100.77.136.106:8084:8084"
+    networks:
+      - default
+      - proxy
+
+networks:
+  default: {}
+  proxy:
+    external: true

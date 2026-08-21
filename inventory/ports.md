@@ -14,6 +14,8 @@
 - `6881/udp` → qBittorrent
 - `7878/tcp` → Radarr
 - `8080/tcp` → qBittorrent Web UI
+- `8083/tcp` → Calibre Web Automated, bound to `100.77.136.106`
+- `8084/tcp` → Shelfmark, bound to `100.77.136.106`
 - `8088/tcp` → Vaultwarden
 - `8096/tcp` → Jellyfin
 - `8191/tcp` → FlareSolverr

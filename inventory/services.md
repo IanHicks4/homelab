@@ -22,3 +22,5 @@
 | FlareSolverr | server | Cloudflare challenge helper | Port 8191 |
 | Recyclarr | server | arr profile sync | Internal/background |
 | Vaultwarden | server | Password manager | Port 8088 / `vault.kai.coach` |
+| Calibre Web Automated | server | Book library management and web access | Active internal/private; Tailscale `100.77.136.106:8083` / `books.kai.coach` |
+| Shelfmark | server | Book search and viewing | Active internal/private; Tailscale `100.77.136.106:8084` / `shelf.kai.coach` |

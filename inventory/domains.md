@@ -10,7 +10,12 @@
 - `home.kai.coach` → Homepage
 - `status.kai.coach` → Uptime Kuma
   - Uses internal TLS in Caddy
+- `books.kai.coach` → Calibre Web Automated
+  - Uses internal TLS in Caddy
+- `shelf.kai.coach` → Shelfmark
+  - Uses internal TLS in Caddy
 
 ## Notes
 - Domain management includes Porkbun DDNS.
 - Caddy is the reverse proxy in front of the public services.
+- Books routes are documented as internal/private; route presence is not evidence of public exposure.
