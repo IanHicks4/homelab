@@ -49,6 +49,7 @@ Prometheus history is useful, but the configuration is usually more critical tha
 - Prometheus `./data/lock`.
 - Prometheus `./data/queries.active`.
 - Host filesystem mounts used by node-exporter and cAdvisor.
+- The host-side node-exporter textfile collector directory and the process that writes backup-freshness metrics.
 - Docker images, containers, or networks.
 - Metrics from targets outside retained Prometheus data.
 
@@ -64,7 +65,8 @@ ls -lh /mnt/backupshare/monitoring/archive
 Verify the compose file exists:
 
 ```bash
-ls -lh compose/monitoring/compose.yaml
+ls -lh ~/homelab/compose/monitoring/compose.yaml
+ls -lh ~/homelab/compose/monitoring/prometheus.yml
 ```
 
 ## Restore Assumptions
@@ -73,6 +75,8 @@ ls -lh compose/monitoring/compose.yaml
 - The selected archive is from the intended restore date.
 - The external `proxy` network exists if compose expects it.
 - Restore commands may require an account with permission to write `/srv/docker/monitoring` and manage containers.
+- The repo files are source artifacts that must be copied or restored into `/srv/docker/monitoring` before Compose is run. Relative `./prometheus.yml` and `./data` mounts are expected to resolve from that deployed directory, not the repository checkout.
+- The host path `/var/lib/node_exporter/textfile_collector` and its metric producer are restored or managed separately from this stack archive.
 
 ## Restore Procedure
 
@@ -106,8 +110,22 @@ tar -xzf /mnt/backupshare/monitoring/archive/monitoring-YYYY-MM-DD.tar.gz -C /sr
 Validate expected files:
 
 ```bash
+test -f /srv/docker/monitoring/compose.yaml
 test -f /srv/docker/monitoring/prometheus.yml
 test -d /srv/docker/monitoring/data
+```
+
+If repository-managed files are missing from the selected archive, restore the reviewed source artifacts without replacing retained Prometheus data:
+
+```bash
+cp ~/homelab/compose/monitoring/compose.yaml /srv/docker/monitoring/compose.yaml
+cp ~/homelab/compose/monitoring/prometheus.yml /srv/docker/monitoring/prometheus.yml
+```
+
+Confirm the separately managed host textfile directory exists before expecting backup-freshness metrics:
+
+```bash
+test -d /var/lib/node_exporter/textfile_collector
 ```
 
 Start containers in backup-script order:
@@ -121,7 +139,7 @@ docker start cadvisor
 If containers were recreated instead of stopped, start from compose:
 
 ```bash
-cd compose/monitoring
+cd /srv/docker/monitoring
 docker compose up -d
 ```
 
@@ -164,6 +182,7 @@ Expected:
 - Prometheus starts without TSDB corruption errors.
 - Prometheus targets show expected scrape health.
 - node-exporter and cAdvisor are running.
+- node-exporter exposes expected textfile metrics when the separately managed producer has written a valid collector file.
 - Historical graphs may be present depending on retained data.
 
 ## Rollback Steps
@@ -208,3 +227,4 @@ docker start cadvisor
 - Excluded Prometheus lock and active query files are regenerated.
 - Historical data may be less important than restoring working scrape configuration.
 - Backup scheduling is not proven by this runbook; verify separately.
+- The repository does not contain the backup-freshness textfile producer or its scheduler; restoring the monitoring stack alone does not recreate them.

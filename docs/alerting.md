@@ -16,6 +16,7 @@ This document describes the current homelab alerting architecture, alert rules, 
   - cAdvisor at `cadvisor:8080`
   - the Pi-hole LXC node-exporter at `192.168.1.53:9100`
 - Backup freshness metrics are exposed through the node-exporter textfile collector as `homelab_backup_*` metrics.
+- `compose/monitoring/compose.yaml` enables that collector at `/host/var/lib/node_exporter/textfile_collector`. Because the host root is mounted at `/host`, this corresponds to `/var/lib/node_exporter/textfile_collector` on `server`.
 
 Grafana, Prometheus, and their administrative interfaces should remain internal/private.
 
@@ -36,6 +37,8 @@ homelab_backup_age_seconds
 ```
 
 Additional `homelab_backup_*` series and their labels may be present. Inspect the current metric output before changing alert selectors. The label schema and exact stale thresholds are not provisioned in this repository and need verification in the Grafana UI.
+
+The repository does not contain the producer or scheduler that writes `backup_status.prom`. The reconciled node-exporter setting proves collection intent, not metric freshness or writer health.
 
 ## Alert Rules
 
@@ -300,6 +303,7 @@ If Grafana uses mute timings instead of silences for the current rule path, crea
 - A deliberately unmounted backup share produces no filesystem data; the backup-share-fullness rule therefore uses **No Data = OK**.
 - **No Data = OK** for share fullness must not replace stale-backup alerting. Backup age remains the primary signal that expected backups are not occurring.
 - Discord delivery depends on external service availability and valid contact-point configuration.
+- The producer and scheduler for `backup_status.prom` are outside the repository and need operational verification.
 
 ## Future Improvements
 

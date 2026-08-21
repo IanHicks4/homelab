@@ -628,6 +628,7 @@ Status:
 
 - Configured in repo: yes.
 - Confirmed running in production: yes.
+- The dated audit `docs/audits/monitoring-compose-drift-2026-08-21.md` found Prometheus and node-exporter running and cAdvisor running/healthy from `/srv/docker/monitoring/compose.yaml`; current runtime status still needs verification.
 
 Main services:
 
@@ -656,6 +657,7 @@ Persistent volumes/bind mounts:
 - `./data:/prometheus`
 - node-exporter: `/:/host:ro,rslave`
 - cAdvisor: host Docker/system paths read-only
+- The Prometheus sources are intentionally relative to the deployed Compose directory. Repository files are source artifacts to be copied/restored under `/srv/docker/monitoring`; running the Compose file directly from the repo checkout would use repo-local config/data paths and is not the documented production workflow.
 
 Backup relevance:
 
@@ -667,6 +669,8 @@ Backup relevance:
 Monitoring/logging relevance:
 
 - Prometheus scrapes `host.docker.internal:9100`, `cadvisor:8080`, and `192.168.1.53:9100`.
+- node-exporter enables `--collector.textfile.directory=/host/var/lib/node_exporter/textfile_collector`, matching the audited live container and the backup-freshness model in `docs/alerting.md`.
+- The metric producer and scheduler that write the host-side textfile are not represented in this repository and need verification.
 
 Security notes:
 
