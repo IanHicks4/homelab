@@ -28,3 +28,24 @@ compose/vikunja/files/
 compose/vikunja/backups/
 vikunja-*.sql.gz
 vikunja-*.tar.gz
+
+# Books stack local environment, runtime state, and generated files
+compose/books/.env
+compose/books/calibre-web-automated/
+compose/books/shelfmark/
+compose/books/**/*.db
+compose/books/**/*.sqlite
+compose/books/**/*.sqlite3
+compose/books/**/*.log
+compose/books/**/secrets*
+compose/books/**/secret*
+compose/books/**/key*
+compose/books/**/*.bak
+compose/books/**/*.tmp
+
+# Backup archives and database dumps
+*.tar
+*.tar.gz
+*.tgz
+*.sql
+*.sql.gz
