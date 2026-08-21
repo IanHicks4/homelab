@@ -171,7 +171,7 @@ Evidence source:
 
 - Dated, value-redacted live audit: `docs/audits/books-stack-review-2026-08-21.md`.
 - Reconciled repository definition: `compose/books/compose.yaml`.
-- Existing internal routes: `configs/caddy/Caddyfile`.
+- Existing internal routes: `compose/caddy/Caddyfile`.
 
 Status:
 
@@ -253,6 +253,12 @@ Main services:
 Purpose:
 
 - Reverse proxy and TLS handling.
+
+Canonical repository source:
+
+- `compose/caddy/Caddyfile` is the single canonical tracked Caddyfile.
+- `compose/caddy/compose.yaml` mounts that file as `./Caddyfile:/etc/caddy/Caddyfile` when the stack directory is deployed.
+- The former duplicate `configs/caddy/Caddyfile` was removed after audit evidence showed its content matched live production and included the two books routes missing from the Compose copy.
 
 Ports and routes:
 

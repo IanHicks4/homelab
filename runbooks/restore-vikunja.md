@@ -260,5 +260,5 @@ Re-run the container, route, login, task/project, and attachment validation chec
 ## Known Limitations And Verification Items
 
 - Backup scheduling is not proven by repository evidence and needs verification on the host.
-- The checked-in Caddyfile did not contain the provided Vikunja route at review time; the route is a human-provided runtime fact and must be restored/verified separately.
+- The canonical checked-in `compose/caddy/Caddyfile` contains the internal `vikunja.kai.coach` route. Current DNS, internal TLS trust, and runtime reachability still require verification during an approved restore.
 - External integrations not stored in the database, `.env`, or files archive require separate recovery.

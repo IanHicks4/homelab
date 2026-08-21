@@ -80,3 +80,13 @@ vikunja.kai.coach {
 	encode zstd gzip
 	reverse_proxy vikunja:3456
 }
+
+books.kai.coach {
+	tls internal
+	reverse_proxy calibre-web-automated:8083
+}
+
+shelf.kai.coach {
+	tls internal
+	reverse_proxy shelfmark:8084
+}
