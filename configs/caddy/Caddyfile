@@ -70,3 +70,23 @@ auth.kai.coach {
         reverse_proxy authelia:9091
 }
 
+tools.kai.coach {
+	tls internal
+	reverse_proxy it-tools:80
+}
+
+vikunja.kai.coach {
+	tls internal
+	encode zstd gzip
+	reverse_proxy vikunja:3456
+}
+
+books.kai.coach {
+	tls internal
+	reverse_proxy calibre-web-automated:8083
+}
+
+shelf.kai.coach {
+	tls internal
+	reverse_proxy shelfmark:8084
+}
