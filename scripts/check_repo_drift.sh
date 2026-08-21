@@ -13,7 +13,7 @@ declare -A MAP=(
   ["$REPO/compose/vaultwarden/compose.yaml"]="/srv/docker/vaultwarden/compose.yaml"
   ["$REPO/compose/vpn/compose.yaml"]="/srv/docker/vpn/compose.yaml"
 
-  ["$REPO/configs/caddy/Caddyfile"]="/srv/docker/caddy/Caddyfile"
+  ["$REPO/compose/caddy/Caddyfile"]="/srv/docker/caddy/Caddyfile"
 
   ["$REPO/configs/homepage/bookmarks.yaml"]="/srv/docker/homepage-stack/homepage-config/bookmarks.yaml"
   ["$REPO/configs/homepage/custom.css"]="/srv/docker/homepage-stack/homepage-config/custom.css"

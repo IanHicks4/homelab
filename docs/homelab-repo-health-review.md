@@ -3,11 +3,13 @@
 Review date: 2026-08-21  
 Scope: repository evidence only; no live-system inspection or changes
 
+Post-review resolution: the Caddy source-of-truth ambiguity identified below was resolved on 2026-08-21. `compose/caddy/Caddyfile` is now canonical, includes the audited Books and Shelfmark routes, and is the source used by Compose, restore documentation, and drift comparison. References below describe the point-in-time evidence that motivated that reconciliation.
+
 ## 1. Executive summary
 
 The repository is healthier than a typical informal homelab repository. Services are generally separated into one Compose directory per stack, sensitive values are represented by environment variables or secret-file references, most stateful Docker stacks have both a backup script and a restore runbook, and the Codex/change-control documents set sensible boundaries between repository work and production. The internal/Tailscale-first design is visible in Tailscale-bound ports, localhost-bound monitoring ports, container-only databases, internal Caddy TLS routes, and a short intentional list of public services.
 
-The main risk is not missing documentation; it is conflicting or partially stale documentation. Two Caddyfiles differ, the short inventory files lag the comprehensive service inventory, and `docs/service-inventory.md` contains a stale statement that the now-present Vikunja Compose stack is absent. Caddy and Homepage reference Calibre/Shelfmark, but those services have no Compose, inventory, backup, or restore representation. The wedding form declares an `html/` bind mount whose content is not tracked. These discrepancies weaken the repository as a recovery source.
+The main risk is not missing documentation; it is conflicting or partially stale documentation. At review time, two Caddyfiles differed, the short inventory files lagged the comprehensive service inventory, and `docs/service-inventory.md` contained a stale statement that the now-present Vikunja Compose stack was absent. The Caddy duplication and missing Books repository representation were subsequently reconciled as noted above. The wedding form still declares an `html/` bind mount whose content is not tracked. Remaining discrepancies weaken the repository as a recovery source.
 
 Backup breadth is good, but reliability is uneven. Most current scripts stop stateful services, verify the backup share, retain archives, and use an exit trap to restart containers. The Vaultwarden script lacks the mountpoint guard used by most peers, two older top-level backup scripts duplicate newer scripts, archives generally have no integrity manifest, and there is no repository evidence of scheduling or restore tests. Several standardized restore runbooks use relative `cd compose/<stack>` fallback commands that are unlikely to work from the documented recovery location. The older Immich, Caddy, and Vaultwarden runbooks also contain stale names, ports, exposure assumptions, or less-safe restore patterns.
 
@@ -42,7 +44,7 @@ No Docker command, `sudo`, SSH, service API, live host path, or `/srv/docker` ac
 ### Structural weaknesses
 
 - `README.md` advertises `diagrams/` and `backups/` directories that do not exist, while it does not point readers to `scripts/backups/` or the authoritative `docs/service-inventory.md`.
-- `compose/caddy/Caddyfile` is the file mounted by `compose/caddy/compose.yaml`, but `configs/caddy/Caddyfile` has two additional internal routes. `scripts/check_repo_drift.sh` compares the latter to the live Caddyfile. The repository therefore has two plausible sources of truth.
+- Resolved after review: `compose/caddy/Caddyfile` is now the single canonical file mounted by `compose/caddy/compose.yaml` and compared by `scripts/check_repo_drift.sh`; the audited Books and Shelfmark routes were reconciled into it and the duplicate was removed.
 - `scripts/backup-immich.sh` and `scripts/backup-vault.sh` duplicate scripts under `scripts/backups/`; the older copies omit safeguards present in at least some newer scripts. `runbooks/docker-updates.md` still invokes the top-level copies.
 - The empty `CHANGELOG.md`, empty Homepage `custom.js`, sample `kubernetes.yaml`, and two short P360 day notes add navigation noise unless their intended role is documented.
 - Generated Recyclarr state and large point-in-time media exports are mixed with hand-maintained configuration. They are useful audit evidence but need a retention/refresh convention.
@@ -57,7 +59,7 @@ It is not fully consistent with current repository content:
 
 - The Vikunja detail section says no Vikunja Compose stack is present even though `compose/vikunja/compose.yaml` now exists.
 - Several statements say runtime inspection confirmed services, DNS, mounts, or Docker socket use. Those may record prior human/runtime observations, but the document's own status model says it is repository-based. The evidence date and source should be explicit so these facts do not look perpetually current.
-- Calibre Web Automated and Shelfmark appear in `configs/caddy/Caddyfile`; Calibre also appears in Homepage. Neither appears in the service tables, Compose tree, backup coverage, or restore coverage.
+- Resolved after review: Calibre Web Automated and Shelfmark now have a reconciled Books Compose stack, inventory entries, and a planning-level restore runbook. Backup design remains pending.
 - `inventory/services.md` omits Authelia, IT Tools, logging, monitoring, n8n, Speedtest Tracker, Vikunja, wedding form, and the newer Caddy-referenced book services.
 - `inventory/domains.md` omits the documented public wedding form and most internal routes. `inventory/ports.md` lists several application ports without interface classification and includes ports that are no longer published by Compose.
 - DDNS includes an `mc` name, but no Minecraft service, host, route, backup, or ownership record exists in the current tree.
@@ -204,7 +206,7 @@ These are candidates for human review, not deletion instructions:
 
 - All visible local and remote topic branches are reported as merged into `main`, including older `codex/*`, `reconcile/*`, `docs/service-inventory`, and `origin/ian/update-recent-changes` refs. Branch retention policy is not documented.
 - `scripts/backup-immich.sh` and `scripts/backup-vault.sh` duplicate the versions under `scripts/backups/`.
-- `compose/caddy/Caddyfile` and `configs/caddy/Caddyfile` overlap but differ.
+- Resolved after review: the former duplicate Caddyfiles were consolidated into canonical `compose/caddy/Caddyfile`.
 - `inventory/services.md`, `inventory/domains.md`, and `inventory/ports.md` lag `docs/service-inventory.md` and current configuration.
 - `docs/p360-day0.md` and `docs/p360-day1.md` duplicate `inventory/hardware.md` and contain a resolved question.
 - `CHANGELOG.md` and `configs/homepage/custom.js` are empty; Homepage Kubernetes/provider/Proxmox files look like optional scaffolding.
@@ -222,7 +224,7 @@ Validation class meanings: **documentation-only** changes repository documentati
 
 | ID | Evidence or repo path | Why it matters | Risk/impact | Suggested next action | Validation class | Human approval |
 |---|---|---|---|---|---|---|
-| N1 | `compose/caddy/Caddyfile`, `configs/caddy/Caddyfile`, `compose/caddy/compose.yaml`, `scripts/check_repo_drift.sh` | Two differing proxy sources make recovery and exposure review ambiguous. | High operational risk: a restore may omit routes or promote unintended ones. | Human selects the canonical file; document the decision and differences. Any later config reconciliation must be separately reviewed. | Documentation-only now; production-reviewed for later config change | Yes |
+| N1 | `compose/caddy/Caddyfile`, `compose/caddy/compose.yaml`, `scripts/check_repo_drift.sh` | Completed 2026-08-21: one canonical proxy source removes recovery and drift ambiguity. | Formerly high operational risk; repository ambiguity is resolved. | No further source-of-truth action. Any future route change remains production-reviewed. | Completed repo reconciliation | Completed with human-directed scope |
 | N2 | `docs/service-inventory.md`, `inventory/services.md`, `inventory/domains.md`, `inventory/ports.md` | Inventories disagree and Vikunja contains a stale “Compose absent” statement. | Medium: responders may use wrong routes, ports, or backup assumptions. | Declare one canonical inventory, timestamp human/runtime facts, and reconcile summaries against current repo evidence. | Documentation-only | Yes, for operational facts |
 | N3 | `runbooks/restore-*.md`, especially Immich/Caddy/Vaultwarden and relative `cd compose/<stack>` commands | Recovery commands must work under pressure and match current names, paths, and exposure. | High: restore failure, unnecessary downtime, or incorrect exposure testing. | Perform a docs-only command/path audit against current Compose; add archive preflight, preservation, rollback, and explicit working directories. Do not execute restores. | Documentation-only, followed by lab-tested drills | Yes |
 | N4 | Top-level backup scripts, `scripts/backups/`, `runbooks/docker-updates.md` | Operators can invoke older, less-safe duplicates. | High for Vaultwarden/Immich: missed mount checks or failed restart can affect data/availability. | Mark one script set canonical, update documentation references, and propose retirement of duplicates without deleting them in the documentation task. | Documentation-only; later production-reviewed | Yes |
@@ -263,7 +265,7 @@ Validation class meanings: **documentation-only** changes repository documentati
 
 ## 11. Items needing human decision
 
-- Which Caddyfile is authoritative, and are the Calibre/Shelfmark routes active? (N1)
+- Resolved: `compose/caddy/Caddyfile` is authoritative, and the dated Books audit identifies Calibre Web Automated and Shelfmark as active internal/private services. (N1)
 - Should `docs/service-inventory.md` replace the short service/domain/port lists, or should those remain maintained summaries? (N2)
 - Is the wedding form still required, where is its static content, and what abuse/data-retention controls exist for its public webhook? (O5/O6)
 - What service or host owns the `mc` DDNS name, and is public DNS still intentional? (O5)

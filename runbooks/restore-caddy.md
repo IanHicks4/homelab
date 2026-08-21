@@ -37,6 +37,8 @@ nslookup vault.kai.coach
 
 ## Restore Caddy Files
 
+The canonical tracked Caddy configuration is `compose/caddy/Caddyfile`. The Compose definition mounts `./Caddyfile`, so both files should be restored together from the same repository directory.
+
 Verify the Caddy stack exists:
 
 ```bash
@@ -54,7 +56,7 @@ If missing, restore from homelab repo:
 ```bash
 mkdir -p /srv/docker/caddy
 cp ~/homelab/compose/caddy/compose.yaml /srv/docker/caddy/
-cp ~/homelab/configs/caddy/Caddyfile /srv/docker/caddy/
+cp ~/homelab/compose/caddy/Caddyfile /srv/docker/caddy/
 ```
 
 Restore any `.env` file manually if one is used.
