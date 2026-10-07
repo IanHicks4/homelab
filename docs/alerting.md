@@ -40,6 +40,8 @@ Additional `homelab_backup_*` series and their labels may be present. Inspect th
 
 The repository does not contain the producer or scheduler that writes `backup_status.prom`. The reconciled node-exporter setting proves collection intent, not metric freshness or writer health.
 
+Paperless-ngx is an active, sensitive internal service and should be covered by backup-freshness monitoring after `scripts/backups/backup-paperless.sh` is deployed and production scheduling is configured. Because the freshness producer, service-label schema, scheduler, and Grafana rules are not managed in this repository, verify in production that Paperless has its own `homelab_backup_*` series and is selected by the appropriate UI-managed stale-backup rule. Do not claim coverage until both a successful scheduled backup and the resulting metric/alert behavior have been observed.
+
 ## Alert Rules
 
 ### Critical Backups Stale

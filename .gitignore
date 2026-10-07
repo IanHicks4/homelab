@@ -59,6 +59,7 @@ compose/paperless/export/
 compose/paperless/db/
 compose/paperless/postgres/
 compose/paperless/redis/
+compose/paperless/valkey/
 compose/paperless/**/*.db
 compose/paperless/**/*.sqlite
 compose/paperless/**/*.sqlite3
