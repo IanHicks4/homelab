@@ -90,3 +90,8 @@ shelf.kai.coach {
 	tls internal
 	reverse_proxy shelfmark:8084
 }
+
+paperless.kai.coach {
+	tls internal
+	reverse_proxy paperless-ngx:8000
+}
