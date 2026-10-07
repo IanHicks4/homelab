@@ -49,3 +49,20 @@ compose/books/**/*.tmp
 *.tgz
 *.sql
 *.sql.gz
+
+# Paperless-ngx runtime data and secrets
+compose/paperless/.env
+compose/paperless/data/
+compose/paperless/media/
+compose/paperless/consume/
+compose/paperless/export/
+compose/paperless/db/
+compose/paperless/postgres/
+compose/paperless/redis/
+compose/paperless/**/*.db
+compose/paperless/**/*.sqlite
+compose/paperless/**/*.sqlite3
+compose/paperless/**/*.log
+compose/paperless/**/secret*
+compose/paperless/**/secrets*
+compose/paperless/**/key*
