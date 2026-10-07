@@ -41,7 +41,7 @@ The repo shows these main architectural pieces:
 | `logging` | Loki, Grafana, Alloy | Log collection and dashboards | Localhost ports; Grafana Caddy route | Grafana internal/private via Pi-hole DNS | Loki data, Grafana data | Backup script and restore runbook exist |
 | `monitoring` | Prometheus, node-exporter, cAdvisor | Metrics collection | Localhost ports; proxy network for Prometheus | No public route found | Prometheus data | Backup script and restore runbook exist |
 | `n8n` | n8n | Workflow automation and webhooks | `n8n.kai.coach` internal route; address-form webhook route | Internal/private via Pi-hole DNS | `/srv/docker/n8n` | Backup script and restore runbook exist |
-| `paperless` | Paperless-ngx, PostgreSQL, Valkey | Document management for scanned paper records and personal/project records, including OCR and search | `paperless.kai.coach` configured as the app URL; proxy network; no direct host port; no checked-in Caddy route | No public exposure claimed | `data`, `media`, `export`, `consume`, `postgres`, and `valkey` under `/srv/docker/paperless` | Backup script and restore runbook exist |
+| `paperless` | Paperless-ngx, PostgreSQL, Valkey | Document management for scanned paper records and personal/project records, including OCR, search, metadata, and tagging | Internal Caddy route `paperless.kai.coach`; proxy network; no direct host port | Internal/private; no public exposure claimed | `data`, `media`, `export`, `consume`, `postgres`, and `valkey` under `/srv/docker/paperless` | Production backup manually tested and scheduled in root crontab; restore runbook exists but is not restore-tested |
 | `speedtest-tracker` | Speedtest Tracker | Network speed history | `100.77.136.106:8082`; proxy network | Needs verification | `./config` | Backup script and restore runbook exist |
 | `vaultwarden` | Vaultwarden | Password manager | `vault.kai.coach` Caddy route | Internal/private via Pi-hole DNS | `./data` | Backup script and restore runbook exist |
 | `vikunja` | Vikunja, PostgreSQL | Internal task and project management | `vikunja.kai.coach`; `tls internal`; proxy to `vikunja:3456` | Internal/private; no public exposure claimed | `/srv/docker/vikunja/files`, `/srv/docker/vikunja/db`, `.env` | Backup script and restore runbook exist |
@@ -738,14 +738,16 @@ Security notes:
 
 Evidence source:
 
-- Human-provided fact: Paperless-ngx has been added to the OptiPlex as a production-ish internal document-management service.
-- Checked-in definitions: `compose/paperless/compose.yaml` and `compose/paperless/.env.example`.
-- No Paperless reference was found in the checked-in Caddy, domain, port, or service inventory files.
+- Human-provided fact: Paperless-ngx is active on the OptiPlex production Docker host as an internal document-management service.
+- Checked-in definitions: `compose/paperless/compose.yaml`, `compose/paperless/.env.example`, and the `paperless.kai.coach` route in `compose/caddy/Caddyfile`.
+- Human-provided facts: the backup script was copied to production, manually run successfully, and added to root crontab.
 
 Status:
 
 - Configured in repo: yes.
-- Confirmed running in production: reported by the human owner; not independently runtime-verified for this repo task.
+- Active on the OptiPlex production Docker host: confirmed by the human owner; not independently runtime-inspected for this repo task.
+- Repo stack source: `compose/paperless`.
+- Deployed service path established by the backup and restore definitions: `/srv/docker/paperless`.
 
 Main services:
 
@@ -760,9 +762,9 @@ Purpose:
 
 Ports and routes:
 
+- Caddy route `paperless.kai.coach` uses internal TLS and proxies to `paperless-ngx:8000`.
 - Compose sets the application URL to `https://paperless.kai.coach` and attaches `paperless-ngx` to the external `proxy` network.
 - No direct host port is published.
-- No `paperless.kai.coach` route is present in the checked-in Caddyfile; operational route configuration needs verification.
 
 Access classification:
 
@@ -785,12 +787,13 @@ Backup relevance:
 - The backup script stops `paperless-ngx`, creates a logical PostgreSQL dump through Compose service `db`, stops `broker` for a consistent Valkey archive, and archives the verified application paths plus production Compose/`.env` configuration.
 - Raw `postgres/` data is excluded because the logical dump is the database restore source. `valkey/` is stored separately under `/mnt/backupshare/paperless/redis`.
 - Backups use private permissions, temporary files followed by rename, and approximately 30-day retention.
-- Backup scheduling: **needs verification**. Script presence does not prove cron or another scheduler.
+- Production backup status: the human operator manually ran the deployed script and confirmed it completed successfully.
+- Backup schedule: installed in root crontab per the human operator. The exact cron expression is not documented in the repository and should be verified on the host with `sudo crontab -l` during an authorized operational check.
 - Restore status: **not restore-tested**.
 
 Monitoring/logging relevance:
 
-- Paperless backup freshness should be added to and verified in the UI-managed Grafana alerting/metric workflow after a working backup is scheduled.
+- Paperless backup freshness should be verified in the UI-managed Grafana alerting/metric workflow now that the working backup is scheduled in root crontab.
 - No Paperless-specific alert rule or backup metric label is present in repository evidence.
 
 Security notes:
@@ -1077,6 +1080,7 @@ These routes are configured in the repo and have internal/private or route-speci
 | Vaultwarden | `vault.kai.coach` | Internal/private via Pi-hole DNS; Caddy route remains valid for internal access; not Porkbun-DDNS-managed |
 | Calibre Web Automated | `books.kai.coach` | Internal/private route using Caddy internal TLS; public exposure is not claimed |
 | Shelfmark | `shelf.kai.coach` | Internal/private route using Caddy internal TLS; public exposure is not claimed |
+| Paperless-ngx | `paperless.kai.coach` | Internal/private route using Caddy internal TLS; proxies to `paperless-ngx:8000`; public exposure is not claimed |
 
 ## Tailscale / Private-Bound Services
 
@@ -1123,7 +1127,7 @@ Backup scripts are under `scripts/backups/`. Restore runbooks are under `runbook
 
 Some backup scripts require root because they archive sensitive or permission-restricted data. Sensitive files such as `.env` files, Authelia secrets, VPN/WireGuard secrets, Homepage integration secrets, n8n credentials/workflows, Vaultwarden data, Caddy certificate state, and DDNS API keys must not be committed to Git.
 
-The repository proves script and runbook presence. It does not prove scheduling. If backups are scheduled operationally, verify with crontab or the relevant scheduler on the host.
+The repository proves script and runbook presence but generally does not prove scheduling. Paperless is an explicit exception: the human operator confirms its script is installed in root crontab and has completed a successful manual production run, although the exact cron expression is not documented. Verify operational schedules with crontab or the relevant scheduler on the host.
 
 Verified backup scripts:
 
@@ -1193,7 +1197,7 @@ Backup coverage summary:
 | Speedtest Tracker | `scripts/backups/backup-speedtest-tracker.sh` | `runbooks/restore-speedtest-tracker.md` | `/srv/docker/speedtest-tracker` archive excluding logs | `.env`, app config, and database/history may be sensitive | complete |
 | Monitoring/Prometheus | `scripts/backups/backup-monitoring.sh` | `runbooks/restore-monitoring.md` | `/srv/docker/monitoring` archive excluding Prometheus lock/active query files | Prometheus history and host metadata may be sensitive | complete |
 | DDNS | `scripts/backups/backup-ddns.sh` | `runbooks/restore-ddns.md` | `/srv/docker/ddns` archive excluding logs | Porkbun API credentials are sensitive | complete |
-| Paperless-ngx | `scripts/backups/backup-paperless.sh` | `runbooks/restore-paperless.md` | PostgreSQL logical dump, app-state archive (`compose.yaml`, `.env`, `data`, `media`, `export`, `consume`), and separate Valkey persistence archive; raw PostgreSQL files excluded | Documents, OCR text, metadata, `.env`, database dumps, and Valkey state are highly sensitive | implemented in repo; scheduling needs verification; not restore-tested |
+| Paperless-ngx | `scripts/backups/backup-paperless.sh` | `runbooks/restore-paperless.md` | PostgreSQL logical dump, app-state archive (`compose.yaml`, `.env`, `data`, `media`, `export`, `consume`), and separate Valkey persistence archive; raw PostgreSQL files excluded | Documents, OCR text, metadata, `.env`, database dumps, and Valkey state are highly sensitive | deployed and manually tested successfully; scheduled in root crontab with exact time unrecorded; restore not tested |
 | Vikunja | `scripts/backups/backup-vikunja.sh` | `runbooks/restore-vikunja.md` | PostgreSQL logical dump plus `compose.yaml`, `.env`, and `files/` archive; raw `db/` excluded | Task/project data, attachments, `.env`, and database dump are sensitive | complete |
 | Books stack | None | `runbooks/restore-books.md` | Backup design pending for both config trees, library, and ingest workflow | Book library, user data, app databases, generated secrets, config directories, covers, and plugins are sensitive | planning only; no backup script or tested restore |
 
@@ -1208,7 +1212,6 @@ Backup coverage summary:
 | Periodic restore testing | Restore test cadence and evidence need documentation. |
 | Wedding address form state | Needs verification whether all state is static or handled by n8n. |
 | Books stack | Active and stateful, but backup design is pending, no backup script exists, and the restore runbook is planning-level until a backup and restore are tested. |
-| Paperless-ngx | Backup and restore design exists, but operational scheduling, freshness reporting, the Caddy route, and restore testing need verification. |
 
 ## Retired Services
 
@@ -1281,6 +1284,5 @@ All Docker-socket-backed services must remain internal/private and should not be
 - What is the approved books backup consistency, retention, and restore-test design?
 - Does Shelfmark still require writable access to all of `/mnt/media`, and are both direct Tailscale ports still intended long term?
 - What is the verified live value and supported semantics for Shelfmark `SEARCH_MODE` before any repo-defined deployment is attempted?
-- Is `paperless.kai.coach` configured in the operational Caddy instance even though its route is absent from the checked-in Caddyfile?
 - Should the naming drift between Compose's `POSTGRES_PASSWORD` and `.env.example`'s `PAPERLESS_DB_PASSWORD` be reconciled before the next deployment?
-- After Paperless backup implementation is enabled, which scheduler runs it and which `homelab_backup_*` metric label represents its freshness?
+- What is the exact Paperless root-crontab schedule, and which `homelab_backup_*` metric label represents its freshness?

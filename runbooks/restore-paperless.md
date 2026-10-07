@@ -16,6 +16,15 @@ This runbook covers the repository-defined services:
 
 This runbook is **not restore-tested**. Do not claim recovery readiness until a restore has been completed in an authorized non-production environment.
 
+## Operational Backup Status
+
+- Backup script: `scripts/backups/backup-paperless.sh`.
+- Production deployment: the human operator confirms the script was copied to the OptiPlex production Docker host.
+- Manual test: the human operator ran the production copy successfully.
+- Schedule: installed in root crontab per the human operator.
+- Exact schedule: not documented in the repository; verify it on the host with `sudo crontab -l` during an authorized operational check.
+- Restore test: not performed or documented.
+
 ## What Is Backed Up
 
 The backup script creates three private, date-matched artifacts.
@@ -56,7 +65,7 @@ The application is stopped before the PostgreSQL dump and file archive. The brok
 - Docker images, containers, networks, and host packages.
 - Caddy configuration and internal DNS.
 - Files outside `/srv/docker/paperless`.
-- Backup scheduling and the node-exporter backup-freshness metric producer.
+- Root-crontab configuration and the node-exporter backup-freshness metric producer; these are operationally managed outside this repository.
 
 ## Prerequisites
 
@@ -66,6 +75,7 @@ The application is stopped before the PostgreSQL dump and file archive. The brok
 - Enough free space for the restored service and a complete rollback copy.
 - The external Docker network named `proxy`, if the restored Compose definition still requires it.
 - Internal DNS and any Caddy route restored separately if required.
+- The existing root-crontab backup job identified and paused or otherwise coordinated so it cannot overlap the restore. Its exact schedule must be verified operationally.
 
 Verify the share and select one date without displaying archive contents:
 
@@ -96,7 +106,7 @@ Stop if any integrity check fails. Do not print `.env`, SQL, OCR, or document co
 - PostgreSQL credentials are supplied by the restored `.env` and read inside the database container.
 - PostgreSQL initializes a new `/srv/docker/paperless/postgres` directory before the logical dump is loaded.
 - The archive preserves the application files needed by Paperless; the Valkey archive separately restores `valkey/`.
-- Compose publishes no direct host port. `PAPERLESS_URL` is configured as `https://paperless.kai.coach`, but no matching checked-in Caddy route was found.
+- Compose publishes no direct host port. The checked-in Caddy route uses internal TLS for `paperless.kai.coach` and proxies to `paperless-ngx:8000`.
 
 ## Restore Procedure
 
@@ -227,9 +237,9 @@ docker compose up -d paperless-ngx
 - A representative document opens successfully.
 - OCR text and search return expected results for a known document.
 - The consume workflow successfully imports a non-sensitive test document.
-- `https://paperless.kai.coach` works through Caddy/internal routing if that route is configured operationally.
+- `https://paperless.kai.coach` works through the configured Caddy internal route.
 - No direct host port or unintended public exposure was introduced.
-- A new backup is not scheduled or claimed healthy until the restored service is accepted.
+- The existing root-crontab backup job is allowed to resume only after the restored service is accepted.
 
 ## Rollback
 
